@@ -2991,7 +2991,6 @@
     <Item/>
     <Texture>
       <File>Ouroboros</File>
-      <Index>0x00</Index>
     </Texture>
     <SlotType>9</SlotType>
     <Soulbound/>
