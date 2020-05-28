@@ -2,7 +2,6 @@
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.objects.SkillTree;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
 
 import flash.display.Sprite;
@@ -54,7 +53,6 @@ public class InteractPanel extends Sprite {
         if ((((this.currentPanel == null)) || (!((_local_1 == this.currObj_))))) {
             this.currObj_ = _local_1;
             if (this.currObj_ != null) {
-                this.currObj_=new SkillTree(null);
                 _local_2 = this.currObj_.getPanel(this.gs_);
                 this.partyPanel_ = new PartyPanel(this.gs_);
             }

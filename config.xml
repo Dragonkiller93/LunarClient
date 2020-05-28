@@ -150,17 +150,17 @@
          <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/authoringsupport.swc</path-element>
          <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/flash-integration.swc</path-element>
          <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/mx/mx.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3-signals.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3core.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3crypto.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Console.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/GTween-v2.01.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/hamcrest-as3-flex-1.1.3.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Hi-Res-Stats.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/ionel.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/robotlegs.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/starling.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/as3-signals.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/as3core.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/as3crypto.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/Console.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/GTween-v2.01.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/hamcrest-as3-flex-1.1.3.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/Hi-Res-Stats.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/ionel.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/robotlegs.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/starling.swc</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
       </library-path>
       <!-- compiler.locale: specifies the locale for internationalization-->
       <locale>
@@ -238,7 +238,7 @@
       -->
       <!-- compiler.source-path: list of path elements that form the roots of ActionScript class hierarchies-->
       <source-path>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/src</path-element>
+         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/src</path-element>
       </source-path>
       <!-- compiler.strict: runs the AS3 compiler in strict error checking mode.-->
       <strict>true</strict>
@@ -449,7 +449,7 @@
    <link-report>filename</link-report>
    -->
    <!-- load-config: load a file containing configuration options-->
-   <load-config>C:\Users\Rotf\.IntelliJIdea2019.3\system\compile-server\webmain_bcf9b3cf\_temp_\IntelliJ_IDEA\idea-DBF48E9E-45A3E760.xml</load-config>
+   <load-config>C:\Users\Rotf\.IntelliJIdea2019.3\system\compile-server\webmain_55a3a8e9\_temp_\IntelliJ_IDEA\idea-DBF48E9E-45A3E760.xml</load-config>
    <!-- load-externs: an XML file containing <def>, <pre>, and <ext> symbols to omit from linking when building a SWF-->
    <!-- load-externs usage:
    <load-externs>filename</load-externs>
@@ -501,7 +501,7 @@
       -->
    </metadata>
    <!-- output: the filename of the SWF movie to create-->
-   <output>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/bin-debug/WebMain.swf</output>
+   <output>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/ClientBackup5-27-20-2-11/RotMG_Client_27.7.X2-master/bin-debug/WebMain.swf</output>
    <!-- raw-metadata: XML text to store in the SWF metadata (overrides metadata.* configuration)-->
    <!-- raw-metadata usage:
    <raw-metadata>text</raw-metadata>
