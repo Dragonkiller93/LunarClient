@@ -61,7 +61,7 @@ public class TabStripMediator extends Mediator {
         this.statsDocked.add(this.onStatsDocked);
         this.statsTabHotKeyInput.add(this.onTabHotkey);
         this.notifyActivePetUpdated.add(this.onNotifyActivePetUpdated);
-        this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked);
+        this.view.initSkillTree(this.imageFactory, this.iconButtonFactory, this.onSkillBtnClicked);
     }
 
     private function onStatsUndocked(_arg_1:StatsView):void {
@@ -86,11 +86,11 @@ public class TabStripMediator extends Mediator {
     override public function destroy():void {
         this.view.tabSelected.remove(this.onTabSelected);
         this.updateBackpack.remove(this.onUpdateBackPack);
-        this.view.friendsBtn.removeEventListener(MouseEvent.CLICK, this.onFriendsBtnClicked);
+        this.view.friendsBtn.removeEventListener(MouseEvent.CLICK, this.onSkillBtnClicked);
     }
 
-    private function onFriendsBtnClicked(_arg_1:MouseEvent):void {
-        this.openDialog.dispatch(new FriendListView());
+    private function onSkillBtnClicked(_arg_1:MouseEvent):void {
+        this.openDialog.dispatch(new FriendListView(this.hudModel.gameSprite.map.player_));
     }
 
     private function addTabs(_arg_1:Player):void {

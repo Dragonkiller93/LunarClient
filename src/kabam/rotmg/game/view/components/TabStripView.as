@@ -47,7 +47,7 @@ public class TabStripView extends Sprite {
         this.containerSprite.y = TabConstants.TAB_TOP_OFFSET;
     }
 
-    public function initFriendList(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function):void {
+    public function initSkillTree(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function):void {
         this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("lofiInterfaceBig", 13), "", TextKey.OPTIONS_FRIEND, "");
         this.friendsBtn.x = 160;
         this.friendsBtn.y = 6;

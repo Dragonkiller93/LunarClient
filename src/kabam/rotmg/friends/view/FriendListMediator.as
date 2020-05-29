@@ -54,7 +54,7 @@ public class FriendListMediator extends Mediator {
 
     private function initView(_arg_1:Boolean = false) {
         if (_arg_1) {
-            this.view.init(this.model.getAllFriends(), this.model.getAllInvitations(), this.model.getCurrentServerName());
+            this.view.init();
         }
         else {
             this.reportError(this.model.errorStr);

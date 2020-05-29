@@ -436,7 +436,7 @@ public class MapUserInput {
             case Parameters.data_.friendList:
                 Parameters.data_.friendListDisplayFlag = !(Parameters.data_.friendListDisplayFlag);
                 if (Parameters.data_.friendListDisplayFlag) {
-                    this.openDialogSignal.dispatch(new FriendListView());
+                    this.openDialogSignal.dispatch(new FriendListView(gs_.map.player_));
                 }
                 else {
                     this.closeDialogSignal.dispatch();
