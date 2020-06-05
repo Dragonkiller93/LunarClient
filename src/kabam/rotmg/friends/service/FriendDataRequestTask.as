@@ -3,6 +3,7 @@ import kabam.lib.tasks.BaseTask;
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.appengine.api.AppEngineClient;
 
+
 public class FriendDataRequestTask extends BaseTask {
 
     [Inject]
@@ -21,7 +22,12 @@ public class FriendDataRequestTask extends BaseTask {
 
     private function onComplete(_arg_1:Boolean, _arg_2:*):void {
         if (_arg_1) {
-            this.xml = new XML(_arg_2);
+            try {
+                this.xml = new XML(_arg_2);
+            }
+            catch (e:Error){
+                //This is a typeError being thrown upon trying to read xml.
+            }
             completeTask(true);
         }
         else {

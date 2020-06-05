@@ -129,6 +129,7 @@ public class EmbeddedAssets {
     public static var cursorsEmbed_:Class = EmbeddedAssets_cursorsEmbed_;
     public static var AddedItemsEmbed_:Class = EmbeddedAssets_AddedItemsEmbed_;
     public static var LunarOuroboros_:Class = Lunar_Band_of_Ouroboros;
+    public static var LunarTieredItems_:Class = Lunar_Tiered_Items;
     public static var models_:Object = {
         "Monster Tank1": new monsterTank1Embed_(),
         "Monster Tank2": new monsterTank2Embed_(),

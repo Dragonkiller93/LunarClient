@@ -1438,6 +1438,12 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                 case StatData.NUM_STARS_STAT:
                     _local_4.numStars_ = _local_8;
                     break;
+                case StatData.subclass:
+                    _local_4.subclass=_local_8;
+                    break;
+                case StatData.feats:
+                    _local_4.feats=_local_8;
+                    break;
                 case StatData.NAME_STAT:
                     if (_arg_1.name_ != _local_7.strStatValue_) {
                         _arg_1.name_ = _local_7.strStatValue_;

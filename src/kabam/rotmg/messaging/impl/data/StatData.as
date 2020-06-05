@@ -5,7 +5,8 @@ import flash.utils.IDataOutput;
 import kabam.rotmg.text.model.TextKey;
 
 public class StatData {
-
+    public static const subclass:int = -1;
+    public static const feats:int = -1;
     public static const MAX_HP_STAT:int = 0;
     public static const HP_STAT:int = 1;
     public static const SIZE_STAT:int = 2;

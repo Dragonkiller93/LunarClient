@@ -17,8 +17,10 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.FocusEvent;
 import flash.events.MouseEvent;
+import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
+import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.friends.model.FriendConstant;
 import kabam.rotmg.friends.model.FriendVO;
@@ -41,6 +43,7 @@ public class FriendListView extends Sprite implements DialogCloser {
     public var closeDialogSignal:Signal;
     public var actionSignal;
     public var tabSignal;
+    private var title:TextFieldDisplayConcrete;
     public var _tabView:FriendTabView;
     public var _w:int;
     public var _h:int;
@@ -75,8 +78,12 @@ public class FriendListView extends Sprite implements DialogCloser {
     }
 
     public function init():void {
+        if(this.player_.subclass==-1){
+            this.drawChooseClass();
+        }
+        else{
 
-        this.drawBackground();
+        }
         this.closeButton.addEventListener(MouseEvent.CLICK,this.onRemovedFromStage);
         this.closeButton.x =  780;
         addChild(closeButton);
@@ -87,13 +94,7 @@ public class FriendListView extends Sprite implements DialogCloser {
         while (numChildren > 0) {
             this.removeChildAt((numChildren - 1));
         }
-        this._addButton = null;
-        this._tabView.destroy();
-        this._tabView = null;
-        this._nameInput.removeEventListener(FocusEvent.FOCUS_IN, this.onFocusIn);
-        this._nameInput = null;
-        this._friendsContainer = null;
-        this._invitationsContainer = null;
+        this.title = null;
     }
 
     public function updateFriendTab(_arg_1:Vector.<FriendVO>, _arg_2:String):void {
@@ -179,11 +180,45 @@ public class FriendListView extends Sprite implements DialogCloser {
     }
 
     private function drawBackground():void {
-            graphics.clear();
-            graphics.beginFill(0x2B2B2B, 0.8);
-            graphics.drawRect(0, 0, 800, 600);
-            graphics.endFill();
 
+
+
+    }
+    private function drawChooseClass():void{
+        graphics.clear();
+        graphics.beginFill(0x000000, 0.8);
+        graphics.drawRect(0, 0, 800, 600);
+        graphics.endFill();
+        graphics.lineStyle(1, 0x5E5E5E);
+        graphics.moveTo(0, 50);
+        graphics.lineTo(800, 50);
+        graphics.lineStyle();
+        this.title = new TextFieldDisplayConcrete();
+        this.title.setSize(18).setColor(0xFFFFFF).setTextWidth(150);
+        this.title.setBold(true).setWordWrap(true).setMultiLine(true).setHorizontalAlign(TextFormatAlign.CENTER);
+        this.title.textField= new TextField();
+        this.title.setStringBuilder(new LineBuilder().setParams("Choose a class!"));
+        this.title.filters = [new DropShadowFilter(0, 0, 0)];
+        this.title.x = 310;
+        this.title.y = 10;
+        this.title.addChild(this.title.textField);
+        this.addChild(title);
+        graphics.lineStyle(1,0xFFFFFF);
+        graphics.moveTo(200,50);
+        graphics.lineTo(200,600);
+        graphics.lineStyle();
+        graphics.lineStyle(1,0xFFFFFF);
+        graphics.moveTo(400,50);
+        graphics.lineTo(400,600);
+        graphics.lineStyle();
+        graphics.lineStyle(1,0xFFFFFF);
+        graphics.moveTo(600,50);
+        graphics.lineTo(600,600);
+        graphics.lineStyle();
+        graphics.lineStyle(1,0xFFFFFF);
+        graphics.moveTo(0,325);
+        graphics.lineTo(800,325);
+        graphics.lineStyle();
     }
 
 

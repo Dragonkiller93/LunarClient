@@ -69,6 +69,7 @@ public class Player extends Character {
     private static const MIN_ATTACK_MULT:Number = 0.5;
     private static const MAX_ATTACK_MULT:Number = 2;
 
+
     public var xpTimer:int;
     public var skinId:int;
     public var skin:AnimatedChar;
@@ -126,6 +127,8 @@ public class Player extends Character {
     public var nextTeleportAt_:int = 0;
     public var dropBoost:int = 0;
     public var tierBoost:int = 0;
+    public var subclass:int=-1;
+    public var feats:int=-1;
     protected var healingEffect_:HealingEffect = null;
     protected var nearestMerchant_:Merchant = null;
     public var isDefaultAnimatedChar:Boolean = true;
@@ -803,7 +806,12 @@ public class Player extends Character {
         }
         var _local_9:BitmapData = texturingCache_[_local_8];
         if (_local_9 == null) {
-            _local_9 = GlowRedrawer.outlineGlow(_local_8, (((this.legendaryRank_ == -1)) ? 0 : 0xFF0000));
+            if(this.legendaryRank_!=-1) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0xFF0000);
+            else if(this.level_ >40) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0xFFB404);
+            else if(this.level_ > 30) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0x0000FF);
+            else if(this.level_>20) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0xFF00FF);
+            else _local_9=GlowRedrawer.outlineGlow(_local_9,0);
+
             texturingCache_[_local_8] = _local_9;
         }
         if (((((isPaused()) || (isStasis()))) || (isPetrified()))) {

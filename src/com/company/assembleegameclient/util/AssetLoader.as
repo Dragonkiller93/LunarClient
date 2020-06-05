@@ -18,6 +18,7 @@ import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedAssets_AddedItemsEmbed_;
 import kabam.rotmg.assets.EmbeddedData;
 import kabam.rotmg.assets.Lunar_Band_of_Ouroboros;
+import kabam.rotmg.assets.Lunar_Tiered_Items;
 
 public class AssetLoader {
 
@@ -89,6 +90,7 @@ public class AssetLoader {
         AssetLibrary.addImageSet("cursorsEmbed", new EmbeddedAssets.cursorsEmbed_().bitmapData, 32, 32);
         AssetLibrary.addImageSet("AddedItems", new EmbeddedAssets.AddedItemsEmbed_().bitmapData,8,8);
         AssetLibrary.addImageSet("Ouroboros", new EmbeddedAssets.LunarOuroboros_().bitmapData,16,16);
+        AssetLibrary.addImageSet("LunarTieredItems", new EmbeddedAssets.LunarTieredItems_().bitmapData,8,8);
     }
 
     private function addAnimatedCharacters():void {
