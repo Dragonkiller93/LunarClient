@@ -810,7 +810,7 @@ public class Player extends Character {
             else if(this.level_ >40) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0xFFB404);
             else if(this.level_ > 30) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0x0000FF);
             else if(this.level_>20) _local_9 = GlowRedrawer.outlineGlow(_local_8, 0xFF00FF);
-            else _local_9=GlowRedrawer.outlineGlow(_local_9,0);
+            else _local_9=GlowRedrawer.outlineGlow(_local_8,0);
 
             texturingCache_[_local_8] = _local_9;
         }
