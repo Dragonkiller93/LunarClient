@@ -169,7 +169,22 @@
    <Region type="0x29" id="Arena Edge Spawn">
       <Color>0xFFF700</Color>
    </Region>
-   <Region type="0x30" id="Quest Monster Region">
+   <Region type="0x3a" id="Quest Monster Region">
       <Color>0xFFF723</Color>
+   </Region>
+   <Region type="0x3b" id="Market_Weapons">
+      <Color>0xFF0000</Color>
+   </Region>
+   <Region type="0x3c" id="Market_Abilities">
+      <Color>0xFFFF00</Color>
+   </Region>
+   <Region type="0x3d" id="Market_Armor">
+      <Color>0xFFFFFF</Color>
+   </Region>
+   <Region type="0x3e" id="Market_Rings">
+      <Color>0xFF00FF</Color>
+   </Region>
+   <Region type="0x3f" id="Market_Consumables">
+      <Color>0x00FFFF</Color>
    </Region>
 </Regions>
