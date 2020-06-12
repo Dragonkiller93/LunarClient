@@ -9,6 +9,7 @@ import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
 import com.company.assembleegameclient.objects.Container;
 import com.company.assembleegameclient.objects.FlashDescription;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Marketer;
 import com.company.assembleegameclient.objects.Merchant;
 import com.company.assembleegameclient.objects.NameChanger;
 import com.company.assembleegameclient.objects.ObjectLibrary;
@@ -1438,10 +1439,10 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                 case StatData.NUM_STARS_STAT:
                     _local_4.numStars_ = _local_8;
                     break;
-                case StatData.subclass:
+                case StatData.SUBCLASS:
                     _local_4.subclass=_local_8;
                     break;
-                case StatData.feats:
+                case StatData.FEAT:
                     _local_4.feats=_local_8;
                     break;
                 case StatData.NAME_STAT:
@@ -1598,6 +1599,12 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     break;
                 case StatData.NEW_CON_STAT:
                     _arg_1.condition_[ConditionEffect.CE_SECOND_BATCH] = _local_8;
+                    break;
+                case StatData.MARKET_PRICE:
+                    (_arg_1 as Marketer).price_=_local_8;
+                    break;
+                case StatData.MARKET_TYPE:
+                    _local_5.setMerchandiseType(_local_8);
                     break;
             }
         }

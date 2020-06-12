@@ -52,6 +52,7 @@ public class ObjectLibrary {
         "GuildMerchant": GuildMerchant,
         "GuildRegister": GuildRegister,
         "Merchant": Merchant,
+        "Marketer":Marketer,
         "MoneyChanger": MoneyChanger,
         "MysteryBoxGround": MysteryBoxGround,
         "NameChanger": NameChanger,

@@ -5,8 +5,7 @@ import flash.utils.IDataOutput;
 import kabam.rotmg.text.model.TextKey;
 
 public class StatData {
-    public static const subclass:int = -1;
-    public static const feats:int = -1;
+
     public static const MAX_HP_STAT:int = 0;
     public static const HP_STAT:int = 1;
     public static const SIZE_STAT:int = 2;
@@ -102,6 +101,10 @@ public class StatData {
     public static const PET_THIRDABILITY_TYPE_STAT:int = 95;
     public static const NEW_CON_STAT:int = 96;
     public static const FORTUNE_TOKEN_STAT:int = 97;
+    public static const SUBCLASS:int = 98;
+    public static const FEAT:int = 99;
+    public static const MARKET_TYPE:int = 100;
+    public static const MARKET_PRICE :int = 101;
 
     public var statType_:uint = 0;
     public var statValue_:int;
