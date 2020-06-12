@@ -1,4 +1,5 @@
 ﻿package kabam.rotmg.packages.view {
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.AssetLibrary;
 
@@ -21,8 +22,9 @@ public class GoldDisplay extends Sprite {
     }
 
     public function init():void {
-        var _local_1:BitmapData = AssetLibrary.getImageFromSet("lofiObj3", 225);
-        _local_1 = TextureRedrawer.redraw(_local_1, 40, true, 0);
+        var _local_1:BitmapData = AssetLibrary.getImageFromSet("LunarGold", 0);
+        _local_1 = ObjectLibrary.shrinkToFit(_local_1, 8, true, 0);
+
         this.graphic = new Bitmap(_local_1);
         addChild(this.graphic);
         addChild(this.text);

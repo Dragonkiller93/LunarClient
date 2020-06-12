@@ -188,7 +188,21 @@ public class ObjectLibrary {
         _local_6 = GlowRedrawer.outlineGlow(_local_6, 0);
         return (_local_6);
     }
+    public static function shrinkToFit(_arg_1:BitmapData,_arg_2:int,_arg_3:Boolean, _arg_4:Boolean = true, _arg_5:Number = 5):BitmapData {
 
+        _arg_2=8;
+        var _local_7:TextureData = typeToTextureData_[_arg_1];
+        var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
+        if (_local_8 == null) {
+            return (TextureRedrawer.redraw(_arg_1, _arg_2, _arg_3, 0, _arg_4, _arg_5));
+        }
+        var _local_9:XML = xmlLibrary_[_arg_1];
+        var _local_10:int = ((_local_9.hasOwnProperty("Tex1")) ? int(_local_9.Tex1) : 0);
+        var _local_11:int = ((_local_9.hasOwnProperty("Tex2")) ? int(_local_9.Tex2) : 0);
+        _arg_1 = TextureRedrawer.resize(_arg_1, _local_8, _arg_2, _arg_3, _local_10, _local_11, _arg_5);
+        _arg_1 = GlowRedrawer.outlineGlow(_arg_1, 0);
+        return (_arg_1);
+    }
     public static function getSizeFromType(_arg_1:int):int {
         var _local_2:XML = xmlLibrary_[_arg_1];
         if (!_local_2.hasOwnProperty("Size")) {

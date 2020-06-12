@@ -1,5 +1,6 @@
 ﻿package kabam.rotmg.game.view {
 import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.FameUtil;
 import com.company.assembleegameclient.util.TextureRedrawer;
@@ -25,8 +26,8 @@ import org.osflash.signals.Signal;
 public class CreditDisplay extends Sprite {
 
     private static const FONT_SIZE:int = 18;
-    public static const IMAGE_NAME:String = "lofiObj3";
-    public static const IMAGE_ID:int = 225;
+    public static const IMAGE_NAME:String = "LunarGold";
+    public static const IMAGE_ID:int = 0;
     public static const waiter:SignalWaiter = new SignalWaiter();
 
     private var creditsText_:TextFieldDisplayConcrete;
@@ -57,7 +58,7 @@ public class CreditDisplay extends Sprite {
         waiter.push(this.creditsText_.textChanged);
         addChild(this.creditsText_);
         var _local_5:BitmapData = AssetLibrary.getImageFromSet(IMAGE_NAME, IMAGE_ID);
-        _local_5 = TextureRedrawer.redraw(_local_5, 40, true, 0);
+        _local_5 = ObjectLibrary.shrinkToFit(_local_5,8,true,0);
         this.coinIcon_ = new Bitmap(_local_5);
         addChild(this.coinIcon_);
         if (this.displayFame_) {

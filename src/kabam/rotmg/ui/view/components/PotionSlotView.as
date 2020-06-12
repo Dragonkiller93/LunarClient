@@ -75,8 +75,8 @@ public class PotionSlotView extends Sprite {
         mouseChildren = false;
         this.position = _arg_2;
         this.grayscaleMatrix = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
-        _local_3 = AssetLibrary.getImageFromSet("lofiObj3", 225);
-        _local_3 = TextureRedrawer.redraw(_local_3, 30, false, 0);
+        _local_3 = AssetLibrary.getImageFromSet("LunarGold", 0);
+        _local_3 = ObjectLibrary.shrinkToFit(_local_3, 8, false , 0);
         this.text = new TextFieldDisplayConcrete().setSize(13).setColor(0xFFFFFF).setTextWidth(BUTTON_WIDTH).setTextHeight(BUTTON_HEIGHT);
         this.text.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
         this.text.y = 4;

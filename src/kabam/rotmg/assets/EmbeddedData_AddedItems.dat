@@ -1228,7 +1228,6 @@
     <BagType>6</BagType>
     <FameBonus>5</FameBonus>
     <feedPower>0</feedPower>
-    <Soulbound />
     <DisplayId>Boshy Gun</DisplayId>
   </Object>
        <Object type="0x66e4" id="Flaming Boomerang">
@@ -2671,7 +2670,6 @@
            <BagType>6</BagType>
            <FameBonus>5</FameBonus>
            <feedPower>0</feedPower>
-           <Soulbound />
            <DisplayId>FireStorm</DisplayId>
          </Object>
        <Object type="0x6725" id="Mega Blaster">
@@ -2721,7 +2719,6 @@
            <Activate effect="Invisible" duration="7">ConditionEffectSelf</Activate>
            <Cooldown>10</Cooldown>
            <feedPower>0</feedPower>
-           <Soulbound />
            <DisplayId>Kid Cape</DisplayId>
          </Object>
        <Object type="0x6727" id="ZSaber">
@@ -2749,7 +2746,6 @@
            <BagType>6</BagType>
            <FameBonus>6</FameBonus>
            <feedPower>5</feedPower>
-           <Soulbound/>
            <DisplayId>Z-Saber</DisplayId>
          </Object>
        <Object type="0x6728" id="Staff of Insanity">
@@ -2804,7 +2800,6 @@
            <BagType>6</BagType>
            <FameBonus>5</FameBonus>
            <feedPower>450</feedPower>
-           <Soulbound/>
            <DisplayId>Gladius of Hell's Forge</DisplayId>
          </Object>
        <Object type="0x672a" id="Unholy Wand">
@@ -2993,7 +2988,6 @@
       <File>Ouroboros</File>
     </Texture>
     <SlotType>9</SlotType>
-    <Soulbound/>
     <Description>{equip.An_amulet_that_provides_helpful_benefits_at_the_cost_of_rai}</Description>
     <Resurrects/>
     <ActivateOnEquip stat="20" amount="1">IncrementStat</ActivateOnEquip>

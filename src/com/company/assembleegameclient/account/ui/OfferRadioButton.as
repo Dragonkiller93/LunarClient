@@ -1,6 +1,7 @@
 ﻿package com.company.assembleegameclient.account.ui {
 import com.company.assembleegameclient.account.ui.components.BackgroundBox;
 import com.company.assembleegameclient.account.ui.components.Selectable;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.offer.Offer;
 import com.company.util.AssetLibrary;
@@ -97,9 +98,8 @@ public class OfferRadioButton extends Sprite implements Selectable {
     }
 
     private function makeCoinImage():void {
-        this.coinBitmap = AssetLibrary.getImageFromSet("lofiObj3", 225);
-        this.coinBitmap = TextureRedrawer.redraw(this.coinBitmap, 50, true, 0, false);
-        this.coinBitmap = BitmapUtil.cropToBitmapData(this.coinBitmap, 8, 8, (this.coinBitmap.width - 16), (this.coinBitmap.height - 16));
+        this.coinBitmap = AssetLibrary.getImageFromSet("LunarGold", 0);
+        this.coinBitmap = ObjectLibrary.shrinkToFit(this.coinBitmap, 48, true, 0);
         var _local_1:Bitmap = new Bitmap(this.coinBitmap);
         _local_1.x = (this.toggle.x + 35);
         this.container.addChild(_local_1);

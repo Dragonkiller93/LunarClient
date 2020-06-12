@@ -11,7 +11,7 @@ public class IconFactory {
 
 
     public static function makeCoin():BitmapData {
-        var _local_1:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("lofiObj3", 225), null, 40, true, 0, 0);
+        var _local_1:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("LunarGold", 0), null, 40, true, 0, 0);
         return (cropAndGlowIcon(_local_1));
     }
 

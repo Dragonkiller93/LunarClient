@@ -435,7 +435,6 @@
       <Description>A map that reveals the way to hidden treasure.</Description>
       <Sound>use_key</Sound>
       <Consumable/>
-      <Soulbound/>
       <Activate id="Treasure Cave Portal">Create</Activate>
       <feedPower>250</feedPower>
       <DisplayId>{cave.Treasure_Map}</DisplayId>

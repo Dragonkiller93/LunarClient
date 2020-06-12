@@ -340,7 +340,6 @@
       <FameBonus>4</FameBonus>
       <OldSound>bladeSwing</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Sword_of_Splendor}</DisplayId>
    </Object>
    <Object type="0x9c9" id="Sword of Majesty">
@@ -366,7 +365,6 @@
       <FameBonus>5</FameBonus>
       <OldSound>bladeSwing</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Sword_of_Majesty}</DisplayId>
    </Object>
 <Object type="0xa04" id="Fire Wand">
@@ -722,7 +720,6 @@
       <FameBonus>4</FameBonus>
       <OldSound>magicShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Wand_of_Evocation}</DisplayId>
    </Object>
    <Object type="0x9c0" id="Wand of Retribution">
@@ -748,7 +745,6 @@
       <FameBonus>5</FameBonus>
       <OldSound>magicShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Wand_of_Retribution}</DisplayId>
    </Object>
 <Object type="0xa14" id="Steel Dagger">
@@ -1092,7 +1088,6 @@
       <FameBonus>4</FameBonus>
       <OldSound>daggerSwing</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Dagger_of_Sinister_Deeds}</DisplayId>
    </Object>
    <Object type="0x9c7" id="Dagger of Dire Hatred">
@@ -1118,7 +1113,6 @@
       <FameBonus>5</FameBonus>
       <OldSound>daggerSwing</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Dagger_of_Dire_Hatred}</DisplayId>
    </Object>
 <Object type="0xa1a" id="Shortbow">
@@ -1482,7 +1476,6 @@
       <NumProjectiles>3</NumProjectiles>
       <OldSound>arrowShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Bow_of_Mystical_Energy}</DisplayId>
    </Object>
    <Object type="0x9cd" id="Bow of Deep Enchantment">
@@ -1510,7 +1503,6 @@
       <NumProjectiles>3</NumProjectiles>
       <OldSound>arrowShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Bow_of_Deep_Enchantment}</DisplayId>
    </Object>
 <Object type="0xa97" id="Energy Staff">
@@ -1909,7 +1901,6 @@
       <ArcGap>0</ArcGap>
       <OldSound>magicShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Staff_of_the_Vital_Unity}</DisplayId>
    </Object>
    <Object type="0x910" id="Staff of the Fundamental Core">
@@ -1939,7 +1930,6 @@
       <ArcGap>0</ArcGap>
       <OldSound>magicShoot</OldSound>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Staff_of_the_Fundamental_Core}</DisplayId>
    </Object>
 <Object type="0xc44" id="Rusty Katana">
@@ -2571,7 +2561,6 @@
       <BagType>4</BagType>
       <FameBonus>5</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Robe_of_the_Star_Mother}</DisplayId>
    </Object>
    <Object type="0x9d0" id="Robe of the Ancient Intellect">
@@ -2591,7 +2580,6 @@
       <BagType>4</BagType>
       <FameBonus>6</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Robe_of_the_Ancient_Intellect}</DisplayId>
    </Object>
    <Object type="0xa78" id="Wolfskin Armor">
@@ -2820,7 +2808,6 @@
       <BagType>4</BagType>
       <FameBonus>5</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Wyrmhide_Armor}</DisplayId>
    </Object>
    <Object type="0x9c3" id="Leviathan Armor">
@@ -2838,7 +2825,6 @@
       <BagType>4</BagType>
       <FameBonus>6</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Leviathan_Armor}</DisplayId>
    </Object>
    <Object type="0xa7b" id="Iron Mail">
@@ -3056,7 +3042,6 @@
       <BagType>4</BagType>
       <FameBonus>5</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Dominion_Armor}</DisplayId>
    </Object>
    <Object type="0x9c5" id="Annihilation Armor">
@@ -3073,7 +3058,6 @@
       <BagType>4</BagType>
       <FameBonus>6</FameBonus>
       <feedPower>0</feedPower>
-      <Soulbound/>
       <DisplayId>{equip.Annihilation_Armor}</DisplayId>
    </Object>
 </Objects>

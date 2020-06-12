@@ -19,7 +19,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1300" id="Small Purple Pinstripe Cloth">
@@ -40,7 +39,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1201" id="Large Brown Lined Cloth">
@@ -61,7 +59,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1301" id="Small Brown Lined Cloth">
@@ -82,7 +79,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1202" id="Large Blue Striped Cloth">
@@ -103,7 +99,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1302" id="Small Blue Striped Cloth">
@@ -124,7 +119,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1203" id="Large Black Striped Cloth">
@@ -145,7 +139,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1303" id="Small Black Striped Cloth">
@@ -166,7 +159,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1204" id="Large Rainbow Cloth">
@@ -187,7 +179,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1304" id="Small Rainbow Cloth">
@@ -208,7 +199,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1205" id="Large Starry Cloth">
@@ -229,7 +219,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1305" id="Small Starry Cloth">
@@ -250,7 +239,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1206" id="Large Brown Stitch Cloth">
@@ -271,7 +259,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1306" id="Small Brown Stitch Cloth">
@@ -292,7 +279,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1207" id="Large Tan Diamond Cloth">
@@ -313,7 +299,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1307" id="Small Tan Diamond Cloth">
@@ -334,7 +319,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1208" id="Large Green Weave Cloth">
@@ -355,7 +339,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1308" id="Small Green Weave Cloth">
@@ -376,7 +359,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1209" id="Large Blue Wave Cloth">
@@ -397,7 +379,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1309" id="Small Blue Wave Cloth">
@@ -418,7 +399,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120a" id="Large Yellow Wire Cloth">
@@ -439,7 +419,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130a" id="Small Yellow Wire Cloth">
@@ -460,7 +439,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120b" id="Large Futuristic Cloth">
@@ -481,7 +459,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130b" id="Small Futuristic Cloth">
@@ -502,7 +479,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120c" id="Large Stony Cloth">
@@ -523,7 +499,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130c" id="Small Stony Cloth">
@@ -544,7 +519,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120d" id="Large Heart Cloth">
@@ -565,7 +539,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130d" id="Small Heart Cloth">
@@ -586,7 +559,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120e" id="Large Skull Cloth">
@@ -607,7 +579,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130e" id="Small Skull Cloth">
@@ -628,7 +599,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x120f" id="Large Red Diamond Cloth">
@@ -649,7 +619,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x130f" id="Small Red Diamond Cloth">
@@ -670,7 +639,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1210" id="Large Jester Cloth">
@@ -691,7 +659,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1310" id="Small Jester Cloth">
@@ -712,7 +679,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1211" id="Large Crossbox Cloth">
@@ -733,7 +699,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1311" id="Small Crossbox Cloth">
@@ -754,7 +719,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1212" id="Large White Diamond Cloth">
@@ -775,7 +739,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1312" id="Small White Diamond Cloth">
@@ -796,7 +759,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1213" id="Large Grey Scaly Cloth">
@@ -817,7 +779,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1313" id="Small Grey Scaly Cloth">
@@ -838,7 +799,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1214" id="Large Red Spotted Cloth">
@@ -859,7 +819,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1314" id="Small Red Spotted Cloth">
@@ -880,7 +839,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1215" id="Large Smiley Cloth">
@@ -901,7 +859,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1315" id="Small Smiley Cloth">
@@ -922,7 +879,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1216" id="Large Bold Diamond Cloth">
@@ -943,7 +899,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1316" id="Small Bold Diamond Cloth">
@@ -964,7 +919,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1217" id="Large Blue Lace Cloth">
@@ -985,7 +939,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1317" id="Small Blue Lace Cloth">
@@ -1006,7 +959,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1218" id="Large Loud Spotted Cloth">
@@ -1027,7 +979,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1318" id="Small Loud Spotted Cloth">
@@ -1048,7 +999,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1219" id="Large Red Weft Cloth">
@@ -1069,7 +1019,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1319" id="Small Red Weft Cloth">
@@ -1090,7 +1039,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121a" id="Large Pink Sparkly Cloth">
@@ -1111,7 +1059,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131a" id="Small Pink Sparkly Cloth">
@@ -1132,7 +1079,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121b" id="Large Red Lace Cloth">
@@ -1153,7 +1099,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131b" id="Small Red Lace Cloth">
@@ -1174,7 +1119,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121c" id="Large Pink Maze Cloth">
@@ -1195,7 +1139,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131c" id="Small Pink Maze Cloth">
@@ -1216,7 +1159,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121d" id="Large Yellow Dot Cloth">
@@ -1237,7 +1179,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131d" id="Small Yellow Dot Cloth">
@@ -1258,7 +1199,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121e" id="Large Cloud Cloth">
@@ -1279,7 +1219,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131e" id="Small Cloud Cloth">
@@ -1300,7 +1239,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x121f" id="Large Glowthread Cloth">
@@ -1321,7 +1259,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x131f" id="Small Glowthread Cloth">
@@ -1342,7 +1279,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1220" id="Large Sweater Cloth">
@@ -1363,7 +1299,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1320" id="Small Sweater Cloth">
@@ -1384,7 +1319,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1221" id="Large Bee Stripe Cloth">
@@ -1405,7 +1339,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1321" id="Small Bee Stripe Cloth">
@@ -1426,7 +1359,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1222" id="Large Western Stripe Cloth">
@@ -1447,7 +1379,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1322" id="Small Western Stripe Cloth">
@@ -1468,7 +1399,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1223" id="Large Blue Point Cloth">
@@ -1489,7 +1419,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1323" id="Small Blue Point Cloth">
@@ -1510,7 +1439,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1224" id="Large Robber Cloth">
@@ -1531,7 +1459,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1324" id="Small Robber Cloth">
@@ -1552,7 +1479,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1225" id="Large Chainmail Cloth">
@@ -1573,7 +1499,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1325" id="Small Chainmail Cloth">
@@ -1594,7 +1519,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1226" id="Large Dark Blue Stripe Cloth">
@@ -1615,7 +1539,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1326" id="Small Dark Blue Stripe Cloth">
@@ -1636,7 +1559,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1227" id="Large Vine Cloth">
@@ -1657,7 +1579,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1327" id="Small Vine Cloth">
@@ -1678,7 +1599,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1228" id="Large Party Cloth">
@@ -1699,7 +1619,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1328" id="Small Party Cloth">
@@ -1720,7 +1639,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1229" id="Large Viva Cloth">
@@ -1741,7 +1659,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1329" id="Small Viva Cloth">
@@ -1762,7 +1679,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122a" id="Large Nautical Cloth">
@@ -1783,7 +1699,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132a" id="Small Nautical Cloth">
@@ -1804,7 +1719,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122b" id="Large Cactus Zag Cloth">
@@ -1825,7 +1739,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132b" id="Small Cactus Zag Cloth">
@@ -1846,7 +1759,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122c" id="Large Big-Stripe Blue Cloth">
@@ -1867,7 +1779,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132c" id="Small Big-Stripe Blue Cloth">
@@ -1888,7 +1799,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122d" id="Large Big-Stripe Red Cloth">
@@ -1909,7 +1819,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132d" id="Small Big-Stripe Red Cloth">
@@ -1930,7 +1839,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122e" id="Large Starry Night Cloth">
@@ -1951,7 +1859,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132e" id="Small Starry Night Cloth">
@@ -1972,7 +1879,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x122f" id="Large Lemon-Lime Cloth">
@@ -1993,7 +1899,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x132f" id="Small Lemon-Lime Cloth">
@@ -2014,7 +1919,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1230" id="Large Floral Cloth">
@@ -2035,7 +1939,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1330" id="Small Floral Cloth">
@@ -2056,7 +1959,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1231" id="Large Pink Dot Cloth">
@@ -2077,7 +1979,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1331" id="Small Pink Dot Cloth">
@@ -2098,7 +1999,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1232" id="Large Dark Eyes Cloth">
@@ -2119,7 +2019,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1332" id="Small Dark Eyes Cloth">
@@ -2140,7 +2039,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1233" id="Large Wind Cloth">
@@ -2161,7 +2059,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1333" id="Small Wind Cloth">
@@ -2182,7 +2079,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1234" id="Large Shamrock Cloth">
@@ -2203,7 +2099,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1334" id="Small Shamrock Cloth">
@@ -2224,7 +2119,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1235" id="Large Bright Stripes Cloth">
@@ -2245,7 +2139,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1335" id="Small Bright Stripes Cloth">
@@ -2266,7 +2159,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1236" id="Large USA Flag Cloth">
@@ -2287,7 +2179,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1336" id="Small USA Flag Cloth">
@@ -2308,7 +2199,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1237" id="Large Flannel Cloth">
@@ -2329,7 +2219,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1337" id="Small Flannel Cloth">
@@ -2350,7 +2239,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1238" id="Large Cow Print Cloth">
@@ -2371,7 +2259,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1338" id="Small Cow Print Cloth">
@@ -2392,7 +2279,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1239" id="Large Lush Camo Cloth">
@@ -2413,7 +2299,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1339" id="Small Lush Camo Cloth">
@@ -2434,7 +2319,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123a" id="Large Dark Camo Cloth">
@@ -2455,7 +2339,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133a" id="Small Dark Camo Cloth">
@@ -2476,7 +2359,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123b" id="Large Teal Crystal Cloth">
@@ -2497,7 +2379,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133b" id="Small Teal Crystal Cloth">
@@ -2518,7 +2399,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123c" id="Large Blue Fireworks Cloth">
@@ -2539,7 +2419,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133c" id="Small Blue Fireworks Cloth">
@@ -2560,7 +2439,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123d" id="Large Crisscross Cloth">
@@ -2581,7 +2459,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133d" id="Small Crisscross Cloth">
@@ -2602,7 +2479,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123e" id="Large Diamond Cloth">
@@ -2623,7 +2499,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133e" id="Small Diamond Cloth">
@@ -2644,7 +2519,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x123f" id="Large Egyptian Cloth">
@@ -2665,7 +2539,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x133f" id="Small Egyptian Cloth">
@@ -2686,7 +2559,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1240" id="Large Purple Bones Cloth">
@@ -2707,7 +2579,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1340" id="Small Purple Bones Cloth">
@@ -2728,7 +2599,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1241" id="Large Plaid Cloth">
@@ -2749,7 +2619,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1341" id="Small Plaid Cloth">
@@ -2770,7 +2639,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1242" id="Large Red USA Star Cloth">
@@ -2791,7 +2659,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1342" id="Small Red USA Star Cloth">
@@ -2812,7 +2679,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1243" id="Large Blue USA Star Cloth">
@@ -2833,7 +2699,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1343" id="Small Blue USA Star Cloth">
@@ -2854,7 +2719,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1244" id="Large USA Star Cloth">
@@ -2875,7 +2739,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1344" id="Small USA Star Cloth">
@@ -2896,7 +2759,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1245" id="Large Purple Stripes Cloth">
@@ -2917,7 +2779,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1345" id="Small Purple Stripes Cloth">
@@ -2938,7 +2799,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1246" id="Large Bright Floral Cloth">
@@ -2959,7 +2819,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1346" id="Small Bright Floral Cloth">
@@ -2980,7 +2839,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1247" id="Large Clanranald Cloth">
@@ -3001,7 +2859,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1347" id="Small Clanranald Cloth">
@@ -3022,7 +2879,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1248" id="Large American Flag Cloth">
@@ -3043,7 +2899,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1348" id="Small American Flag Cloth">
@@ -3064,7 +2919,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1249" id="Large Relief Cloth">
@@ -3085,7 +2939,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1349" id="Small Relief Cloth">
@@ -3106,7 +2959,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124a" id="Large Intense Clovers Cloth">
@@ -3127,7 +2979,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134a" id="Small Intense Clovers Cloth">
@@ -3148,7 +2999,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124b" id="Large Celtic Knot Cloth">
@@ -3169,7 +3019,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134b" id="Small Celtic Knot Cloth">
@@ -3190,7 +3039,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124c" id="Large Flame Cloth">
@@ -3211,7 +3059,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134c" id="Small Flame Cloth">
@@ -3232,7 +3079,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124d" id="Large Heavy Chainmail Cloth">
@@ -3253,7 +3099,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134d" id="Small Heavy Chainmail Cloth">
@@ -3274,7 +3119,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124e" id="Large Leopard Print Cloth">
@@ -3295,7 +3139,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134e" id="Small Leopard Print Cloth">
@@ -3316,7 +3159,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x124f" id="Large Zebra Print Cloth">
@@ -3337,7 +3179,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x134f" id="Small Zebra Print Cloth">
@@ -3358,7 +3199,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1250" id="Large Colored Egg Cloth">
@@ -3379,7 +3219,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1350" id="Small Colored Egg Cloth">
@@ -3400,7 +3239,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1251" id="Large Spring Cloth">
@@ -3421,7 +3259,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1351" id="Small Spring Cloth">
@@ -3442,7 +3279,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1252" id="Large Hibiscus Beach Wrap Cloth">
@@ -3463,7 +3299,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1352" id="Small Hibiscus Beach Wrap Cloth">
@@ -3484,7 +3319,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1253" id="Large Blue Camo Cloth">
@@ -3505,7 +3339,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1353" id="Small Blue Camo Cloth">
@@ -3526,7 +3359,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1254" id="Large Sunburst Cloth">
@@ -3547,7 +3379,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1354" id="Small Sunburst Cloth">
@@ -3568,7 +3399,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1255" id="Large Ivory Dragon Scale Cloth">
@@ -3589,7 +3419,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1355" id="Small Ivory Dragon Scale Cloth">
@@ -3610,7 +3439,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1256" id="Large Green Dragon Scale Cloth">
@@ -3631,7 +3459,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1356" id="Small Green Dragon Scale Cloth">
@@ -3652,7 +3479,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1257" id="Large Midnight Dragon Scale Cloth">
@@ -3673,7 +3499,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1357" id="Small Midnight Dragon Scale Cloth">
@@ -3694,7 +3519,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1258" id="Large Blue Dragon Scale Cloth">
@@ -3715,7 +3539,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1358" id="Small Blue Dragon Scale Cloth">
@@ -3736,7 +3559,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1259" id="Large Red Dragon Scale Cloth">
@@ -3757,7 +3579,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x1359" id="Small Red Dragon Scale Cloth">
@@ -3778,7 +3599,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x125a" id="Large Jester Argyle Cloth">
@@ -3799,7 +3619,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x135a" id="Small Jester Argyle Cloth">
@@ -3820,7 +3639,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x125b" id="Large Alchemist Cloth">
@@ -3841,7 +3659,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x135b" id="Small Alchemist Cloth">
@@ -3862,7 +3679,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x125c" id="Large Spooky Cloth">
@@ -3883,7 +3699,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x135c" id="Small Spooky Cloth">
@@ -3904,7 +3719,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x125d" id="Large Mosaic Cloth">
@@ -3925,7 +3739,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
    <Object type="0x135d" id="Small Mosaic Cloth">
@@ -3946,7 +3759,6 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Consumable/>
-      <Soulbound/>
       <BagType>2</BagType>
    </Object>
 </Objects>

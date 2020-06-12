@@ -1,5 +1,6 @@
 package kabam.rotmg.lunarmarket.utils
 {
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.AssetLibrary;
 
@@ -15,10 +16,10 @@ public class IconUtils
     }
 
     /* Draw the gold icon */
-    public static function getCoinIcon(size:int = 40) : BitmapData
-    {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        return TextureRedrawer.redraw(fameBD,size,true,0);
+    public static function getCoinIcon(size:int = 40) : BitmapData {
+        var fameBD:BitmapData = AssetLibrary.getImageFromSet("LunarGold", 0);
+        fameBD = ObjectLibrary.shrinkToFit(fameBD, 50, true, 0);
+        return fameBD;
     }
 }
 }

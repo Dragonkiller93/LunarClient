@@ -14,7 +14,6 @@
       <PetId>Black Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Black_Cat_Egg}</DisplayId>
    </Object>
@@ -31,7 +30,6 @@
       <PetId>Grey Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grey_Cat_Egg}</DisplayId>
    </Object>
@@ -48,7 +46,6 @@
       <PetId>Orange Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Orange_Cat_Egg}</DisplayId>
    </Object>
@@ -65,7 +62,6 @@
       <PetId>Tan Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Tan_Cat_Egg}</DisplayId>
    </Object>
@@ -82,7 +78,6 @@
       <PetId>Yellow Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Yellow_Cat_Egg}</DisplayId>
    </Object>
@@ -99,7 +94,6 @@
       <PetId>Brown Pup</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Brown_Pup_Egg}</DisplayId>
    </Object>
@@ -116,7 +110,6 @@
       <PetId>Grey Pup</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grey_Pup_Egg}</DisplayId>
    </Object>
@@ -133,7 +126,6 @@
       <PetId>Golden Pup</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Golden_Pup_Egg}</DisplayId>
    </Object>
@@ -150,7 +142,6 @@
       <PetId>White Cat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.White_Cat_Egg}</DisplayId>
    </Object>
@@ -167,7 +158,6 @@
       <PetId>Blue Snail</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Blue_Snail_Egg}</DisplayId>
    </Object>
@@ -184,7 +174,6 @@
       <PetId>Grey Wolf</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grey_Wolf_Egg}</DisplayId>
    </Object>
@@ -201,7 +190,6 @@
       <PetId>Brown Fox</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Brown_Fox_Egg}</DisplayId>
    </Object>
@@ -218,7 +206,6 @@
       <PetId>Green Frog</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Green_Frog_Egg}</DisplayId>
    </Object>
@@ -236,7 +223,6 @@
       <PetSkin>Lion Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Lion_Egg}</DisplayId>
    </Object>
@@ -253,7 +239,6 @@
       <PetId>Penguin</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Penguin_Egg}</DisplayId>
    </Object>
@@ -270,7 +255,6 @@
       <PetId>Sheepdog</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Sheepdog_Egg}</DisplayId>
    </Object>
@@ -288,7 +272,6 @@
       <PetSkin>Panda Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Panda_Egg}</DisplayId>
    </Object>
@@ -305,7 +288,6 @@
       <PetId>Purple Snail</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Purple_Snail_Egg}</DisplayId>
    </Object>
@@ -323,7 +305,6 @@
       <PetSkin>Black Wolf Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Black_Wolf_Egg}</DisplayId>
    </Object>
@@ -340,7 +321,6 @@
       <PetId>Grey Fox</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grey_Fox_Egg}</DisplayId>
    </Object>
@@ -357,7 +337,6 @@
       <PetId>Purple Frog</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Purple_Frog_Egg}</DisplayId>
    </Object>
@@ -375,7 +354,6 @@
       <PetSkin>White Lion Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.White_Lion_Egg}</DisplayId>
    </Object>
@@ -392,7 +370,6 @@
       <PetId>Green Penguin</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Green_Penguin_Egg}</DisplayId>
    </Object>
@@ -410,7 +387,6 @@
       <PetSkin>Golden Sheepdog Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Golden_Sheepdog_Egg}</DisplayId>
    </Object>
@@ -427,7 +403,6 @@
       <PetId>Blue Parrot</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Blue_Parrot_Egg}</DisplayId>
    </Object>
@@ -444,7 +419,6 @@
       <PetId>Chick</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Chick_Egg}</DisplayId>
    </Object>
@@ -461,7 +435,6 @@
       <PetId>Pig</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Pig_Egg}</DisplayId>
    </Object>
@@ -478,7 +451,6 @@
       <PetId>Sea Slurp</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Sea_Slurp_Egg}</DisplayId>
    </Object>
@@ -495,7 +467,6 @@
       <PetId>Squirrel</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Squirrel_Egg}</DisplayId>
    </Object>
@@ -512,7 +483,6 @@
       <PetId>Bat</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Bat_Egg}</DisplayId>
    </Object>
@@ -529,7 +499,6 @@
       <PetId>Lil' Ghost</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.LilAPOS_Ghost_Egg}</DisplayId>
    </Object>
@@ -590,7 +559,6 @@
       <PetSkin>Leprechaun Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Leprechaun_Egg}</DisplayId>
    </Object>
@@ -608,7 +576,6 @@
       <PetSkin>Lil' Oryx Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.LilAPOS_Oryx_Egg}</DisplayId>
    </Object>
@@ -626,7 +593,6 @@
       <PetSkin>Toucan Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Toucan_Egg}</DisplayId>
    </Object>
@@ -644,7 +610,6 @@
       <PetSkin>Skunk Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Skunk_Egg}</DisplayId>
    </Object>
@@ -662,7 +627,6 @@
       <PetSkin>Mallard Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Mallard_Egg}</DisplayId>
    </Object>
@@ -679,7 +643,6 @@
       <PetId>Duck</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Duck_Egg}</DisplayId>
    </Object>
@@ -697,7 +660,6 @@
       <PetSkin>Eagle Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Eagle_Egg}</DisplayId>
    </Object>
@@ -714,7 +676,6 @@
       <PetId>Turtle</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Turtle_Egg}</DisplayId>
    </Object>
@@ -732,7 +693,6 @@
       <PetSkin>Jelly Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Jelly_Egg}</DisplayId>
    </Object>
@@ -750,7 +710,6 @@
       <PetSkin>Bee Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Bee_Egg}</DisplayId>
    </Object>
@@ -768,7 +727,6 @@
       <PetSkin>Raven Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Raven_Egg}</DisplayId>
    </Object>
@@ -785,7 +743,6 @@
       <PetId>Grape Penguin</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grape_Penguin_Egg}</DisplayId>
    </Object>
@@ -802,7 +759,6 @@
       <PetId>Grass Penguin</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Grass_Penguin_Egg}</DisplayId>
    </Object>
@@ -820,7 +776,6 @@
       <PetSkin>Elf Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Elf_Egg}</DisplayId>
    </Object>
@@ -837,7 +792,6 @@
       <PetId>Crab</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Crab_Egg}</DisplayId>
    </Object>
@@ -854,7 +808,6 @@
       <PetId>Hamster</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Hamster_Egg}</DisplayId>
    </Object>
@@ -871,7 +824,6 @@
       <PetId>Dino</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Dino_Egg}</DisplayId>
    </Object>
@@ -888,7 +840,6 @@
       <PetId>Elephant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Elephant_Egg}</DisplayId>
    </Object>
@@ -906,7 +857,6 @@
       <PetSkin>Demon Frog Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Demon_Frog_Egg}</DisplayId>
    </Object>
@@ -924,7 +874,6 @@
       <PetSkin>Gargoyle Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Gargoyle_Egg}</DisplayId>
    </Object>
@@ -942,7 +891,6 @@
       <PetSkin>Gummy Bear Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Gummy_Bear_Egg}</DisplayId>
    </Object>
@@ -959,7 +907,6 @@
       <PetId>Dragonfly</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Dragonfly_Egg}</DisplayId>
    </Object>
@@ -977,7 +924,6 @@
       <PetSkin>Lil' Cyclops Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.LilAPOS_Cyclops_Egg}</DisplayId>
    </Object>
@@ -995,7 +941,6 @@
       <PetSkin>Snowy Owl Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Snowy_Owl_Egg}</DisplayId>
    </Object>
@@ -1013,7 +958,6 @@
       <PetSkin>Turkey Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Turkey_Egg}</DisplayId>
    </Object>
@@ -1030,7 +974,6 @@
       <PetId>Baby</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Baby_Egg}</DisplayId>
    </Object>
@@ -1048,7 +991,6 @@
       <PetSkin>Baby Dragon Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Baby_Dragon_Egg}</DisplayId>
    </Object>
@@ -1066,7 +1008,6 @@
       <PetSkin>Karate Red Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Karate_Penguin_Red_Egg}</DisplayId>
    </Object>
@@ -1084,7 +1025,6 @@
       <PetSkin>Karate Blue Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Karate_Penguin_Blue_Egg}</DisplayId>
    </Object>
@@ -1102,7 +1042,6 @@
       <PetSkin>Karate Yellow Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Karate_Penguin_Yellow_Egg}</DisplayId>
    </Object>
@@ -1120,7 +1059,6 @@
       <PetSkin>Karate Purple Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Karate_Penguin_Purple_Egg}</DisplayId>
    </Object>
@@ -1137,7 +1075,6 @@
       <BagType>2</BagType>
       <InvUse/>
       <Activate objectId="Beach Ball" cooldown="1" hideEffect="true">PermaPet</Activate>
-      <Soulbound/>
       <feedPower>500</feedPower>
    </Object>
    <Object type="0x163f" id="Beach Ball">
@@ -1165,7 +1102,6 @@
       <PetSkin>Robobuddy Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Robobuddy_Egg}</DisplayId>
    </Object>
@@ -1183,7 +1119,6 @@
       <PetSkin>Snowman Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Snowman_Egg}</DisplayId>
    </Object>
@@ -1200,7 +1135,6 @@
       <PetId>Black Ant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Black_Ant_Egg}</DisplayId>
    </Object>
@@ -1217,7 +1151,6 @@
       <PetId>Blue Ant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Blue_Ant_Egg}</DisplayId>
    </Object>
@@ -1234,7 +1167,6 @@
       <PetId>Green Ant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Green_Ant_Egg}</DisplayId>
    </Object>
@@ -1251,7 +1183,6 @@
       <PetId>Red Ant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Red_Ant_Egg}</DisplayId>
    </Object>
@@ -1268,7 +1199,6 @@
       <PetId>Purple Ant</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Purple_Ant_Egg}</DisplayId>
    </Object>
@@ -1289,7 +1219,6 @@
       <Sound>spell/light_heal</Sound>
       <InvUse/>
       <VaultItem/>
-      <Soulbound/>
       <Activate objectId="Beer Slurp" cooldown="10">PermaPet</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>1000</feedPower>
@@ -1325,7 +1254,6 @@
       <PetSkin>Peppermint Snail Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Peppermint_Snail_Egg}</DisplayId>
    </Object>
@@ -1342,7 +1270,6 @@
       <PetId>Oriole</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Relief_Oriole_Egg}</DisplayId>
    </Object>
@@ -1359,7 +1286,6 @@
       <PetId>Goldfinch</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Relief_Goldfinch_Egg}</DisplayId>
    </Object>
@@ -1376,7 +1302,6 @@
       <PetId>Bluebird</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Relief_Bluebird_Egg}</DisplayId>
    </Object>
@@ -1393,7 +1318,6 @@
       <PetId>Cardinal</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Relief_Cardinal_Egg}</DisplayId>
    </Object>
@@ -1411,7 +1335,6 @@
       <PetSkin>Werewolf Cub Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Werewolf_Cub_Egg}</DisplayId>
    </Object>
@@ -1428,7 +1351,6 @@
       <PetId>Tomb Snake</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Tomb_Snake_Egg}</DisplayId>
    </Object>
@@ -1446,7 +1368,6 @@
       <PetSkin>Ninja Cat Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Ninja_Cat_Egg}</DisplayId>
    </Object>
@@ -1464,7 +1385,6 @@
       <PetSkin>Praying Mantis Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Praying_Mantis_Egg}</DisplayId>
    </Object>
@@ -1481,7 +1401,6 @@
       <PetId>Dreidel</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Dreidel_Egg}</DisplayId>
    </Object>
@@ -1499,7 +1418,6 @@
       <PetSkin>Reindeer Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Reindeer_Egg}</DisplayId>
    </Object>
@@ -1516,7 +1434,6 @@
       <PetId>Koala</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Koala_Egg}</DisplayId>
    </Object>
@@ -1534,7 +1451,6 @@
       <PetSkin>USA Eagle Skin</PetSkin>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.USA_Eagle_Egg}</DisplayId>
    </Object>
@@ -1551,7 +1467,6 @@
       <PetId>Spirit</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Spirit_Egg}</DisplayId>
    </Object>
@@ -1568,7 +1483,6 @@
       <PetId>Sprite Star</PetId>
       <Activate>CreatePet</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>3</BagType>
       <DisplayId>{permapets.Sprite_Star_Egg}</DisplayId>
    </Object>
