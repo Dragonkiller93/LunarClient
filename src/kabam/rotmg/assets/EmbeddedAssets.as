@@ -126,11 +126,18 @@ public class EmbeddedAssets {
     public static var d3Chars16x16rEmbed_:Class = EmbeddedAssets_d3Chars16x16rEmbed_;
     public static var d3LofiObjEmbed_:Class = EmbeddedAssets_d3LofiObjEmbed_;
     public static var d3LofiObjBigEmbed_:Class = EmbeddedAssets_d3LofiObjBigEmbed_;
+    public static var lostHallsObjects8x8Embed_:Class = EmbeddedAssets_lostHallsObjects8x8Embed_;
+    public static var lostHallsObjects16x16Embed_:Class = EmbeddedAssets_lostHallsObjects16x16Embed_;
+    public static var lostHallsChars8x8Embed_:Class = EmbeddedAssets_lostHallsChars8x8Embed_;
+    public static var lostHallsChars16x16Embed_:Class = EmbeddedAssets_lostHallsChars16x16Embed_;
     public static var cursorsEmbed_:Class = EmbeddedAssets_cursorsEmbed_;
     public static var AddedItemsEmbed_:Class = EmbeddedAssets_AddedItemsEmbed_;
+    public static var LunarAddedItems32x32_:Class = Lunar_AddedItems32x32;
     public static var LunarOuroboros_:Class = Lunar_Band_of_Ouroboros;
     public static var LunarTieredItems_:Class = Lunar_Tiered_Items;
     public static var LunarGoldIcon_:Class = Lunar_Gold_Icon;
+    public static var LunarDoomShield_:Class = Lunar_Crimson_Doom_Shield;
+
     public static var models_:Object = {
         "Monster Tank1": new monsterTank1Embed_(),
         "Monster Tank2": new monsterTank2Embed_(),

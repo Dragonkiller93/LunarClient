@@ -15,11 +15,8 @@ import flash.utils.ByteArray;
 import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
-import kabam.rotmg.assets.EmbeddedAssets_AddedItemsEmbed_;
 import kabam.rotmg.assets.EmbeddedData;
-import kabam.rotmg.assets.Lunar_Band_of_Ouroboros;
-import kabam.rotmg.assets.Lunar_Gold_Icon;
-import kabam.rotmg.assets.Lunar_Tiered_Items;
+import kabam.rotmg.assets.Lunar_AddedItems32x32;
 
 public class AssetLoader {
 
@@ -92,7 +89,12 @@ public class AssetLoader {
         AssetLibrary.addImageSet("AddedItems", new EmbeddedAssets.AddedItemsEmbed_().bitmapData,8,8);
         AssetLibrary.addImageSet("Ouroboros", new EmbeddedAssets.LunarOuroboros_().bitmapData,16,16);
         AssetLibrary.addImageSet("LunarTieredItems", new EmbeddedAssets.LunarTieredItems_().bitmapData,8,8);
-        AssetLibrary.addImageSet("LunarGold",new Lunar_Gold_Icon().bitmapData,48,48);
+        AssetLibrary.addImageSet("LunarGold",new EmbeddedAssets.LunarGoldIcon_().bitmapData,48,48);
+        AssetLibrary.addImageSet("LunarDoomShield",new EmbeddedAssets.LunarDoomShield_().bitmapData,32,32);
+        AssetLibrary.addImageSet("lostHallsObjects16x16",new EmbeddedAssets.lostHallsObjects16x16Embed_().bitmapData,16,16);
+        AssetLibrary.addImageSet("lostHallsObjects8x8",new EmbeddedAssets.lostHallsObjects8x8Embed_().bitmapData,8,8);
+        AssetLibrary.addImageSet("LunarAddedItems32x32", new EmbeddedAssets.LunarAddedItems32x32_().bitmapData,32,32);
+
     }
 
     private function addAnimatedCharacters():void {
@@ -124,6 +126,8 @@ public class AssetLoader {
         AnimatedChars.add("petsDivine", new EmbeddedAssets.petsDivineEmbed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
         AnimatedChars.add("playerskins16", new EmbeddedAssets.playersSkins16Embed_().bitmapData, new EmbeddedAssets.playersSkins16MaskEmbed_().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
         AnimatedChars.add("d1chars16x16r", new EmbeddedAssets.d1Chars16x16rEmbed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
+        AnimatedChars.add("lostHallsChars16x16",new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData,null,16,16,112,16,AnimatedChar.RIGHT);
+        AnimatedChars.add("lostHallsChars8x8",new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData,null,8,8,56,8,AnimatedChar.STAND)
     }
 
     private function addSoundEffects():void {

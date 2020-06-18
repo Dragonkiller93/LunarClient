@@ -146,7 +146,7 @@ public class StatusBar extends Sprite {
         graphics.clear();
         this.colorSprite.graphics.clear();
         var _local_1:uint = 0xFFFFFF;
-        if ((((this.maxMax_ > 0)) && (((this.max_ - this.boost_) == this.maxMax_)))) {
+        if ((((this.maxMax_ > 0)) && (((this.max_ - this.boost_) >= this.maxMax_)))) {
             _local_1 = 0xFCDF00;
         }
         else {

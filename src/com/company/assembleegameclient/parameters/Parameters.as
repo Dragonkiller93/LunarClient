@@ -51,7 +51,11 @@ public class Parameters {
     public static var toggleHPBar_:Boolean = false;
     public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030];
     public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476,26417];
+    public static const itemShrinkTypes:Dictionary = new Dictionary();
     private static var keyNames_:Dictionary = new Dictionary();
+    itemShrinkTypes[36994]=32;
+    itemShrinkTypes[36995]=32;
+    itemShrinkTypes[36996]=32;
 
 
     public static function load():void {

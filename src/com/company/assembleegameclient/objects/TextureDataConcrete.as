@@ -79,45 +79,51 @@ public class TextureDataConcrete extends TextureData {
         var _local_2:MaskedImage;
         var _local_3:RemoteTexture;
         var _local_4:XML;
-        switch (_arg_1.name().toString()) {
-            case "Texture":
-                texture_ = AssetLibrary.getImageFromSet(String(_arg_1.File), int(_arg_1.Index));
-                return;
-            case "Mask":
-                mask_ = AssetLibrary.getImageFromSet(String(_arg_1.File), int(_arg_1.Index));
-                return;
-            case "Effect":
-                effectProps_ = new EffectProperties(_arg_1);
-                return;
-            case "AnimatedTexture":
-                animatedChar_ = AnimatedChars.getAnimatedChar(String(_arg_1.File), int(_arg_1.Index));
-                _local_2 = animatedChar_.imageFromAngle(0, AnimatedChar.STAND, 0);
-                texture_ = _local_2.image_;
-                mask_ = _local_2.mask_;
-                return;
-            case "RemoteTexture":
-                texture_ = AssetLibrary.getImageFromSet("lofiObj3", 0xFF);
-                if (this.isUsingLocalTextures) {
-                    _local_3 = new RemoteTexture(_arg_1.Id, _arg_1.Instance, this.onRemoteTexture);
-                    _local_3.run();
-                    if (!AssetLoader.currentXmlIsTesting) {
-                        remoteTexturesUsed = true;
+        try {
+            switch (_arg_1.name().toString()) {
+                case "Texture":
+                    texture_ = AssetLibrary.getImageFromSet(String(_arg_1.File), int(_arg_1.Index));
+                    return;
+                case "Mask":
+                    mask_ = AssetLibrary.getImageFromSet(String(_arg_1.File), int(_arg_1.Index));
+                    return;
+                case "Effect":
+                    effectProps_ = new EffectProperties(_arg_1);
+                    return;
+                case "AnimatedTexture":
+                    animatedChar_ = AnimatedChars.getAnimatedChar(String(_arg_1.File), int(_arg_1.Index));
+                    _local_2 = animatedChar_.imageFromAngle(0, AnimatedChar.STAND, 0);
+                    texture_ = _local_2.image_;
+                    mask_ = _local_2.mask_;
+                    return;
+                case "RemoteTexture":
+                    texture_ = AssetLibrary.getImageFromSet("lofiObj3", 0xFF);
+                    if (this.isUsingLocalTextures) {
+                        _local_3 = new RemoteTexture(_arg_1.Id, _arg_1.Instance, this.onRemoteTexture);
+                        _local_3.run();
+                        if (!AssetLoader.currentXmlIsTesting) {
+                            remoteTexturesUsed = true;
+                        }
                     }
-                }
-                remoteTextureDir_ = ((_arg_1.hasOwnProperty("Right")) ? AnimatedChar.RIGHT : AnimatedChar.DOWN);
-                return;
-            case "RandomTexture":
-                randomTextureData_ = new Vector.<TextureData>();
-                for each (_local_4 in _arg_1.children()) {
-                    randomTextureData_.push(new TextureDataConcrete(_local_4));
-                }
-                return;
-            case "AltTexture":
-                if (altTextures_ == null) {
-                    altTextures_ = new Dictionary();
-                }
-                altTextures_[int(_arg_1.@id)] = new TextureDataConcrete(_arg_1);
-                return;
+                    remoteTextureDir_ = ((_arg_1.hasOwnProperty("Right")) ? AnimatedChar.RIGHT : AnimatedChar.DOWN);
+                    return;
+                case "RandomTexture":
+                    randomTextureData_ = new Vector.<TextureData>();
+                    for each (_local_4 in _arg_1.children()) {
+                        randomTextureData_.push(new TextureDataConcrete(_local_4));
+                    }
+                    return;
+                case "AltTexture":
+                    if (altTextures_ == null) {
+                        altTextures_ = new Dictionary();
+                    }
+                    altTextures_[int(_arg_1.@id)] = new TextureDataConcrete(_arg_1);
+                    return;
+            }
+        }
+        catch( e:Error) {
+
+            throw(_arg_1.toString() + e.getStackTrace());
         }
     }
 
