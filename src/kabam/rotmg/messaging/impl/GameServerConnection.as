@@ -106,6 +106,7 @@ public class GameServerConnection {
     public static const PET_CHANGE_FORM_MSG:int = 42;
     public static const KEY_INFO_REQUEST:int = 66;
     public static const KEY_INFO_RESPONSE:int = 19;
+    public static const CHANGESUBCLASS:int = 103;
     public static var instance:GameServerConnection;
 
     public var changeMapSignal:Signal;
@@ -174,6 +175,9 @@ public class GameServerConnection {
     }
 
     public function cancelTrade():void {
+    }
+
+    public function changeSubClass(_arg_1:int,_arg_2:Vector.<Boolean>):void{
     }
 
     public function joinGuild(_arg_1:String):void {

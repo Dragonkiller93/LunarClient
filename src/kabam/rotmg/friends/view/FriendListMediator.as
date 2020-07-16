@@ -66,64 +66,64 @@ public class FriendListMediator extends Mediator {
     }
 
     private function onTabSwitched(_arg_1:String):void {
-        switch (_arg_1) {
-            case FriendConstant.FRIEND_TAB:
-                this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
-                return;
-            case FriendConstant.INVITE_TAB:
-                this.view.updateInvitationTab(this.model.getAllInvitations());
-                return;
-        }
+//        switch (_arg_1) {
+//            case FriendConstant.FRIEND_TAB:
+//                this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
+//                return;
+//            case FriendConstant.INVITE_TAB:
+//                this.view.updateInvitationTab(this.model.getAllInvitations());
+//                return;
+//        }
     }
 
     private function onFriendActed(_arg_1:String, _arg_2:String):void {
-        var _local_4:String;
-        var _local_5:String;
-        var _local_3:FriendRequestVO = new FriendRequestVO(_arg_1, _arg_2);
-        switch (_arg_1) {
-            case FriendConstant.SEARCH:
-                if (((!((_arg_2 == null))) && (!((_arg_2 == ""))))) {
-                    this.view.updateFriendTab(this.model.getFilterFriends(_arg_2), this.model.getCurrentServerName());
-                }
-                else {
-                    if (_arg_2 == "") {
-                        this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
-                    }
-                }
-                return;
-            case FriendConstant.INVITE:
-                if (this.model.ifReachMax()) {
-                    this.view.updateInput(TextKey.FRIEND_REACH_CAPACITY);
-                    return;
-                }
-                _local_3.callback = this.inviteFriendCallback;
-                break;
-            case FriendConstant.REMOVE:
-                _local_3.callback = this.removeFriendCallback;
-                _local_4 = TextKey.FRIEND_REMOVE_TITLE;
-                _local_5 = TextKey.FRIEND_REMOVE_TEXT;
-                this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_4, _local_5, TextKey.FRAME_CANCEL, TextKey.FRIEND_REMOVE_BUTTON, _local_3, {"name": _local_3.target}));
-                return;
-            case FriendConstant.ACCEPT:
-                _local_3.callback = this.acceptInvitationCallback;
-                break;
-            case FriendConstant.REJECT:
-                _local_3.callback = this.rejectInvitationCallback;
-                break;
-            case FriendConstant.BLOCK:
-                _local_3.callback = this.blockInvitationCallback;
-                _local_4 = TextKey.FRIEND_BLOCK_TITLE;
-                _local_5 = TextKey.FRIEND_BLOCK_TEXT;
-                this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_4, _local_5, TextKey.FRAME_CANCEL, TextKey.FRIEND_BLOCK_BUTTON, _local_3, {"name": _local_3.target}));
-                return;
-            case FriendConstant.WHISPER:
-                this.whisperCallback(_arg_2);
-                return;
-            case FriendConstant.JUMP:
-                this.jumpCallback(_arg_2);
-                return;
-        }
-        this.actionSignal.dispatch(_local_3);
+//        var _local_4:String;
+//        var _local_5:String;
+//        var _local_3:FriendRequestVO = new FriendRequestVO(_arg_1, _arg_2);
+//        switch (_arg_1) {
+//            case FriendConstant.SEARCH:
+//                if (((!((_arg_2 == null))) && (!((_arg_2 == ""))))) {
+//                    this.view.updateFriendTab(this.model.getFilterFriends(_arg_2), this.model.getCurrentServerName());
+//                }
+//                else {
+//                    if (_arg_2 == "") {
+//                        this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
+//                    }
+//                }
+//                return;
+//            case FriendConstant.INVITE:
+//                if (this.model.ifReachMax()) {
+//                    this.view.updateInput(TextKey.FRIEND_REACH_CAPACITY);
+//                    return;
+//                }
+//                _local_3.callback = this.inviteFriendCallback;
+//                break;
+//            case FriendConstant.REMOVE:
+//                _local_3.callback = this.removeFriendCallback;
+//                _local_4 = TextKey.FRIEND_REMOVE_TITLE;
+//                _local_5 = TextKey.FRIEND_REMOVE_TEXT;
+//                this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_4, _local_5, TextKey.FRAME_CANCEL, TextKey.FRIEND_REMOVE_BUTTON, _local_3, {"name": _local_3.target}));
+//                return;
+//            case FriendConstant.ACCEPT:
+//                _local_3.callback = this.acceptInvitationCallback;
+//                break;
+//            case FriendConstant.REJECT:
+//                _local_3.callback = this.rejectInvitationCallback;
+//                break;
+//            case FriendConstant.BLOCK:
+//                _local_3.callback = this.blockInvitationCallback;
+//                _local_4 = TextKey.FRIEND_BLOCK_TITLE;
+//                _local_5 = TextKey.FRIEND_BLOCK_TEXT;
+//                this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_4, _local_5, TextKey.FRAME_CANCEL, TextKey.FRIEND_BLOCK_BUTTON, _local_3, {"name": _local_3.target}));
+//                return;
+//            case FriendConstant.WHISPER:
+//                this.whisperCallback(_arg_2);
+//                return;
+//            case FriendConstant.JUMP:
+//                this.jumpCallback(_arg_2);
+//                return;
+//        }
+//        this.actionSignal.dispatch(_local_3);
     }
 
     private function inviteFriendCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void {

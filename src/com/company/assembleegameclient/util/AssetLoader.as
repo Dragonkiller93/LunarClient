@@ -17,6 +17,7 @@ import flash.utils.getQualifiedClassName;
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
 import kabam.rotmg.assets.Lunar_AddedItems32x32;
+import kabam.rotmg.assets.Lunar_Skill_Tree_Icons;
 
 public class AssetLoader {
 
@@ -94,6 +95,7 @@ public class AssetLoader {
         AssetLibrary.addImageSet("lostHallsObjects16x16",new EmbeddedAssets.lostHallsObjects16x16Embed_().bitmapData,16,16);
         AssetLibrary.addImageSet("lostHallsObjects8x8",new EmbeddedAssets.lostHallsObjects8x8Embed_().bitmapData,8,8);
         AssetLibrary.addImageSet("LunarAddedItems32x32", new EmbeddedAssets.LunarAddedItems32x32_().bitmapData,32,32);
+        AssetLibrary.addImageSet("LunarSkillIcons",new EmbeddedAssets.LunarSkillIcons_().bitmapData,32,32);
 
     }
 

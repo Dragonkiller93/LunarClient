@@ -128,7 +128,7 @@ public class Player extends Character {
     public var dropBoost:int = 0;
     public var tierBoost:int = 0;
     public var subclass:int=-1;
-    public var feats:int=-1;
+    public var feats:Vector.<Boolean>=null;
     protected var healingEffect_:HealingEffect = null;
     protected var nearestMerchant_:Merchant = null;
     public var isDefaultAnimatedChar:Boolean = true;

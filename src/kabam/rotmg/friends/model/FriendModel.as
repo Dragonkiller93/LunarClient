@@ -80,7 +80,7 @@ public class FriendModel {
     }
 
     private function onInvitationListResponse(_arg_1:FriendDataRequestTask, _arg_2:Boolean, _arg_3:String = ""):void {
-        if (_arg_2) {
+        /*if (_arg_2) {
             this.seedInvitations(_arg_1.xml);
         }
         this._isInvDataOK = _arg_2;
@@ -88,41 +88,43 @@ public class FriendModel {
         _arg_1.reset();
         this._inProcessFlag = false;
         this.dataSignal.dispatch(((this._isFriDataOK) && (this._isInvDataOK)));
+
+         */
     }
 
     public function seedFriends(_arg_1:XML):void {
-        var _local_2:String;
-        var _local_3:String;
-        var _local_4:String;
-        var _local_5:FriendVO;
-        var _local_6:XML;
-        this._onlineFriends.length = 0;
-        this._offlineFriends.length = 0;
-        for each (_local_6 in _arg_1.Account) {
-            _local_2 = _local_6.Name;
-            _local_5 = (((this._friends[_local_2]) != null) ? (this._friends[_local_2].vo as FriendVO) : new FriendVO(Player.fromPlayerXML(_local_2, _local_6.Character[0])));
-            if (_local_6.hasOwnProperty("Online")) {
-                _local_4 = String(_local_6.Online);
-                _local_3 = this.serverNameDictionary()[_local_4];
-                _local_5.online(_local_3, _local_4);
-                this._onlineFriends.push(_local_5);
-                this._friends[_local_5.getName()] = {
-                    "vo": _local_5,
-                    "list": this._onlineFriends
-                };
-            }
-            else {
-                _local_5.offline();
-                this._offlineFriends.push(_local_5);
-                this._friends[_local_5.getName()] = {
-                    "vo": _local_5,
-                    "list": this._offlineFriends
-                };
-            }
-        }
-        this._onlineFriends.sort(this.sortFriend);
-        this._offlineFriends.sort(this.sortFriend);
-        this._friendTotal = (this._onlineFriends.length + this._offlineFriends.length);
+//        var _local_2:String;
+//        var _local_3:String;
+//        var _local_4:String;
+//        var _local_5:FriendVO;
+//        var _local_6:XML;
+//        this._onlineFriends.length = 0;
+//        this._offlineFriends.length = 0;
+//        for each (_local_6 in _arg_1.Account) {
+//            _local_2 = _local_6.Name;
+//            _local_5 = (((this._friends[_local_2]) != null) ? (this._friends[_local_2].vo as FriendVO) : new FriendVO(Player.fromPlayerXML(_local_2, _local_6.Character[0])));
+//            if (_local_6.hasOwnProperty("Online")) {
+//                _local_4 = String(_local_6.Online);
+//                _local_3 = this.serverNameDictionary()[_local_4];
+//                _local_5.online(_local_3, _local_4);
+//                this._onlineFriends.push(_local_5);
+//                this._friends[_local_5.getName()] = {
+//                    "vo": _local_5,
+//                    "list": this._onlineFriends
+//                };
+//            }
+//            else {
+//                _local_5.offline();
+//                this._offlineFriends.push(_local_5);
+//                this._friends[_local_5.getName()] = {
+//                    "vo": _local_5,
+//                    "list": this._offlineFriends
+//                };
+//            }
+//        }
+//        this._onlineFriends.sort(this.sortFriend);
+//        this._offlineFriends.sort(this.sortFriend);
+//        this._friendTotal = (this._onlineFriends.length + this._offlineFriends.length);
     }
 
     public function seedInvitations(_arg_1:XML):void {

@@ -153,6 +153,7 @@ import kabam.rotmg.messaging.impl.outgoing.AoeAck;
 import kabam.rotmg.messaging.impl.outgoing.Buy;
 import kabam.rotmg.messaging.impl.outgoing.CancelTrade;
 import kabam.rotmg.messaging.impl.outgoing.ChangeGuildRank;
+import kabam.rotmg.messaging.impl.outgoing.ChangeSubclass;
 import kabam.rotmg.messaging.impl.outgoing.ChangeTrade;
 import kabam.rotmg.messaging.impl.outgoing.CheckCredits;
 import kabam.rotmg.messaging.impl.outgoing.ChooseName;
@@ -367,6 +368,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local_1.map(CHANGETRADE).toMessage(ChangeTrade);
         _local_1.map(ACCEPTTRADE).toMessage(AcceptTrade);
         _local_1.map(CANCELTRADE).toMessage(CancelTrade);
+        _local_1.map(CHANGESUBCLASS).toMessage(ChangeSubclass);
         _local_1.map(CHECKCREDITS).toMessage(CheckCredits);
         _local_1.map(ESCAPE).toMessage(Escape);
         _local_1.map(JOINGUILD).toMessage(JoinGuild);
@@ -492,6 +494,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local_1.unmap(CHANGETRADE);
         _local_1.unmap(ACCEPTTRADE);
         _local_1.unmap(CANCELTRADE);
+        _local_1.unmap(CHANGESUBCLASS)
         _local_1.unmap(CHECKCREDITS);
         _local_1.unmap(ESCAPE);
         _local_1.unmap(JOINGUILD);
@@ -750,7 +753,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
             else {
                 p = this.player;
             }
-            if ((((((((((((((((((((((itemId == 2591)) || ((itemId == 5465)))) || ((itemId == 9064)))) && ((p.attackMax_ == (p.attack_ - p.attackBoost_))))) || ((((((((itemId == 2592)) || ((itemId == 5466)))) || ((itemId == 9065)))) && ((p.defenseMax_ == (p.defense_ - p.defenseBoost_))))))) || ((((((((itemId == 2593)) || ((itemId == 5467)))) || ((itemId == 9066)))) && ((p.speedMax_ == (p.speed_ - p.speedBoost_))))))) || ((((((((itemId == 2612)) || ((itemId == 5468)))) || ((itemId == 9067)))) && ((p.vitalityMax_ == (p.vitality_ - p.vitalityBoost_))))))) || ((((((((itemId == 2613)) || ((itemId == 5469)))) || ((itemId == 9068)))) && ((p.wisdomMax_ == (p.wisdom_ - p.wisdomBoost_))))))) || ((((((((itemId == 2636)) || ((itemId == 5470)))) || ((itemId == 9069)))) && ((p.dexterityMax_ == (p.dexterity_ - p.dexterityBoost_))))))) || ((((((((itemId == 2793)) || ((itemId == 5471)))) || ((itemId == 9070)))) && ((p.maxHPMax_ == (p.maxHP_ - p.maxHPBoost_))))))) || ((((((((itemId == 2794)) || ((itemId == 5472)))) || ((itemId == 9071)))) && ((p.maxMPMax_ == (p.maxMP_ - p.maxMPBoost_))))))) {
+            if ((((((((((((((((((((((itemId == 2591)) || ((itemId == 5465)))) || ((itemId == 9064)))) && ((p.attackMax_ <= (p.attack_ - p.attackBoost_-(p.level_-20)))))) || ((((((((itemId == 2592)) || ((itemId == 5466)))) || ((itemId == 9065)))) && ((p.defenseMax_ <= (p.defense_ - p.defenseBoost_-(p.level_-20)))))))) || ((((((((itemId == 2593)) || ((itemId == 5467)))) || ((itemId == 9066)))) && ((p.speedMax_ <= (p.speed_ - p.speedBoost_-(p.level_-20)))))))) || ((((((((itemId == 2612)) || ((itemId == 5468)))) || ((itemId == 9067)))) && ((p.vitalityMax_ <= (p.vitality_ - p.vitalityBoost_-(p.level_-20)))))))) || ((((((((itemId == 2613)) || ((itemId == 5469)))) || ((itemId == 9068)))) && ((p.wisdomMax_ <= (p.wisdom_ - p.wisdomBoost_-(p.level_-20)))))))) || ((((((((itemId == 2636)) || ((itemId == 5470)))) || ((itemId == 9069)))) && ((p.dexterityMax_ <= (p.dexterity_ - p.dexterityBoost_-(p.level_-20)))))))) || ((((((((itemId == 2793)) || ((itemId == 5471)))) || ((itemId == 9070)))) && ((p.maxHPMax_ <= (p.maxHP_ - p.maxHPBoost_-(10*(p.level_-20))))))))) || ((((((((itemId == 2794)) || ((itemId == 5472)))) || ((itemId == 9071)))) && ((p.maxMPMax_ <= (p.maxMP_ - p.maxMPBoost_-(5*(p.level_-20))))))))) {
                 return (false);
             }
         }
@@ -898,7 +901,12 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local_2.offer_ = _arg_1;
         serverConnection.sendMessage(_local_2);
     }
-
+    override public function changeSubClass(_arg_1:int,_arg_2:Vector.<Boolean>):void{
+        var _local_2:ChangeSubclass= (this.messages.require(CHANGESUBCLASS) as ChangeSubclass);
+        _local_2.subclass_=_arg_1;
+        _local_2.feats_=_arg_2;
+        serverConnection.sendMessage(_local_2);
+    }
     override public function acceptTrade(_arg_1:Vector.<Boolean>, _arg_2:Vector.<Boolean>):void {
         var _local_3:AcceptTrade = (this.messages.require(ACCEPTTRADE) as AcceptTrade);
         _local_3.myOffer_ = _arg_1;
@@ -1359,7 +1367,14 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         }
         _local_2.onGoto(_arg_1.pos_.x_, _arg_1.pos_.y_, gs_.lastUpdate_);
     }
+    private static function stringtofeats(_arg_1:String):Vector.<Boolean>{
+        var result:Vector.<Boolean> = new Vector.<Boolean>();
 
+        for(var i:int =0;i < _arg_1.length;i++){
+            result[i] = _arg_1.charAt(i) == '1';
+        }
+        return result;
+    }
     private function updateGameObject(_arg_1:GameObject, _arg_2:Vector.<StatData>, _arg_3:Boolean):void {
         var _local_7:StatData;
         var _local_8:int;
@@ -1443,7 +1458,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     _local_4.subclass=_local_8;
                     break;
                 case StatData.FEAT:
-                    _local_4.feats=_local_8;
+                    _local_4.feats=stringtofeats(_local_7.strStatValue_);
                     break;
                 case StatData.NAME_STAT:
                     if (_arg_1.name_ != _local_7.strStatValue_) {

@@ -19,7 +19,9 @@ public class TextButton extends TextButtonBase {
         }
         text_.textChanged.addOnce(this.onTextChanged);
     }
-
+    public function changeColor(_arg_1:int):void{
+        this.text_.setColor(_arg_1);
+    }
     protected function onTextChanged():void {
         initText();
         this.textChanged.dispatch();

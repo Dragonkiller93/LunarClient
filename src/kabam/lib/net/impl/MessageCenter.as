@@ -7,7 +7,7 @@ import org.swiftsuspenders.Injector;
 
 public class MessageCenter implements MessageMap, MessageProvider {
 
-    private static const MAX_ID:int = 0x0100;
+    private static const MAX_ID:int = 0x0103;
 
     private const maps:Vector.<MessageCenterMapping> = new Vector.<MessageCenterMapping>(MAX_ID, true);
     private const pools:Vector.<MessagePool> = new Vector.<MessagePool>(MAX_ID, true);

@@ -178,7 +178,7 @@ public class ObjectLibrary {
             _arg_2 = (_arg_2 * 0.5);
         }
         if(_arg_1 in Parameters.itemShrinkTypes) {
-            _arg_2 = (_arg_2 * 8/Parameters.itemShrinkTypes[_arg_1]);6
+            _arg_2 = (_arg_2 * 8/Parameters.itemShrinkTypes[_arg_1]);
         }
         var _local_7:TextureData = typeToTextureData_[_arg_1];
         var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
