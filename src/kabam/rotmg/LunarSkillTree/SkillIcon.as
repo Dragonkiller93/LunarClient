@@ -1,4 +1,4 @@
-﻿package com.company.assembleegameclient.ui.icons {
+package kabam.rotmg.LunarSkillTree {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 import com.company.assembleegameclient.util.TextureRedrawer;
@@ -19,7 +19,7 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.tooltips.HoverTooltipDelegate;
 import kabam.rotmg.tooltips.TooltipAble;
 
-public class IconButton extends Sprite implements TooltipAble {
+public class SkillIcon extends Sprite implements TooltipAble {
 
     protected static const mouseOverCT:ColorTransform = new ColorTransform(1, (220 / 0xFF), (133 / 0xFF));
     protected static const disableCT:ColorTransform = new ColorTransform(0.6, 0.6, 0.6, 1);
@@ -33,31 +33,18 @@ public class IconButton extends Sprite implements TooltipAble {
     protected var ct_:ColorTransform = null;
     private var toolTip_:TextToolTip = null;
 
-    public function IconButton(_arg_1:BitmapData, _arg_2:String, _arg_3:String, _arg_4:String = "") {
+    public function SkillIcon(ImageBitmap:BitmapData) {
         this.hoverTooltipDelegate = new HoverTooltipDelegate();
         super();
-        this.origIconBitmapData_ = _arg_1;
-        this.iconBitmapData_ = TextureRedrawer.redraw(this.origIconBitmapData_, (320 / this.origIconBitmapData_.width), true, 0);
-        this.icon_ = new Bitmap(this.iconBitmapData_);
-        this.icon_.x = -12;
-        this.icon_.y = -12;
+        this.icon_ = new Bitmap(ImageBitmap);
+
         addChild(this.icon_);
-        if (_arg_2 != "") {
-            this.label_ = new TextFieldDisplayConcrete().setColor(0xFFFFFF).setSize(14);
-            this.label_.setStringBuilder(new LineBuilder().setParams(_arg_2));
-            this.label_.x = ((this.icon_.x + this.icon_.width) - 8);
-            this.label_.y = 0;
-            addChild(this.label_);
-        }
         addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
-        this.setToolTipTitle(_arg_3);
-        this.hotkeyName_ = _arg_4;
-        if (this.hotkeyName_ != "") {
-            this.setToolTipText(TextKey.ICON_BUTTON_HOT_KEY, {"hotkey": KeyCodes.CharCodeStrings[Parameters.data_[this.hotkeyName_]]});
-        }
     }
-
+    public function setSize(_arg_1:int){
+        this.width=this.height=this.icon_.width=this.icon_.height=_arg_1;
+    }
     public function destroy():void {
         removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
