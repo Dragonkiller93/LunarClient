@@ -31,7 +31,7 @@ public class SkillIcon extends Sprite implements TooltipAble {
     protected var label_:TextFieldDisplayConcrete;
     protected var hotkeyName_:String;
     protected var ct_:ColorTransform = null;
-    private var toolTip_:TextToolTip = null;
+    public var toolTip_:TextToolTip = null;
 
     public function SkillIcon(ImageBitmap:BitmapData) {
         this.hoverTooltipDelegate = new HoverTooltipDelegate();

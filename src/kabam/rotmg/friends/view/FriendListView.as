@@ -390,6 +390,7 @@ public class FriendListView extends Sprite implements DialogCloser {
             }
             subclassIcon.setToolTipTitle(SkillTexts.getSubclassName(i));
             subclassIcon.setToolTipText(SkillTexts.getSubclassDescription(i));
+            subclassIcon.toolTip_.tipText_.setSize(15);
             classIcons.push(subclassIcon);
             for(var j:int=0;j < numFeats[i];j++){
                 var feat:SkillIcon = new SkillIcon(AssetLibrary.getImageFromSet("LunarSkillIcons",(0x10*i)+j+1));

@@ -138,6 +138,7 @@ public class EmbeddedAssets {
     public static var LunarGoldIcon_:Class = Lunar_Gold_Icon;
     public static var LunarDoomShield_:Class = Lunar_Crimson_Doom_Shield;
     public static var LunarSkillIcons_:Class = Lunar_Skill_Tree_Icons;
+    public static var LunarSkillTreeIcon_:Class=Lunar_Skill_Tree_Icon;
 
     public static var models_:Object = {
         "Monster Tank1": new monsterTank1Embed_(),

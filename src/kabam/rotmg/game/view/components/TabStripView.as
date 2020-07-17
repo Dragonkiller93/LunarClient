@@ -1,5 +1,6 @@
 ﻿package kabam.rotmg.game.view.components {
 import com.company.assembleegameclient.objects.ImageFactory;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.ui.icons.IconButton;
 import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 import com.company.ui.BaseSimpleText;
@@ -48,7 +49,7 @@ public class TabStripView extends Sprite {
     }
 
     public function initSkillTree(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function):void {
-        this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("lofiInterfaceBig", 13), "", TextKey.OPTIONS_FRIEND, "");
+        this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("LunarSkillTreeIcon", 0), "", "Skill Tree", "");
         this.friendsBtn.x = 160;
         this.friendsBtn.y = 6;
         this.friendsBtn.addEventListener(MouseEvent.CLICK, _arg_3);
