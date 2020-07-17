@@ -306,135 +306,252 @@ public class FriendListView extends Sprite implements DialogCloser {
 
     }
     private function canChoose(column:int, featindex:int) {
-        var class1feats = player_.feats.splice(0, 7);
-        var class2feats = player_.feats.splice(0, 7);
-        var class3feats = player_.feats.splice(0, 7);
-        var class4feats = player_.feats;
+        var class1feats:Vector.<Boolean> = player_.feats.splice(0, 7);
+        var class2feats:Vector.<Boolean> = player_.feats.splice(0, 7);
+        var class3feats:Vector.<Boolean> = player_.feats.splice(0, 7);
+        var class4feats:Vector.<Boolean> = player_.feats.splice(0, 7);
         player_.feats = class1feats.concat(class2feats).concat(class3feats).concat(class4feats);
         var subclass:int = player_.subclass;
 
         switch (column) {
             case 1:
-                return ((featindex > 0 && class1feats[featindex - 1]) || (featindex == 0 && subclass == 1) || (featindex > 1 && class2feats[featindex - 2]) || (featindex==1 && subclass==2) );
+                return ((class1feats[featindex]) || (featindex > 0 && class1feats[featindex - 1]) || (featindex == 0 && subclass == 1) || (featindex > 1 && class2feats[featindex - 2]) || (featindex==1 && subclass==2) );
             case 2:
-                return ((featindex > 0 && class2feats[featindex - 1]) || (featindex == 0 && subclass == 2) || (featindex < 5 && class1feats[featindex + 2]) || (featindex > 0 && class3feats[featindex - 1]) || (featindex==0 && subclass==3));
+                return ((class2feats[featindex]) || (featindex > 0 && class2feats[featindex - 1]) || (featindex == 0 && subclass == 2) || (featindex < 5 && class1feats[featindex + 2]) || (featindex > 0 && class3feats[featindex - 1]) || (featindex==0 && subclass==3));
             case 3:
-                return ((featindex > 0 && class3feats[featindex - 1]) || (featindex == 0 && subclass == 3) || (featindex < 6 && class2feats[featindex + 1]) || (featindex < 3 && class4feats[featindex + 4]));
+                return ((class3feats[featindex]) || (featindex > 0 && class3feats[featindex - 1]) || (featindex == 0 && subclass == 3) || (featindex < 6 && class2feats[featindex + 1]) || (featindex < 3 && class4feats[featindex + 4]));
             case 4:
-                return ((featindex > 0 && class4feats[featindex - 1]) || (featindex == 0 && subclass == 4) || (featindex > 3 && class3feats[featindex - 4]) || (featindex==3 && subclass==3));
+                return ((class4feats[featindex]) || (featindex > 0 && class4feats[featindex - 1]) || (featindex == 0 && subclass == 4) || (featindex > 3 && class3feats[featindex - 4]) || (featindex==3 && subclass==3));
         }
     }
+    public function ChooseFeat(column:int, index:int):Function{
+        var currentfeats:int = 0;
+        var f:FriendListView = this;
+        for each(var b:Boolean in player_.feats) currentfeats+=b?1:0;
+        if((currentfeats < (int) ((player_.level_-20)/3)) && canChoose(column,index)) {
+            return function(_arg_1:MouseEvent):void {
+                throw("Shit");
+//                player_.feats[column * 7 + index] = true;
+//                this.player_.map_.gs_.gsc_.changeSubClass(player_.subclass,player_.feats);
+//                f.drawSkillTree();
+            }
+        }
+        return function(_arg_1:MouseEvent):void{throw "SHIT"}
+    }
     private function drawSkillTree():void{
-        graphics.beginFill(0x6a6a6a, 1);
-        graphics.drawRect(0, 0, 800, 600);
-        graphics.beginFill(0x000000,0.8);
-        graphics.drawRect(100,0,600,600);
+        //while(skilltreedisplay.numChildren>0) {skilltreedisplay.removeChildAt(0);}
+//        graphics.beginFill(0x6a6a6a, 1);
+//        graphics.drawRect(0, 0, 800, 600);
+//        graphics.beginFill(0x000000,0.8);
+//        graphics.drawRect(100,0,600,600);
+
+        var numClasses:int = 4;
+        var Classes :Vector.<int> = new <int>[0,2,3,-1];
+        var numFeats:Vector.<int> = new <int>[7,7,7,7];
+        var subclass:int = player_.subclass-1;
+        var feats:Vector.<Boolean> = player_.feats.slice();
+
 
         var vertDistance:int = 12;
         var horDistance:int = 100;
         var startingX:int = 200;
-        var startingY:int=520;
-        var subclassScale:Number = 1.8;
-        var featScale:Number = 1.2;
-        var featLength:int = featScale*32;
-        var subclasslength:int = subclassScale*32;
-        
-
-        var class1feats = player_.feats.splice(0,7);
-        var class2feats = player_.feats.splice(0,7);
-        var class3feats = player_.feats.splice(0,7);
-        var class4feats = player_.feats;
-        player_.feats = class1feats.concat(class2feats).concat(class3feats).concat(class4feats);
-        var subclass:int = player_.subclass;
-        //Subclass 1
-        var class1data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x00);
-        var class1:Bitmap = new Bitmap(class1data);
-        class1.x=startingX;
-        class1.y=startingY;
-        class1.scaleX=subclassScale;
-        class1.scaleY=subclassScale;
-
-        var c1fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
-        for(var i:int = 0;i < c1fs.length;i++){
-            var temp:Bitmap =new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x01+i));
-            temp.x = class1.x+((subclasslength-featLength)/2);
-            temp.y = class1.y-featLength-vertDistance-((featLength+vertDistance)*i);
-            temp.scaleX = featScale;
-            temp.scaleY = featScale;
-            temp.alpha = canChoose(1,i)?1:0.4;
-            c1fs[i] = temp;
-        }
-        
-
-        //Subclass 2
-        var class2data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x10);
-        var class2:Bitmap = new Bitmap(class2data);
-        class2.x=startingX+(featLength+horDistance);
-        class2.y=startingY-(featLength+vertDistance)*2;
-        class2.scaleX=subclassScale;
-        class2.scaleY=subclassScale;
-
-        var c2fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
-        for(var i:int = 0;i < c2fs.length;i++){
-            var temp:Bitmap = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x11+i));
-            temp.x = class2.x+((subclasslength-featLength)/2);
-            temp.y = class2.y-featLength-vertDistance-((featLength+vertDistance)*i);
-            temp.scaleX = featScale;
-            temp.scaleY = featScale;
-            temp.alpha = canChoose(2,i)?1:0.4;
-            c2fs[i] = temp;
-        }
+        var startingY:int=480;
+        var subclassScale:Number = 1.4;
+        var featScale:Number = 1;
+        var featLength:Number = featScale*32;
+        var subclasslength:Number = subclassScale*32;
+        var featBorderWidth:int = 1;
+        var subclassBorderWidth:int = 3;
+        var featBorderColor:int = 0xFF0000;
+        var subclassBorderColor:int = 0xFF0000;
 
 
-        //Subclass 3
-        var class3data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x20);
-        var class3:Bitmap = new Bitmap(class3data);
-        class3.x=startingX + (featLength+horDistance)*2;
-        class3.y=startingY-(featLength+vertDistance)*3;
-        class3.scaleX=subclassScale;
-        class3.scaleY=subclassScale;
-
-        var c3fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
-        for(var i:int = 0;i < c3fs.length;i++){
-            var temp:Bitmap = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x21+i));
-            temp.x = class3.x+((subclasslength-featLength)/2);
-            temp.y = class3.y-featLength-vertDistance-((featLength+vertDistance)*i);
-            temp.scaleX = featScale;
-            temp.scaleY = featScale;
-            temp.alpha = canChoose(3,i)?1:0.4;
-            c3fs[i] = temp;
-        }
 
 
-        //Subclass 4
-        var class4data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x30);
-        var class4:Bitmap = new Bitmap(class4data);
-        class4.x=startingX+(featLength+horDistance)*3;
-        class4.y=startingY+(featLength+vertDistance);
-        class4.scaleX=subclassScale;
-        class4.scaleY=subclassScale;
+        var images:Vector.<Bitmap> = new Vector.<Bitmap>();
 
-        var c4fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
-        for(var i:int = 0;i < c4fs.length;i++){
-            var temp:Bitmap = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x31+i));
-            temp.x = class4.x+((subclasslength-featLength)/2);
-            temp.y = class4.y-featLength-vertDistance-((featLength+vertDistance)*i);
-            temp.scaleX = featScale;
-            temp.scaleY = featScale;
-            temp.alpha = canChoose(4,i)?1:0.4;
-            c4fs[i]=temp;
+        for (var i:int=0;i < numClasses;i++){
+            var subclassX:int = startingX + ((featLength+horDistance)*i);
+            var subclassY:int = startingY - ((featLength+vertDistance)*Classes[i]);
+            var subclassBitmap:Bitmap = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons", i*(0x10)));
+            subclassBitmap.x = subclassX;
+            subclassBitmap.y = subclassY;
+            subclassBitmap.alpha=0.1;
+            subclassBitmap.scaleX = subclassScale;
+            subclassBitmap.scaleY = subclassScale;
+            if(i == subclass){
+                subclassBitmap.alpha=1;
+                graphics.lineStyle(subclassBorderWidth,subclassBorderColor);
+                graphics.drawRect(subclassX-1,subclassY-1,subclasslength+2,subclasslength+2);
+            }
+            images.push(subclassBitmap);
+            for(var j:int=0;j < numFeats[i];j++){
+                var featBitmap:Bitmap = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons", (0x10 * i) + j+1))
+                var featX:int = subclassX+((subclasslength-featLength)/2);
+                var featY:int = subclassY-((featLength+vertDistance)*(j+1));
+                featBitmap.x = featX;
+                featBitmap.y = featY;
+                featBitmap.scaleX = featScale;
+                featBitmap.scaleY = featScale;
+                featBitmap.alpha = canChoose(i+1,j)?0.6:0.1;
+                if(feats[images.length-i-1]){
+                    featBitmap.alpha=1;
+                    graphics.lineStyle(featBorderWidth,featBorderColor);
+                    graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
+                }
+                featBitmap.width=featLength;
+                featBitmap.height=featLength;
+                var button:TextButton = new TextButton(15,"");
+                button.changeColor(0xffffff);
+                //button.alpha=0;
+                button.x=featX;
+                button.y=featY;
+                button.width=featLength;
+                button.height=featLength;
+                button.buttonMode=true;
+                button.addEventListener(MouseEvent.CLICK, function(_arg_1:MouseEvent):void{throw"SHIT"});
+
+                skilltreedisplay.addChild(button);
+
+                images.push(featBitmap);
+
+            }
+
 
         }
-        
-
-
-
-        var subclassicons:Vector.<Bitmap> = new <Bitmap>[class1,class2,class3,class4];
-        var feats:Vector.<Bitmap>= c1fs.concat(c2fs).concat(c3fs).concat(c4fs);
-        for each(var b:Bitmap in feats){
+        for each(var b:Bitmap in images){
             skilltreedisplay.addChild(b);
         }
-        skilltreedisplay.addChild(subclassicons[subclass-1]);
+        //images.forEach(function (item:Bitmap,index:int,vector:Vector.<Bitmap>):void{subclassdisplay.addChild(item)});
+//        var class1feats:Vector.<Boolean> = player_.feats.splice(0,7);
+//        var class2feats:Vector.<Boolean> = player_.feats.splice(0,7);
+//        var class3feats:Vector.<Boolean> = player_.feats.splice(0,7);
+//        var class4feats:Vector.<Boolean> = player_.feats;
+//        player_.feats = class1feats.concat(class2feats).concat(class3feats).concat(class4feats);
+//        var subclass:int = player_.subclass;
+//        //Subclass 1
+//        var class1data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x00);
+//        var class1:Bitmap = new Bitmap(class1data);
+//
+//        class1.x=startingX;
+//        class1.y=startingY;
+//        class1.scaleX=subclassScale;
+//        class1.scaleY=subclassScale;
+//
+//        var c1fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
+//        for(i = 0;i < c1fs.length;i++){
+//            temp =new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x01+i));
+//            tempx = class1.x+((subclasslength-featLength)/2);
+//            tempy = class1.y-featLength-vertDistance-((featLength+vertDistance)*i);
+//            temp.x = tempx;
+//            temp.y = tempy;
+//            temp.scaleX = featScale;
+//            temp.scaleY = featScale;
+//            temp.width=featLength;
+//            temp.height=featLength;
+//            temp.alpha = canChoose(1,i)?0.6:0.1;
+//            if(class1feats[i]){
+//                temp.alpha=1;
+//                graphics.lineStyle(1,0xFF0000);
+//                graphics.drawRect(tempx-1,tempy-1,featLength+2,featLength+2);
+//            }
+//            c1fs[i] = temp;
+//        }
+//
+//
+//        //Subclass 2
+//        var class2data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x10);
+//        var class2:Bitmap = new Bitmap(class2data);
+//        class2.x=startingX+(featLength+horDistance);
+//        class2.y=startingY-(featLength+vertDistance)*2;
+//        class2.scaleX=subclassScale;
+//        class2.scaleY=subclassScale;
+//
+//        var c2fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
+//        for(i = 0;i < c2fs.length;i++){
+//            temp = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x11+i));
+//            tempx = class2.x+((subclasslength-featLength)/2);
+//            tempy = class2.y-featLength-vertDistance-((featLength+vertDistance)*i);
+//            temp.x = tempx;
+//            temp.y = tempy;
+//            temp.scaleX = featScale;
+//            temp.scaleY = featScale;
+//            temp.alpha = canChoose(2,i)?0.6:0.1;
+//            if(class2feats[i]){
+//                temp.alpha=1;
+//                graphics.lineStyle(1,0xFF0000);
+//                graphics.drawRect(tempx-1,tempy-1,featLength+2,featLength+2);
+//
+//            }
+//
+//            c2fs[i] = temp;
+//        }
+//
+//
+//        //Subclass 3
+//        var class3data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x20);
+//        var class3:Bitmap = new Bitmap(class3data);
+//        class3.x=startingX + (featLength+horDistance)*2;
+//        class3.y=startingY-(featLength+vertDistance)*3;
+//        class3.scaleX=subclassScale;
+//        class3.scaleY=subclassScale;
+//        var c3fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
+//        for(i= 0;i < c3fs.length;i++){
+//            temp = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x21+i));
+//            tempx = class3.x+((subclasslength-featLength)/2);
+//            tempy = class3.y-featLength-vertDistance-((featLength+vertDistance)*i);
+//            temp.x = tempx;
+//            temp.y = tempy;
+//            temp.scaleX = featScale;
+//            temp.scaleY = featScale;
+//            temp.alpha = canChoose(3,i)?0.6:0.1;
+//            if(class3feats[i]){
+//                temp.alpha=1;
+//                graphics.lineStyle(1,0xFF0000);
+//                graphics.drawRect(tempx-1,tempy-1,featLength+2,featLength+2);
+//            }
+//            c3fs[i] = temp;
+//        }
+//
+//
+//        //Subclass 4
+//        var class4data:BitmapData = AssetLibrary.getImageFromSet("LunarSkillIcons", 0x30);
+//        var class4:Bitmap = new Bitmap(class4data);
+//        class4.x=startingX+(featLength+horDistance)*3;
+//        class4.y=startingY+(featLength+vertDistance);
+//        class4.scaleX=subclassScale;
+//        class4.scaleY=subclassScale;
+//
+//        var c4fs:Vector.<Bitmap> = new Vector.<Bitmap>(7);
+//        for(i = 0;i < c4fs.length;i++){
+//            temp = new Bitmap(AssetLibrary.getImageFromSet("LunarSkillIcons",0x31+i));
+//            tempx = class4.x+((subclasslength-featLength)/2);
+//            tempy = class4.y-featLength-vertDistance-((featLength+vertDistance)*i);
+//            temp.x = tempx;
+//            temp.y = tempy;
+//            temp.scaleX = featScale;
+//            temp.scaleY = featScale;
+//            temp.alpha = canChoose(4,i)?0.6:0.1;
+//            if(class4feats[i]){
+//                temp.alpha=1;
+//                graphics.lineStyle(1,0xFF0000);
+//                graphics.drawRect(tempx-1,tempy-1,featLength+2,featLength+2);
+//            }
+//            c4fs[i]=temp;
+//
+//        }
+//
+//
+//
+//
+//        var subclassicons:Vector.<Bitmap> = new <Bitmap>[class1,class2,class3,class4];
+//        var feats:Vector.<Bitmap>= c1fs.concat(c2fs).concat(c3fs).concat(c4fs);
+//        for each(var b:Bitmap in feats){
+//            skilltreedisplay.addChild(b);
+//        }
+//        skilltreedisplay.addChild(subclassicons[subclass-1]);
+//        graphics.lineStyle(3,0xFF0000);
+//        graphics.drawRect(subclassicons[subclass-1].x-1,subclassicons[subclass-1].y-1,subclasslength+2,subclasslength+2);
     }
 }//package kabam.rotmg.friends.view
 }
