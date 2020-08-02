@@ -299,7 +299,7 @@
     <UnlockCost>499</UnlockCost>
     <DisplayId>{players.Necromancer}</DisplayId>
   </Object>
-  <Object type="0x0322" id="Huntress">
+  <Object type="0x0322" id="Huntsman">
     <Class>Player</Class>
     <Description>{players.The_huntress_uses_arrows_and_traps_to_defeat_her_enemies.}</Description>
     <AnimatedTexture>
@@ -331,7 +331,7 @@
     <UnlockLevel level="20" type="0x0300">Rogue</UnlockLevel>
     <UnlockLevel level="20" type="0x0307">Archer</UnlockLevel>
     <UnlockCost>499</UnlockCost>
-    <DisplayId>{players.Huntress}</DisplayId>
+    <DisplayId>Huntsman</DisplayId>
   </Object>
   <Object type="0x0323" id="Mystic">
     <Class>Player</Class>
@@ -480,8 +480,8 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>24, 25, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-    <Equipment>0xc44, 0xc53, -1, -1, 0xa22, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <SlotTypes>27, 28, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0x90be, 0x90cd, -1, -1, 0xa22, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
     <Attack max="75">15</Attack>

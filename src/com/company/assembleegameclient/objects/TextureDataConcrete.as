@@ -1,6 +1,7 @@
 ﻿package com.company.assembleegameclient.objects {
 import com.company.assembleegameclient.appengine.RemoteTexture;
 import com.company.assembleegameclient.objects.particles.EffectProperties;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.AnimatedChars;
 import com.company.assembleegameclient.util.AssetLoader;

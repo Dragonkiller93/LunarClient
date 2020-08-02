@@ -16,7 +16,10 @@ import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
+import kabam.rotmg.assets.Lunar_EnvironmentReplacements;
+import kabam.rotmg.assets.Lunar_HuntsmanTiered;
 import kabam.rotmg.assets.Lunar_Skill_Tree_Icon;
+import kabam.rotmg.assets.Lunar_TieredItemProjectiles;
 
 public class AssetLoader {
 
@@ -96,6 +99,9 @@ public class AssetLoader {
         AssetLibrary.addImageSet("LunarAddedItems32x32", new EmbeddedAssets.LunarAddedItems32x32_().bitmapData,32,32);
         AssetLibrary.addImageSet("LunarSkillIcons",new EmbeddedAssets.LunarSkillIcons_().bitmapData,32,32);
         AssetLibrary.addImageSet("LunarSkillTreeIcon",new EmbeddedAssets.LunarSkillTreeIcon_().bitmapData,16,16);
+        AssetLibrary.addImageSet("LunarEnvironment", new EmbeddedAssets.LunarEnvironment().bitmapData,16,16);
+        AssetLibrary.addImageSet("LunarHuntsmanTiered",new EmbeddedAssets.LunarHuntsmanTiered().bitmapData,8,8);
+        AssetLibrary.addImageSet("LunarTieredProjs",new EmbeddedAssets.LunarTieredProjs().bitmapData,8,8);
     }
 
     private function addAnimatedCharacters():void {
@@ -104,7 +110,7 @@ public class AssetLoader {
         AnimatedChars.add("chars8x8rLow1", new EmbeddedAssets.chars8x8rLow1Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rLow2", new EmbeddedAssets.chars8x8rLow2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rMid", new EmbeddedAssets.chars8x8rMidEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
-        AnimatedChars.add("chars8x8rMid2", new EmbeddedAssets.chars8x8rMid2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars. add("chars8x8rMid2", new EmbeddedAssets.chars8x8rMid2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHigh", new EmbeddedAssets.chars8x8rHighEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHero1", new EmbeddedAssets.chars8x8rHero1Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHero2", new EmbeddedAssets.chars8x8rHero2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
@@ -172,7 +178,10 @@ public class AssetLoader {
         var _local_1:*;
         for each (_local_1 in EmbeddedData.objectFiles) {
             currentXmlIsTesting = this.checkIsTestingXML(_local_1);
-            ObjectLibrary.parseFromXML(XML(_local_1));
+            try {
+                ObjectLibrary.parseFromXML(XML(_local_1));
+            }
+            catch(e:Error){ throw _local_1.name}
         }
         currentXmlIsTesting = false;
     }

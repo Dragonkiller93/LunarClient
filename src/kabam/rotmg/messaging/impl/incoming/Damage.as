@@ -9,6 +9,7 @@ public class Damage extends IncomingMessage {
     public var kill_:Boolean;
     public var bulletId_:uint;
     public var objectId_:int;
+    public var remove_:Boolean;
 
     public function Damage(_arg_1:uint, _arg_2:Function) {
         this.effects_ = new Vector.<uint>();
@@ -19,7 +20,7 @@ public class Damage extends IncomingMessage {
         this.targetId_ = _arg_1.readInt();
         this.effects_.length = 0;
         var _local_2:int = _arg_1.readUnsignedByte();
-        var _local_3:uint;
+        var _local_3:uint=0;
         while (_local_3 < _local_2) {
             this.effects_.push(_arg_1.readUnsignedByte());
             _local_3++;
@@ -28,10 +29,11 @@ public class Damage extends IncomingMessage {
         this.kill_ = _arg_1.readBoolean();
         this.bulletId_ = _arg_1.readUnsignedByte();
         this.objectId_ = _arg_1.readInt();
+        this.remove_ = _arg_1.readBoolean();
     }
 
     override public function toString():String {
-        return (formatToString("DAMAGE", "targetId_", "effects_", "damageAmount_", "kill_", "bulletId_", "objectId_"));
+        return (formatToString("DAMAGE", "targetId_", "effects_", "damageAmount_", "kill_", "bulletId_", "objectId_","remove_"));
     }
 
 

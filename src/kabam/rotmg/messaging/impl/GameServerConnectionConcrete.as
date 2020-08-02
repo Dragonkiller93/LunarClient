@@ -110,6 +110,7 @@ import kabam.rotmg.messaging.impl.incoming.ClientStat;
 import kabam.rotmg.messaging.impl.incoming.CreateSuccess;
 import kabam.rotmg.messaging.impl.incoming.Damage;
 import kabam.rotmg.messaging.impl.incoming.Death;
+import kabam.rotmg.messaging.impl.incoming.EffectText;
 import kabam.rotmg.messaging.impl.incoming.EnemyShoot;
 import kabam.rotmg.messaging.impl.incoming.EvolvedMessageHandler;
 import kabam.rotmg.messaging.impl.incoming.EvolvedPetMessage;
@@ -381,6 +382,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local_1.map(QUEST_FETCH_ASK).toMessage(OutgoingMessage);
         _local_1.map(QUEST_REDEEM).toMessage(QuestRedeem);
         _local_1.map(PET_CHANGE_FORM_MSG).toMessage(ReskinPet);
+        _local_1.map(EFFECTTEXT).toMessage(EffectText).toMethod(this.onEffectText);
         _local_1.map(FAILURE).toMessage(Failure).toMethod(this.onFailure);
         _local_1.map(CREATE_SUCCESS).toMessage(CreateSuccess).toMethod(this.onCreateSuccess);
         _local_1.map(SERVERPLAYERSHOOT).toMessage(ServerPlayerShoot).toMethod(this.onServerPlayerShoot);
@@ -533,6 +535,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local_1.unmap(FILE);
         _local_1.unmap(INVITEDTOGUILD);
         _local_1.unmap(PLAYSOUND);
+        _local_1.unmap(EFFECTTEXT);
     }
 
     private function encryptConnection():void {
@@ -866,7 +869,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         serverConnection.sendMessage(_local_4);
     }
 
-    override public function chooseName(_arg_1:String):void {
+    override public function  chooseName(_arg_1:String):void {
         var _local_2:ChooseName = (this.messages.require(CHOOSENAME) as ChooseName);
         _local_2.name_ = _arg_1;
         serverConnection.sendMessage(_local_2);
@@ -990,16 +993,21 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         var _local_5:int;
         var _local_2:AbstractMap = gs_.map;
         var _local_3:Projectile;
-        if ((((_arg_1.objectId_ >= 0)) && ((_arg_1.bulletId_ > 0)))) {
+        if ((((_arg_1.objectId_ >= 0)) && ((_arg_1.bulletId_ >= 0)))) {
             _local_5 = Projectile.findObjId(_arg_1.objectId_, _arg_1.bulletId_);
             _local_3 = (_local_2.boDict_[_local_5] as Projectile);
-            if (((!((_local_3 == null))) && (!(_local_3.projProps_.multiHit_)))) {
+            if(_local_3!=null && _arg_1.remove_) _local_3.update(99999999999,0);
+            if ( (((!(_local_3 == null)) && (!(_local_3.projProps_.multiHit_)))) ) {
+
                 _local_2.removeObj(_local_5);
             }
+
         }
         var _local_4:GameObject = _local_2.goDict_[_arg_1.targetId_];
+
         if (_local_4 != null) {
             _local_4.damage(-1, _arg_1.damageAmount_, _arg_1.effects_, _arg_1.kill_, _local_3);
+
         }
     }
 
@@ -1460,6 +1468,9 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                 case StatData.FEAT:
                     _local_4.feats=stringtofeats(_local_7.strStatValue_);
                     break;
+                case StatData.BLOCKS_PROJ:
+                    _local_4.blocksProjectiles=_local_7.boolStatValue_;
+                    break;
                 case StatData.NAME_STAT:
                     if (_arg_1.name_ != _local_7.strStatValue_) {
                         _arg_1.name_ = _local_7.strStatValue_;
@@ -1482,7 +1493,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     (_arg_1 as SellableObject).setPrice(_local_8);
                     break;
                 case StatData.ACTIVE_STAT:
-                    (_arg_1 as Portal).active_ = !((_local_8 == 0));
+                    (_arg_1 as Portal).active_ = _local_7.boolStatValue_;
                     break;
                 case StatData.ACCOUNT_ID_STAT:
                     _local_4.accountId_ = _local_7.strStatValue_;
@@ -1545,7 +1556,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     (_arg_1 as NameChanger).setRankRequired(_local_8);
                     break;
                 case StatData.NAME_CHOSEN_STAT:
-                    _local_4.nameChosen_ = !((_local_8 == 0));
+                    _local_4.nameChosen_ = _local_7.boolStatValue_;
                     _arg_1.nameBitmapData_ = null;
                     break;
                 case StatData.CURR_FAME_STAT:
@@ -1596,9 +1607,9 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     ((!((_local_4.skinId == _local_8))) && (this.setPlayerSkinTemplate(_local_4, _local_8)));
                     break;
                 case StatData.HASBACKPACK_STAT:
-                    (_arg_1 as Player).hasBackpack_ = Boolean(_local_8);
+                    (_arg_1 as Player).hasBackpack_ = _local_7.boolStatValue_;
                     if (_arg_3) {
-                        this.updateBackpackTab.dispatch(Boolean(_local_8));
+                        this.updateBackpackTab.dispatch(_local_7.boolStatValue_);
                     }
                     break;
                 case StatData.BACKPACK_0_STAT:
@@ -1920,7 +1931,9 @@ public class GameServerConnectionConcrete extends GameServerConnection {
             _local_2.dispatch();
         }
     }
-
+    private function onEffectText(_arg_1:EffectText):void {
+        this.player.showEffectText(_arg_1.message_);
+    }
     private function onPasswordPrompt(_arg_1:PasswordPrompt):void {
         if (_arg_1.cleanPasswordStatus == 3) {
             TitleView.queuePasswordPromptFull = true;

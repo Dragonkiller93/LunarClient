@@ -107,6 +107,7 @@ public class GameServerConnection {
     public static const KEY_INFO_REQUEST:int = 66;
     public static const KEY_INFO_RESPONSE:int = 19;
     public static const CHANGESUBCLASS:int = 103;
+    public static const EFFECTTEXT:int = 104;
     public static var instance:GameServerConnection;
 
     public var changeMapSignal:Signal;

@@ -40,8 +40,9 @@ public class ProjectileProperties {
             this.minDamage_ = (this.maxDamage_ = int(_arg_1.Damage));
         }
         else {
-            this.minDamage_ = int(_arg_1.MinDamage);
-            this.maxDamage_ = int(_arg_1.MaxDamage);
+            if(!_arg_1.hasOwnProperty("MinDamage") && !_arg_1.hasOwnProperty("MaxDamage")) this.minDamage_=(this.maxDamage_=0);
+            else if(!_arg_1.hasOwnProperty("MinDamage")) this.minDamage_=(this.maxDamage_=int(_arg_1.MaxDamage));
+            else  this.minDamage_=(this.maxDamage_=int(_arg_1.MinDamage));
         }
         for each (_local_2 in _arg_1.ConditionEffect) {
             if (this.effects_ == null) {

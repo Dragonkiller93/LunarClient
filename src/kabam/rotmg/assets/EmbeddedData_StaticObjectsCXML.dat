@@ -4,8 +4,8 @@
    <Object type="0x0100" id="Tree A">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x49</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x00</Index>
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
@@ -20,8 +20,8 @@
    <Object type="0x0101" id="Tree B">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x4a</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x01</Index>
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
@@ -68,8 +68,8 @@
    <Object type="0x0104" id="Tree Jungle">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x4d</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x02</Index>
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
@@ -84,11 +84,13 @@
    <Object type="0x0105" id="Bush">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x4e</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x03</Index>
       </Texture>
-      <ShadowSize>75</ShadowSize>
+      <ShadowSize>0</ShadowSize>
       <Static/>
+      <MinSize>50</MinSize>
+      <MaxSize>60</MaxSize>
    </Object>
    <Object type="0x0106" id="Shrub">
       <Class>GameObject</Class>
@@ -96,29 +98,34 @@
          <File>lofiEnvironment</File>
          <Index>0x4f</Index>
       </Texture>
-      <ShadowSize>75</ShadowSize>
+	<ShadowSize>0</ShadowSize>
       <Static/>
+      <Size>20</Size>
    </Object>
    <Object type="0x0107" id="Rock Grey">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x59</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x06</Index>
       </Texture>
       <HitSound>monster/rocks_hit</HitSound>
       <DeathSound>monster/rocks_death</DeathSound>
       <Static/>
+<ShadowSize>0</ShadowSize>
+      <MinSize>50</MinSize>
+      <MaxSize>60</MaxSize>
       <OccupySquare/>
    </Object>
    <Object type="0x0108" id="Rock Brown">
       <Class>GameObject</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0x5a</Index>
+         <File>LunarEnvironment</File>
+         <Index>0x05</Index>
       </Texture>
       <HitSound>monster/rocks_hit</HitSound>
       <DeathSound>monster/rocks_death</DeathSound>
       <Static/>
+<ShadowSize>0</ShadowSize>
       <OccupySquare/>
    </Object>
    <Object type="0x0109" id="Small Mushroom">

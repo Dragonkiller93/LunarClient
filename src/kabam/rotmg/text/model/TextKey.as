@@ -540,6 +540,8 @@ public class TextKey {
     public static const TERMSVIEW_PEACEOUT:String = "TermsView.PeaceOut";
     public static const SELLABLEOBJECTPANEL_TEXT:String = "SellableObjectPanel.text";
     public static const SELLABLEOBJECTPANEL_BUY:String = "SellableObjectPanel.buy";
+
+    public static const CONDITIONEFFECT_EXPOSED:String = "conditionEffect.Exposed";
     public static const CONDITIONEFFECT_NOTHING:String = "conditionEffect.Nothing";
     public static const CONDITIONEFFECT_DEAD:String = "conditionEffect.Dead";
     public static const CONDITIONEFFECT_QUIET:String = "conditionEffect.Quiet";

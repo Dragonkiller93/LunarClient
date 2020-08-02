@@ -182,7 +182,12 @@ public class Player extends Character {
         return (_local_5);
     }
 
-
+    public function showEffectText(message:String)
+    {
+        var _local_4:CharacterStatusText = new CharacterStatusText(this, 0xFFB6C1, 1000);
+        _local_4.setStringBuilder(new StaticStringBuilder(message));
+        map_.mapOverlay_.addStatusText(_local_4);
+    }
     public function setRelativeMovement(_arg_1:Number, _arg_2:Number, _arg_3:Number):void {
         var _local_4:Number;
         if (this.relMoveVec_ == null) {
@@ -853,6 +858,11 @@ public class Player extends Character {
         var _local_5:XML = ObjectLibrary.xmlLibrary_[_local_4];
         if ((((_local_5 == null)) || (!(_local_5.hasOwnProperty("Usable"))))) {
             return (false);
+        }
+        if(isSilenced())
+        {
+            SoundEffectLibrary.play("error");
+            return false;
         }
         var _local_6:Point = map_.pSTopW(_arg_1, _arg_2);
         if (_local_6 == null) {

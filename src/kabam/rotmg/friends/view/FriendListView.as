@@ -30,7 +30,7 @@ import flash.text.TextFormatAlign;
 import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.LunarSkillTree.SkillIcon;
-import kabam.rotmg.LunarSkillTree.SkillTexts;
+import kabam.rotmg.LunarSkillTree.SkillLiterals;
 
 import kabam.rotmg.friends.model.FriendConstant;
 import kabam.rotmg.friends.model.FriendVO;
@@ -173,7 +173,7 @@ public class FriendListView extends Sprite implements DialogCloser {
     }
     private function EmptyFeats():Vector.<Boolean>{
         var result:Vector.<Boolean>= new Vector.<Boolean>();
-        for(var i:int =0;i < 28;i++) {
+        for(var i:int =0;i < 40;i++) {
             result.push(false);
         }
         return result;
@@ -203,7 +203,12 @@ public class FriendListView extends Sprite implements DialogCloser {
         this.player_.map_.gs_.gsc_.changeSubClass(4,EmptyFeats());
         this.ClasstoTree();
     }
-
+    private function reset(_arg_1:Event):void{
+        this.player_.feats=EmptyFeats();
+        this.removeChild(skilltreedisplay);
+        this.drawChooseClass();
+        this.addChild(subclassdisplay);
+    }
     private function drawChooseClass():void {
         graphics.clear();
         graphics.beginFill(0x000000, 0.8);
@@ -310,13 +315,21 @@ public class FriendListView extends Sprite implements DialogCloser {
 
     }
     private function canChoose(column:int, featindex:int) {
+        var classes:Vector.<int> = new <int>[0,2,3,-1];
+        var featsPerColumn:int = 7;
         var class1feats:Vector.<Boolean> = player_.feats.splice(0, 7);
         var class2feats:Vector.<Boolean> = player_.feats.splice(0, 7);
         var class3feats:Vector.<Boolean> = player_.feats.splice(0, 7);
         var class4feats:Vector.<Boolean> = player_.feats.splice(0, 7);
         player_.feats = class1feats.concat(class2feats).concat(class3feats).concat(class4feats);
         var subclass:int = player_.subclass;
-
+        var left:Boolean = false;
+        var right:Boolean = false;
+        var below:Boolean = false;
+        for(var i:int=0; i <SkillLiterals.specialFeatLocs.length;i++){
+            var loc:Vector.<int> = SkillLiterals.specialFeatLocs[i];
+            if(loc[0] == column-1 && loc[1] ==classes[column]+featindex) left = player_.feats[classes.length * featsPerColumn + i];
+        }
         switch (column) {
             case 1:
                 return ((class1feats[featindex]) || (featindex > 0 && class1feats[featindex - 1]) || (featindex == 0 && subclass == 1) || (featindex > 1 && class2feats[featindex - 2]) || (featindex==1 && subclass==2) );
@@ -388,8 +401,8 @@ public class FriendListView extends Sprite implements DialogCloser {
                 graphics.lineStyle(subclassBorderWidth,subclassBorderColor);
                 graphics.drawRect(subclassX-1,subclassY-1,subclasslength+2,subclasslength+2);
             }
-            subclassIcon.setToolTipTitle(SkillTexts.getSubclassName(i));
-            subclassIcon.setToolTipText(SkillTexts.getSubclassDescription(i));
+            subclassIcon.setToolTipTitle(SkillLiterals.getSubclassName(i));
+            subclassIcon.setToolTipText(SkillLiterals.getSubclassDescription(i));
             subclassIcon.toolTip_.tipText_.setSize(15);
             classIcons.push(subclassIcon);
             for(var j:int=0;j < numFeats[i];j++){
@@ -400,18 +413,18 @@ public class FriendListView extends Sprite implements DialogCloser {
                 feat.x=featX;
                 feat.y=featY;
                 feat.setSize(featLength);
-                feat.icon_.alpha = 0.1
+                feat.icon_.alpha = 0.1;
                 if(isChosen){
                     feat.icon_.alpha=1;
                     graphics.lineStyle(featBorderWidth,featBorderColor);
                     graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
-                    feat.setToolTipTitle(SkillTexts.getFeatName(featIcons.length));
-                    feat.setToolTipText(SkillTexts.getFeatDesc(featIcons.length));
+                    feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
+                    feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
                 }
                 if(canChoose(i+1,j) && !isChosen){
                     feat.icon_.alpha=0.6;
-                    feat.setToolTipTitle(SkillTexts.getFeatName(featIcons.length));
-                    feat.setToolTipText(SkillTexts.getFeatDesc(featIcons.length));
+                    feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
+                    feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
                     feat.addEventListener(MouseEvent.CLICK,ChooseFeat(i,j));
                 }
 
@@ -422,6 +435,26 @@ public class FriendListView extends Sprite implements DialogCloser {
 
 
         }
+        for(i=0; i <SkillLiterals.specialFeatLocs.length;i++){
+            var loc:Vector.<int> = SkillLiterals.specialFeatLocs[i];
+            featX = startingX+((featLength+horDistance)*(loc[0]-.5) +(subclasslength-featLength)/2);
+            featY = startingY-((featLength+vertDistance)*(loc[1]));
+            feat= new SkillIcon(AssetLibrary.getImageFromSet("LunarSkillIcons",(0x40)+i));
+            feat.x=featX;
+            feat.y=featY;
+            feat.setSize(featLength);
+            graphics.lineStyle(featBorderWidth,featBorderColor);
+            graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
+            feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
+            feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
+            feat.icon_.alpha = 1;
+            featIcons.push(feat);
+        }
+        var resetButton:TextButton = new TextButton(12, "Reset", 0);
+        resetButton.x=50;
+        resetButton.y=300;
+        resetButton.addEventListener(MouseEvent.CLICK,reset);
+        skilltreedisplay.addChild(resetButton);
         for each(var icon:SkillIcon in classIcons.concat(featIcons)){
             skilltreedisplay.addChild(icon);
         }

@@ -115,6 +115,7 @@ public class ObjectLibrary {
                     }
                 }
                 typeToTextureData_[_local_5] = textureDataFactory.create(_local_2);
+
                 if (_local_2.hasOwnProperty("Top")) {
                     typeToTopTextureData_[_local_5] = textureDataFactory.create(XML(_local_2.Top));
                 }

@@ -47,6 +47,7 @@ public class Projectile extends BasicObject {
     public var angle_:Number = 0;
     public var multiHitDict_:Dictionary;
     public var p_:Point3D;
+    public var toberemoved:Boolean = false;
     private var staticPoint_:Point;
     private var staticVector3D_:Vector3D;
     protected var shadowGradientFill_:GraphicsGradientFill;
@@ -215,6 +216,7 @@ public class Projectile extends BasicObject {
         if (_local_3 > this.projProps_.lifetime_) {
             return (false);
         }
+        if(toberemoved) return false;
         var _local_4:Point = this.staticPoint_;
         this.positionAt(_local_3, _local_4);
         if (((!(this.moveTo(_local_4.x, _local_4.y))) || ((square_.tileType_ == 0xFFFF)))) {
@@ -241,6 +243,7 @@ public class Projectile extends BasicObject {
         }
         var _local_6:GameObject = this.getHit(_local_4.x, _local_4.y);
         if (_local_6 != null) {
+
             _local_7 = map_.player_;
             _local_8 = !((_local_7 == null));
             _local_9 = _local_6.props_.isEnemy_;
@@ -257,15 +260,17 @@ public class Projectile extends BasicObject {
                 if (_local_6 == _local_7) {
                     map_.gs_.gsc_.playerHit(this.bulletId_, this.ownerId_);
                     _local_6.damage(this.containerType_, _local_11, this.projProps_.effects_, false, this);
+                    if(_local_7.feats[18]) return false;
                 }
                 else {
                     if (_local_6.props_.isEnemy_) {
                         map_.gs_.gsc_.enemyHit(_arg_1, this.bulletId_, _local_6.objectId_, _local_12);
-                        _local_6.damage(this.containerType_, _local_11, this.projProps_.effects_, _local_12, this);
+                        //_local_6.damage(this.containerType_, _local_11, this.projProps_.effects_, _local_12, this);
                     }
                     else {
                         if (!this.projProps_.multiHit_) {
                             map_.gs_.gsc_.otherHit(_arg_1, this.bulletId_, this.ownerId_, _local_6.objectId_);
+
                         }
                     }
                 }
@@ -274,10 +279,11 @@ public class Projectile extends BasicObject {
                 this.multiHitDict_[_local_6] = true;
             }
             else {
-                return (false);
+                return false;
             }
+            if(_local_6.blocksProjectiles) return false;
         }
-        return (true);
+        return true;
     }
 
     public function getHit(_arg_1:Number, _arg_2:Number):GameObject {
@@ -296,7 +302,7 @@ public class Projectile extends BasicObject {
                             _local_6 = (((_local_5.x_ > _arg_1)) ? (_local_5.x_ - _arg_1) : (_arg_1 - _local_5.x_));
                             _local_7 = (((_local_5.y_ > _arg_2)) ? (_local_5.y_ - _arg_2) : (_arg_2 - _local_5.y_));
                             if (!(((_local_6 > _local_5.radius_)) || ((_local_7 > _local_5.radius_)))) {
-                                if (!((this.projProps_.multiHit_) && (!((this.multiHitDict_[_local_5] == null))))) {
+                                if (!((this.projProps_.multiHit_) && (!(this.multiHitDict_[_local_5] == null)))) {
                                     if (_local_5 == map_.player_) {
                                         return (_local_5);
                                     }

@@ -62,7 +62,7 @@ public class GameObject extends BasicObject {
     private static const ZERO_LIMIT:Number = 1E-5;
     private static const NEGATIVE_ZERO_LIMIT:Number = -(ZERO_LIMIT);
     public static const ATTACK_PERIOD:int = 300;
-
+    public var blocksProjectiles:Boolean = false;
     public var nameBitmapData_:BitmapData = null;
     private var nameFill_:GraphicsBitmapFill = null;
     private var namePath_:GraphicsPath = null;
@@ -216,6 +216,10 @@ public class GameObject extends BasicObject {
                 _local_5 = (_local_5 * 2);
             }
         }
+        if((_arg_4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXPOSED_BIT) != 0)
+        {
+            _local_5 = _local_5 - 20;
+        }
         var _local_6:int = ((_arg_1 * 3) / 20);
         var _local_7:int = Math.max(_local_6, (_arg_1 - _local_5));
         if ((_arg_4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) != 0) {
@@ -359,6 +363,18 @@ public class GameObject extends BasicObject {
 
     public function isQuiet():Boolean {
         return (!(((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.QUIET_BIT) == 0)));
+    }
+    public function isSilenced() : Boolean
+    {
+        return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SILENCED_BIT) != 0;
+    }
+    public function isEnergized():Boolean
+    {
+        return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.ENERGIZED_BIT)!=0;
+    }
+    public function isExposed() : Boolean
+    {
+        return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXPOSED_BIT) != 0;
     }
 
     public function isWeak():Boolean {
@@ -710,6 +726,7 @@ public class GameObject extends BasicObject {
                             case ConditionEffect.UNSTABLE:
                             case ConditionEffect.DARKNESS:
                             case ConditionEffect.PETRIFIED_IMMUNE:
+                            case ConditionEffect.EXPOSED:
                                 _local_9 = ConditionEffect.effects_[_local_8];
                                 break;
                             case ConditionEffect.SLOWED:
@@ -723,6 +740,16 @@ public class GameObject extends BasicObject {
                                 }
                                 break;
                             case ConditionEffect.ARMORBROKEN:
+                                if (this.isArmorBrokenImmune()) {
+                                    _local_10 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                    _local_10.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                    map_.mapOverlay_.addStatusText(_local_10);
+                                }
+                                else {
+                                    _local_9 = ConditionEffect.effects_[_local_8];
+                                }
+                                break;
+                            case ConditionEffect.EXPOSED:
                                 if (this.isArmorBrokenImmune()) {
                                     _local_10 = new CharacterStatusText(this, 0xFF0000, 3000);
                                     _local_10.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
@@ -787,7 +814,7 @@ public class GameObject extends BasicObject {
                                 break;
                         }
                         if (_local_9 != null) {
-                            if (_local_8 < ConditionEffect.NEW_CON_THREASHOLD) {
+                            if (_local_8 < ConditionEffect.NEW_CON_THREASHOLD || _local_8==47) {
                                 if ((this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_9.bit_) == this.condition_[ConditionEffect.CE_FIRST_BATCH]) continue;
                                 this.condition_[ConditionEffect.CE_FIRST_BATCH] = (this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_9.bit_);
                             }
@@ -1147,46 +1174,50 @@ public class GameObject extends BasicObject {
         }
     }
 
-    public function drawConditionIcons(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
-        var _local_9:BitmapData;
-        var _local_10:GraphicsBitmapFill;
-        var _local_11:GraphicsPath;
-        var _local_12:Number;
-        var _local_13:Number;
-        var _local_14:Matrix;
-        if (this.icons_ == null) {
+    public function drawConditionIcons(param1:Vector.<IGraphicsData>, param2:Camera, param3:int) : void
+    {
+        var _loc9_:BitmapData = null;
+        var _loc10_:GraphicsBitmapFill = null;
+        var _loc11_:GraphicsPath = null;
+        var _loc12_:Number = NaN;
+        var _loc13_:Number = NaN;
+        var _loc14_:Matrix = null;
+        if(this.icons_ == null)
+        {
             this.icons_ = new Vector.<BitmapData>();
             this.iconFills_ = new Vector.<GraphicsBitmapFill>();
             this.iconPaths_ = new Vector.<GraphicsPath>();
         }
         this.icons_.length = 0;
-        var _local_4:int = (_arg_3 / 500);
-        ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH], this.icons_, _local_4);
-        ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH], this.icons_, _local_4);
-        var _local_5:Number = posS_[3];
-        var _local_6:Number = this.vS_[1];
-        var _local_7:int = this.icons_.length;
-        var _local_8:int;
-        while (_local_8 < _local_7) {
-            _local_9 = this.icons_[_local_8];
-            if (_local_8 >= this.iconFills_.length) {
-                this.iconFills_.push(new GraphicsBitmapFill(null, new Matrix(), false, false));
-                this.iconPaths_.push(new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>()));
+        var _loc4_:int = param3 / 500;
+        ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH],this.icons_,_loc4_);
+        ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH],this.icons_,_loc4_);
+        var _loc5_:Number = posS_[3];
+        var _loc6_:Number = this.vS_[1];
+        var _loc7_:int = this.icons_.length;
+        var _loc8_:int = 0;
+        while(_loc8_ < _loc7_)
+        {
+            _loc9_ = this.icons_[_loc8_];
+            if(_loc8_ >= this.iconFills_.length)
+            {
+                this.iconFills_.push(new GraphicsBitmapFill(null,new Matrix(),false,false));
+                this.iconPaths_.push(new GraphicsPath(GraphicsUtil.QUAD_COMMANDS,new Vector.<Number>()));
             }
-            _local_10 = this.iconFills_[_local_8];
-            _local_11 = this.iconPaths_[_local_8];
-            _local_10.bitmapData = _local_9;
-            _local_12 = ((_local_5 - ((_local_9.width * _local_7) / 2)) + (_local_8 * _local_9.width));
-            _local_13 = (_local_6 - (_local_9.height / 2));
-            _local_11.data.length = 0;
-            _local_11.data.push(_local_12, _local_13, (_local_12 + _local_9.width), _local_13, (_local_12 + _local_9.width), (_local_13 + _local_9.height), _local_12, (_local_13 + _local_9.height));
-            _local_14 = _local_10.matrix;
-            _local_14.identity();
-            _local_14.translate(_local_12, _local_13);
-            _arg_1.push(_local_10);
-            _arg_1.push(_local_11);
-            _arg_1.push(GraphicsUtil.END_FILL);
-            _local_8++;
+            _loc10_ = this.iconFills_[_loc8_];
+            _loc11_ = this.iconPaths_[_loc8_];
+            _loc10_.bitmapData = _loc9_;
+            _loc12_ = _loc5_ - _loc9_.width * _loc7_ / 2 + _loc8_ * _loc9_.width;
+            _loc13_ = _loc6_ - _loc9_.height / 2;
+            _loc11_.data.length = 0;
+            (_loc11_.data as Vector.<Number>).push(_loc12_,_loc13_,_loc12_ + _loc9_.width,_loc13_,_loc12_ + _loc9_.width,_loc13_ + _loc9_.height,_loc12_,_loc13_ + _loc9_.height);
+            _loc14_ = _loc10_.matrix;
+            _loc14_.identity();
+            _loc14_.translate(_loc12_,_loc13_);
+            param1.push(_loc10_);
+            param1.push(_loc11_);
+            param1.push(GraphicsUtil.END_FILL);
+            _loc8_++;
         }
     }
 

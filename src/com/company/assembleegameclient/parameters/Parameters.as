@@ -56,6 +56,8 @@ public class Parameters {
     itemShrinkTypes[36994]=32;
     itemShrinkTypes[36995]=32;
     itemShrinkTypes[36996]=32;
+    itemShrinkTypes[262]=16;
+    itemShrinkTypes[263] = 16;
 
 
     public static function load():void {

@@ -105,10 +105,12 @@ public class StatData {
     public static const FEAT:int = 99;
     public static const MARKET_TYPE:int = 100;
     public static const MARKET_PRICE :int = 101;
+    public static const BLOCKS_PROJ:int = 102;
 
     public var statType_:uint = 0;
     public var statValue_:int;
     public var strStatValue_:String;
+    public var boolStatValue_:Boolean;
 
 
     public static function statToName(_arg_1:int):String {
@@ -152,18 +154,30 @@ public class StatData {
             case ACCOUNT_ID_STAT:
             case OWNER_ACCOUNT_ID_STAT:
             case FEAT:
-                return (true);
+                return true;
         }
-        return (false);
+        return false;
     }
-
+    public function isBoolStat():Boolean{
+        switch(this.statType_){
+            case BLOCKS_PROJ:
+            case ACTIVE_STAT:
+            case NAME_CHOSEN_STAT:
+            case HASBACKPACK_STAT:
+                return true;
+        }
+        return false;
+    }
     public function parseFromInput(_arg_1:IDataInput):void {
         this.statType_ = _arg_1.readUnsignedByte();
-        if (!this.isStringStat()) {
-            this.statValue_ = _arg_1.readInt();
+        if(this.isStringStat()){
+            this.strStatValue_=_arg_1.readUTF()
         }
-        else {
-            this.strStatValue_ = _arg_1.readUTF();
+        else if(this.isBoolStat()){
+            this.boolStatValue_=_arg_1.readBoolean();
+        }
+        else{
+            this.statValue_ = _arg_1.readInt();
         }
     }
 
