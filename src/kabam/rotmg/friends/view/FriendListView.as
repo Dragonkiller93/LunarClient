@@ -24,12 +24,14 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.FocusEvent;
 import flash.events.MouseEvent;
+import flash.geom.ColorTransform;
 import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.LunarSkillTree.SkillIcon;
+import kabam.rotmg.LunarSkillTree.SkillLiterals;
 import kabam.rotmg.LunarSkillTree.SkillLiterals;
 
 import kabam.rotmg.friends.model.FriendConstant;
@@ -167,10 +169,7 @@ public class FriendListView extends Sprite implements DialogCloser {
         this.destroy();
     }
 
-    private function drawBackground():void {
 
-
-    }
     private function EmptyFeats():Vector.<Boolean>{
         var result:Vector.<Boolean>= new Vector.<Boolean>();
         for(var i:int =0;i < 40;i++) {
@@ -314,45 +313,37 @@ public class FriendListView extends Sprite implements DialogCloser {
 
 
     }
-    private function canChoose(column:int, featindex:int) {
-        var classes:Vector.<int> = new <int>[0,2,3,-1];
-        var featsPerColumn:int = 7;
-        var class1feats:Vector.<Boolean> = player_.feats.splice(0, 7);
-        var class2feats:Vector.<Boolean> = player_.feats.splice(0, 7);
-        var class3feats:Vector.<Boolean> = player_.feats.splice(0, 7);
-        var class4feats:Vector.<Boolean> = player_.feats.splice(0, 7);
-        player_.feats = class1feats.concat(class2feats).concat(class3feats).concat(class4feats);
-        var subclass:int = player_.subclass;
-        var left:Boolean = false;
-        var right:Boolean = false;
-        var below:Boolean = false;
-        for(var i:int=0; i <SkillLiterals.specialFeatLocs.length;i++){
-            var loc:Vector.<int> = SkillLiterals.specialFeatLocs[i];
-            if(loc[0] == column-1 && loc[1] ==classes[column]+featindex) left = player_.feats[classes.length * featsPerColumn + i];
+    private function canChoose(featindex:int) {
+        if(player_.feats[featindex]) return true;
+        for each(var i:int in SkillLiterals.getUnlocks(featindex)){
+            if(i<0 && player_.subclass ==-1*i) return true;
+            else if(i >= 0 && player_.feats[i]) return true;
         }
-        switch (column) {
-            case 1:
-                return ((class1feats[featindex]) || (featindex > 0 && class1feats[featindex - 1]) || (featindex == 0 && subclass == 1) || (featindex > 1 && class2feats[featindex - 2]) || (featindex==1 && subclass==2) );
-            case 2:
-                return ((class2feats[featindex]) || (featindex > 0 && class2feats[featindex - 1]) || (featindex == 0 && subclass == 2) || (featindex < 5 && class1feats[featindex + 2]) || (featindex > 0 && class3feats[featindex - 1]) || (featindex==0 && subclass==3));
-            case 3:
-                return ((class3feats[featindex]) || (featindex > 0 && class3feats[featindex - 1]) || (featindex == 0 && subclass == 3) || (featindex < 6 && class2feats[featindex + 1]) || (featindex < 3 && class4feats[featindex + 4]));
-            case 4:
-                return ((class4feats[featindex]) || (featindex > 0 && class4feats[featindex - 1]) || (featindex == 0 && subclass == 4) || (featindex > 3 && class3feats[featindex - 4]) || (featindex==3 && subclass==3));
-        }
+        return false;
+
     }
-    public function ChooseFeat(column:int, index:int):Function{
+    public function ChooseFeat(index:int):Function{
         var currentfeats:int = 0;
         var f:FriendListView = this;
         for each(var b:Boolean in player_.feats) currentfeats+=b?1:0;
-        if((currentfeats < (int) ((player_.level_-20)/3)) && canChoose(column+1,index)) {
+        if((currentfeats < (int) ((player_.level_-20)/3)) && canChoose(index)) {
             return function(_arg_1:MouseEvent):void {
-                player_.feats[column * 7 + index] = true;
+                player_.feats[index] = true;
+                player_.showEffectText(player_.feats.length.toString());
                 player_.map_.gs_.gsc_.changeSubClass(player_.subclass,player_.feats);
                 f.drawSkillTree();
             }
         }
         return function(_arg_1:MouseEvent):void{}
+    }
+    private function MeetsRequirements(index:int):Boolean {
+        var req:Vector.<int> = SkillLiterals.specialReqs[index];
+        if(req==null) return true;
+        var numChosen:int = 0;
+        for(var i:int =0; i < player_.feats.length;i++) {
+            if(player_.feats[i] && SkillLiterals.getType(i)==req[0]) numChosen++;
+        }
+        return numChosen>=req[1];
     }
     private function drawSkillTree():void{
         while(skilltreedisplay.numChildren>0) {skilltreedisplay.removeChildAt(0);}
@@ -414,18 +405,30 @@ public class FriendListView extends Sprite implements DialogCloser {
                 feat.y=featY;
                 feat.setSize(featLength);
                 feat.icon_.alpha = 0.1;
-                if(isChosen){
-                    feat.icon_.alpha=1;
-                    graphics.lineStyle(featBorderWidth,featBorderColor);
-                    graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
-                    feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
-                    feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
-                }
-                if(canChoose(i+1,j) && !isChosen){
+                if(canChoose(featIcons.length)){
                     feat.icon_.alpha=0.6;
                     feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
                     feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
-                    feat.addEventListener(MouseEvent.CLICK,ChooseFeat(i,j));
+                    switch(SkillLiterals.getType(featIcons.length)){
+                        case 1:feat.setColor(0x0000cc); break;
+                        case 2:feat.setColor(0xcc0000); break;
+                        case 3:feat.setColor(0x351c75); break;
+                        case 4:feat.setColor(0xf1c232); break;
+                    }
+                    if(isChosen){
+                        feat.icon_.alpha=1;
+                        graphics.lineStyle(featBorderWidth,featBorderColor);
+                        graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
+                    }
+                    else{
+                        if(!MeetsRequirements(featIcons.length)){
+                            var req:Vector.<int> = SkillLiterals.specialReqs[featIcons.length];
+                            feat.setToolTipText("You Require: " + req[1]+ " skills in that group.");
+                        }
+                        else {
+                            feat.addEventListener(MouseEvent.CLICK, ChooseFeat(featIcons.length));
+                        }
+                    }
                 }
 
 
@@ -440,16 +443,38 @@ public class FriendListView extends Sprite implements DialogCloser {
             featX = startingX+((featLength+horDistance)*(loc[0]-.5) +(subclasslength-featLength)/2);
             featY = startingY-((featLength+vertDistance)*(loc[1]));
             feat= new SkillIcon(AssetLibrary.getImageFromSet("LunarSkillIcons",(0x40)+i));
+
+            isChosen = feats[featIcons.length];
             feat.x=featX;
             feat.y=featY;
             feat.setSize(featLength);
-            graphics.lineStyle(featBorderWidth,featBorderColor);
-            graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
-            feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
-            feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
-            feat.icon_.alpha = 1;
+            feat.icon_.alpha = 0.1;
+            if(canChoose(featIcons.length)){
+                feat.icon_.alpha=0.6;
+                feat.setToolTipTitle(SkillLiterals.getFeatName(featIcons.length));
+                feat.setToolTipText(SkillLiterals.getFeatDesc(featIcons.length));
+                switch(SkillLiterals.getType(featIcons.length)){
+                    case 1:feat.setColor(0x0000cc); break;
+                    case 2:feat.setColor(0xcc0000); break;
+                    case 3:feat.setColor(0x351c75); break;
+                    case 4:feat.setColor(0xf1c232); break;
+                }
+
+
+
+                }
+                if(isChosen){
+                    feat.icon_.alpha=1;
+                    graphics.lineStyle(featBorderWidth,featBorderColor);
+                    graphics.drawRect(featX-1,featY-1,featLength+2,featLength+2);
+                }
+                else{
+                    feat.addEventListener(MouseEvent.CLICK,ChooseFeat(featIcons.length));
+                }
             featIcons.push(feat);
-        }
+            }
+
+
         var resetButton:TextButton = new TextButton(12, "Reset", 0);
         resetButton.x=50;
         resetButton.y=300;

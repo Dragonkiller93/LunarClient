@@ -376,7 +376,10 @@ public class GameObject extends BasicObject {
     {
         return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXPOSED_BIT) != 0;
     }
-
+    public function isInspired() : Boolean
+    {
+        return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.INSPIRED_BIT) != 0;
+    }
     public function isWeak():Boolean {
         return (!(((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.WEAK_BIT) == 0)));
     }

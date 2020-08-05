@@ -79,7 +79,9 @@ public class SkillIcon extends Sprite implements TooltipAble {
             this.toolTip_.setText(new LineBuilder().setParams(_arg_1, _arg_2));
         }
     }
-
+    public function setColor(_arg_1:uint):void{
+        this.toolTip_.titleText_.setColor(_arg_1);
+    }
     public function setColorTransform(_arg_1:ColorTransform):void {
         if (_arg_1 == this.ct_) {
             return;

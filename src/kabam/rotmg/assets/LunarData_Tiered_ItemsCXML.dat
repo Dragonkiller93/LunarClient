@@ -6877,4 +6877,176 @@
     <feedPower>380</feedPower>
     <DisplayId>Nightstalker Trap</DisplayId>
   </Object>
+  <Object type="0xae4" id="Stasis Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x90</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>0</Tier>
+    <Description>A crystal orb that holds enemies in an ethereal prison.</Description>
+    <Usable/>
+    <BagType>1</BagType>
+    <MpCost>65</MpCost>
+    <Activate duration="3">StasisBlast</Activate>
+    <feedPower>5</feedPower>
+    <DisplayId>Stasis Orb</DisplayId>
+  </Object>
+  <Object type="0xa42" id="Suspension Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x91</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>1</Tier>
+    <Description>An orb that temporarily shackles enemies to another plane.</Description>
+    <Usable/>
+    <BagType>1</BagType>
+    <Usable/>
+    <MpCost>65</MpCost>
+    <Activate effect="Curse" duration="4.5" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="3.5">StasisBlast</Activate>
+    <feedPower>10</feedPower>
+    <DisplayId>Suspension Orb</DisplayId>
+  </Object>
+  <Object type="0xa43" id="Imprisonment Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x92</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>2</Tier>
+    <Description>An orb used by starwizards to bind their demonic opponents.</Description>
+    <Usable/>
+    <BagType>1</BagType>
+    <MpCost>70</MpCost>
+    <Activate effect="Curse" duration="5" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="4">StasisBlast</Activate>
+    <feedPower>20</feedPower>
+    <DisplayId>Imprisonment Orb</DisplayId>
+  </Object>
+  <Object type="0xa44" id="Neutralization Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x93</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>3</Tier>
+    <Description>A glowing orb of pale emerald, used to constrain rogue elementals.</Description>
+    <Usable/>
+    <BagType>2</BagType>
+    <FameBonus>1</FameBonus>
+    <MpCost>75</MpCost>
+    <Activate effect="Curse" duration="5.5" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="4.5">StasisBlast</Activate>
+    <feedPower>45</feedPower>
+    <DisplayId>Neutralization Orb</DisplayId>
+  </Object>
+  <Object type="0xa45" id="Timelock Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x94</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>4</Tier>
+    <Description>A powerful orb of flawless sun quartz, created by dark thaumaturgy.</Description>
+    <Usable/>
+    <BagType>2</BagType>
+    <FameBonus>2</FameBonus>
+    <MpCost>80</MpCost>
+    <Activate effect="Curse" duration="6" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="5">StasisBlast</Activate>
+    <feedPower>90</feedPower>
+    <DisplayId>Timelock Orb</DisplayId>
+  </Object>
+  <Object type="0xa46" id="Banishment Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x95</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>5</Tier>
+    <Description>An orb of pure diamond, shining with an eerie blackness.</Description>
+    <Usable/>
+    <BagType>4</BagType>
+    <FameBonus>3</FameBonus>
+    <MpCost>80</MpCost>
+    <Activate effect="Berserk" duration="1.5" useWisMod="true">ConditionEffectSelf</Activate>
+    <Activate effect="Curse" duration="6.5" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="5.5">StasisBlast</Activate>
+    <feedPower>185</feedPower>
+    <DisplayId>Banishment Orb</DisplayId>
+  </Object>
+  <Object type="0xb2d" id="Planefetter Orb">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x96</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>6</Tier>
+    <Description>An orb of astral amethyst, crystallized beneath the titanic density of a collapsed star.</Description>
+    <Usable/>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <MpCost>90</MpCost>
+    <Activate effect="Berserk" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
+    <Activate effect="Curse" duration="7" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="6">StasisBlast</Activate>
+    <feedPower>380</feedPower>
+    <DisplayId>Planefetter Orb</DisplayId>
+  </Object>
+  <Object type="0x90dc" id="Orb of Eternal Light">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x97</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>7</Tier>
+    <Description>An orb made from pure material light that traps any mortal who glances into its depths.</Description>
+    <Usable/>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <MpCost>100</MpCost>
+    <Activate effect="Berserk" duration="2.5" useWisMod="true">ConditionEffectSelf</Activate>
+    <Activate effect="Curse" duration="7.5" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="6.5">StasisBlast</Activate>
+    <feedPower>380</feedPower>
+    <DisplayId>Orb of Eternal Light</DisplayId>
+  </Object>
+  <Object type="0x90dd" id="Orb of Infinite Rapture">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x98</Index>
+    </Texture>
+    <SlotType>21</SlotType>
+    <Tier>8</Tier>
+    <Description>An orb created from a tear in the fabric of space-time, capable of trapping a god.</Description>
+    <Usable/>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <MpCost>110</MpCost>
+    <Activate effect="Berserk" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
+    <Activate effect="Curse" duration="8" range="5" color="0x808080" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+    <Activate duration="7">StasisBlast</Activate>
+    <feedPower>380</feedPower>
+    <DisplayId>Orb of Infinite Rapture</DisplayId>
+  </Object>
 </Objects>
