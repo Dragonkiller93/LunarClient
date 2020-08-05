@@ -30,6 +30,7 @@ public class Projectile extends BasicObject {
     private static var objBullIdToObjId_:Dictionary = new Dictionary();
 
     public var props_:ObjectProperties;
+    public var lifetime_:int;
     public var containerProps_:ObjectProperties;
     public var projProps_:ProjectileProperties;
     public var texture_:BitmapData;
@@ -213,7 +214,7 @@ public class Projectile extends BasicObject {
         var _local_11:int;
         var _local_12:Boolean;
         var _local_3:int = (_arg_1 - this.startTime_);
-        if (_local_3 > this.projProps_.lifetime_) {
+        if (_local_3 > this.lifetime_) {
             return (false);
         }
         if(toberemoved) return false;

@@ -971,8 +971,7 @@ public class Player extends Character {
             else {
                 _local_12.reset(_arg_2, 0, objectId_, _local_11, _local_9, _arg_1);
             }
-            if(isInspired())_local_12.projProps_.lifetime_= (int)(1.25* ObjectLibrary.propsLibrary_[_arg_2].projectiles_[0].lifetime_);
-            throw(_local_12.projProps_.lifetime_);
+            _local_12.lifetime_= isInspired()?((int)(_local_12.projProps_.lifetime_*1.25)):(_local_12.projProps_.lifetime_);
             _local_13 = int(_local_12.projProps_.minDamage_);
             _local_14 = int(_local_12.projProps_.maxDamage_);
             _local_15 = ((_arg_5) ? this.attackMultiplier() : 1);
