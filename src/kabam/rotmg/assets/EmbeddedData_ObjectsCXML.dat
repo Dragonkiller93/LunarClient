@@ -1648,4 +1648,22 @@
       <Size>160</Size>
       <XpMult>0.0</XpMult>
    </Object>
+  <Object type="0xd095" id="Chapel Portal">
+    <Class>Portal</Class>
+    <IntergamePortal/>
+    <Texture>
+      <File>LunarAddedItems32x32</File>
+      <Index>0x03</Index>
+    </Texture>
+    <DisplayId>Chapel Portal</DisplayId>
+  </Object>
+  <Object type="0xd096" id="Market Portal">
+    <Class>Portal</Class>
+    <IntergamePortal/>
+    <Texture>
+      <File>LunarAddedItems32x32</File>
+      <Index>0x04</Index>
+    </Texture>
+    <DisplayId>Market Portal</DisplayId>
+  </Object>
 </Objects>

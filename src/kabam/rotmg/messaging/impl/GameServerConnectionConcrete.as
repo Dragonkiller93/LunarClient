@@ -1051,6 +1051,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         else {
             _local_3.reset(_arg_1.containerType_, 0, _arg_1.ownerId_, _arg_1.bulletId_, _arg_1.angle_, gs_.lastUpdate_);
         }
+
         gs_.map.addObj(_local_3, _local_2.x_, _local_2.y_);
         _local_2.setAttack(_arg_1.containerType_, _arg_1.angle_);
     }
@@ -1074,6 +1075,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
             _local_5 = (_arg_1.angle_ + (_arg_1.angleInc_ * _local_3));
             _local_4.reset(_local_2.objectType_, _arg_1.bulletType_, _arg_1.ownerId_, ((_arg_1.bulletId_ + _local_3) % 0x0100), _local_5, gs_.lastUpdate_);
             _local_4.setDamage(_arg_1.damage_);
+            _local_4.lifetime_=_local_4.projProps_.lifetime_;
             gs_.map.addObj(_local_4, _arg_1.startingPos_.x_, _arg_1.startingPos_.y_);
             _local_3++;
         }

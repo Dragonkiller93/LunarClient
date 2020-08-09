@@ -8,4 +8,84 @@
     </Texture>
     <DisplayId>Market</DisplayId>
   </Object>
+  <Object type="0xc069" id="Nexus Wall">
+    <Class>Wall</Class>
+    <Texture>
+      <File>LunarGround</File>
+      <Index>0x21</Index>
+    </Texture>
+    <Top>
+      <Texture>
+        <File>LunarGround</File>
+        <Index>0x23</Index>
+      </Texture>
+    </Top>
+    <Animation prob="0.4" period="1">
+      <Frame time="1">
+        <Texture>
+          <File>LunarGround</File>
+          <Index>0x22</Index>
+        </Texture>
+      </Frame>
+    </Animation>
+    <HitSound>monster/stone_walls_hit</HitSound>
+    <DeathSound>monster/stone_walls_death</DeathSound>
+    <Static/>
+    <FullOccupy/>
+    <OccupySquare/>
+    <EnemyOccupySquare/>
+    <BlocksSight/>
+  </Object>
+
+  <Object type="0xd094" id="Nexus Brazier">
+    <Class>GameObject</Class>
+    <Texture>
+      <File>LunarEnvironment</File>
+      <Index>0x07</Index>
+    </Texture>
+    <ShadowSize>0</ShadowSize>
+    <Animation prob="1" period="0">
+      <Frame time="1">
+        <Texture>
+          <File>LunarEnvironment</File>
+          <Index>0x08</Index>
+        </Texture>
+      </Frame>
+      <Frame time="2">
+        <Texture>
+          <File>LunarEnvironment</File>
+          <Index>0x07</Index>
+        </Texture>
+      </Frame>
+    </Animation>
+    <DisplayId>Nexus Brazier</DisplayId>
+  </Object>
+  <Object type="0xc07a" id="Nexus Wall 2">
+    <Class>Wall</Class>
+    <Texture>
+      <File>LunarGround</File>
+      <Index>0x34</Index>
+    </Texture>
+    <Top>
+      <Texture>
+        <File>LunarGround</File>
+        <Index>0x36</Index>
+      </Texture>
+    </Top>
+    <Animation prob="0.4" period="1">
+      <Frame time="1">
+        <Texture>
+          <File>LunarGround</File>
+          <Index>0x35</Index>
+        </Texture>
+      </Frame>
+    </Animation>
+    <HitSound>monster/stone_walls_hit</HitSound>
+    <DeathSound>monster/stone_walls_death</DeathSound>
+    <Static/>
+    <FullOccupy/>
+    <OccupySquare/>
+    <EnemyOccupySquare/>
+    <BlocksSight/>
+  </Object>
 </Objects>

@@ -91,10 +91,12 @@ public class Projectile extends BasicObject {
         this.bulletId_ = _arg_4;
         this.angle_ = Trig.boundToPI(_arg_5);
         this.startTime_ = _arg_6;
+
         objectId_ = getNewObjId(this.ownerId_, this.bulletId_);
         z_ = 0.5;
         this.containerProps_ = ObjectLibrary.propsLibrary_[this.containerType_];
         this.projProps_ = this.containerProps_.projectiles_[_arg_2];
+        this.lifetime_=this.projProps_.lifetime_;
         var _local_9:String = ((((!((_arg_7 == ""))) && ((this.projProps_.objectId_ == _arg_8)))) ? _arg_7 : this.projProps_.objectId_);
         this.props_ = ObjectLibrary.getPropsFromId(_local_9);
         hasShadow_ = (this.props_.shadowSize_ > 0);

@@ -188,13 +188,17 @@ public class Merchant extends SellableObject implements IInteractiveObject {
         var _local_3:BaseSimpleText;
         var _local_1:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, 80, true);
         var _local_2:XML = ObjectLibrary.xmlLibrary_[this.merchandiseType_];
-        if (_local_2.hasOwnProperty("Doses")) {
-            _local_1 = _local_1.clone();
-            _local_3 = new BaseSimpleText(12, 0xFFFFFF, false, 0, 0);
-            _local_3.text = String(_local_2.Doses);
-            _local_3.updateMetrics();
-            _local_1.draw(_local_3, DOSE_MATRIX);
+        try {
+            if (_local_2.hasOwnProperty("Doses")) {
+                _local_1 = _local_1.clone();
+                _local_3 = new BaseSimpleText(12, 0xFFFFFF, false, 0, 0);
+                _local_3.text = String(_local_2.Doses);
+                _local_3.updateMetrics();
+                _local_1.draw(_local_3, DOSE_MATRIX);
+            }
         }
+        catch(e:Error){ throw(this.merchandiseType_ + e);}
+
         return (_local_1);
     }
 

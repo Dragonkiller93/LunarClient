@@ -8449,4 +8449,34 @@
       <EnemyOccupySquare/>
       <BlocksSight/>
    </Object>
+  <Object type="0xd097" id="Nexus Pillar">
+    <Class>GameObject</Class>
+    <Texture>
+      <File>LunarAddedItems32x32</File>
+      <Index>0x05</Index>
+    </Texture>
+    <ShadowSize>0</ShadowSize>
+    <HitSound>monster/trees_hit</HitSound>
+    <DeathSound>monster/tress_death</DeathSound>
+    <MaxHitPoints>1000</MaxHitPoints>
+    <SizeStep>5</SizeStep>
+    <Static/>
+    <XpMult>0.0</XpMult>
+    <OccupySquare/>
+  </Object>
+  <Object type="0xd098" id="Nexus Banner">
+    <Class>GameObject</Class>
+    <Texture>
+      <File>LunarEnvironment</File>
+      <Index>0x09</Index>
+    </Texture>
+    <ShadowSize>0</ShadowSize>
+    <HitSound>monster/trees_hit</HitSound>
+    <DeathSound>monster/tress_death</DeathSound>
+    <MaxHitPoints>1000</MaxHitPoints>
+    <SizeStep>5</SizeStep>
+    <Static/>
+    <XpMult>0.0</XpMult>
+    <OccupySquare/>
+  </Object>
 </Objects>

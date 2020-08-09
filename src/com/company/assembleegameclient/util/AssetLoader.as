@@ -16,10 +16,6 @@ import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
-import kabam.rotmg.assets.Lunar_EnvironmentReplacements;
-import kabam.rotmg.assets.Lunar_HuntsmanTiered;
-import kabam.rotmg.assets.Lunar_Skill_Tree_Icon;
-import kabam.rotmg.assets.Lunar_TieredItemProjectiles;
 
 public class AssetLoader {
 
@@ -102,6 +98,7 @@ public class AssetLoader {
         AssetLibrary.addImageSet("LunarEnvironment", new EmbeddedAssets.LunarEnvironment().bitmapData,16,16);
         AssetLibrary.addImageSet("LunarHuntsmanTiered",new EmbeddedAssets.LunarHuntsmanTiered().bitmapData,8,8);
         AssetLibrary.addImageSet("LunarTieredProjs",new EmbeddedAssets.LunarTieredProjs().bitmapData,8,8);
+        AssetLibrary.addImageSet("LunarGround",new EmbeddedAssets.LunarGround().bitmapData,8,8);
     }
 
     private function addAnimatedCharacters():void {
@@ -134,7 +131,7 @@ public class AssetLoader {
         AnimatedChars.add("playerskins16", new EmbeddedAssets.playersSkins16Embed_().bitmapData, new EmbeddedAssets.playersSkins16MaskEmbed_().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
         AnimatedChars.add("d1chars16x16r", new EmbeddedAssets.d1Chars16x16rEmbed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars16x16",new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData,null,16,16,112,16,AnimatedChar.RIGHT);
-        AnimatedChars.add("lostHallsChars8x8",new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData,null,8,8,56,8,AnimatedChar.STAND)
+        AnimatedChars.add("lostHallsChars8x8",new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData,null,8,8,56,8,AnimatedChar.STAND);
     }
 
     private function addSoundEffects():void {
