@@ -1683,4 +1683,67 @@
     </Animation>
     <DisplayId>Big Boat</DisplayId>
   </Object>
+    <Object type="0xd09a" id="Tinkerer Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <Texture>
+        <File>LunarAddedItems32x32</File>
+        <Index>0x08</Index>
+      </Texture>
+      <DisplayId>Tinkerer Portal</DisplayId>
+    </Object>
+    <Object type="0xd09b" id="Lunar Misc Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <Texture>
+        <File>LunarAddedItems32x32</File>
+        <Index>0x09</Index>
+      </Texture>
+      <DisplayId>Lunar Misc Portal</DisplayId>
+    </Object>
+    <Object type="0xd09c" id="Nexus Pillar 2">
+      <Class>GameObject</Class>
+      <Texture>
+        <File>LunarAddedItems32x32</File>
+        <Index>0x0a</Index>
+      </Texture>
+      <ShadowSize>0</ShadowSize>
+      <HitSound>monster/trees_hit</HitSound>
+      <DeathSound>monster/tress_death</DeathSound>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <SizeStep>5</SizeStep>
+      <Static/>
+      <XpMult>0.0</XpMult>
+      <OccupySquare/>
+    </Object>
+      <Object type="0xd09d" id="Nexus Banner 2">
+        <Class>GameObject</Class>
+        <Texture>
+          <File>LunarEnvironment</File>
+          <Index>0x0a</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+        <HitSound>monster/trees_hit</HitSound>
+        <DeathSound>monster/tress_death</DeathSound>
+        <MaxHitPoints>1000</MaxHitPoints>
+        <SizeStep>5</SizeStep>
+        <Static/>
+        <XpMult>0.0</XpMult>
+        <OccupySquare/>
+      </Object>
+      <Object type="0xd09e" id="Nexus Banner 3">
+        <Class>GameObject</Class>
+        <Texture>
+          <File>LunarEnvironment</File>
+          <Index>0x0b</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+        <HitSound>monster/trees_hit</HitSound>
+        <DeathSound>monster/tress_death</DeathSound>
+        <MaxHitPoints>1000</MaxHitPoints>
+        <SizeStep>5</SizeStep>
+        <Static/>
+        <XpMult>0.0</XpMult>
+        <OccupySquare/>
+      </Object>
 </Objects>
