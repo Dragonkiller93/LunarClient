@@ -30,10 +30,10 @@ package kabam.rotmg.chat.control{
                         if(command.length > 1) {
                             var mscale:Number = Number(command[1]);
                             if(mscale)
-                                Parameters.data_.mscale = mscale;
+                                Parameters.data_.mscale = 76.43*Math.pow(0.166,mscale);
                             Parameters.save();
                         }
-                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Map Scale: " + Parameters.data_.mscale));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Map Scale: " + mscale));
                         return;
 
                 }

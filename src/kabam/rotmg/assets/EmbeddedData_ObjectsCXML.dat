@@ -1666,4 +1666,21 @@
     </Texture>
     <DisplayId>Market Portal</DisplayId>
   </Object>
+  <Object type="0xd099" id="Big Boat">
+    <Class>Portal</Class>
+    <IntergamePortal/>
+    <Texture>
+      <File>LunarAddedItems32x32</File>
+      <Index>0x06</Index>
+    </Texture>
+    <Animation prob="0.4" period="1">
+      <Frame time="1">
+        <Texture>
+          <File>LunarAddedItems32x32</File>
+          <Index>0x07</Index>
+        </Texture>
+      </Frame>
+    </Animation>
+    <DisplayId>Big Boat</DisplayId>
+  </Object>
 </Objects>

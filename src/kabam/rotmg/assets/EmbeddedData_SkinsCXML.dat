@@ -727,17 +727,6 @@
       <UnlockSpecial>Unlocked during Halloween 2014</UnlockSpecial>
       <DisplayId>{skins.Infected_Assassin}</DisplayId>
    </Object>
-   <Object type="0x7467" id="Huntsman">
-      <Skin/>
-      <Class>Skin</Class>
-      <AnimatedTexture>
-         <File>playerskins</File>
-         <Index>77</Index>
-      </AnimatedTexture>
-      <PlayerClassType>0x0307</PlayerClassType>
-      <UnlockSpecial>Unlocked during Halloween 2014. Thanks to: WunderWafe</UnlockSpecial>
-      <DisplayId>{skins.Huntsman}</DisplayId>
-   </Object>
    <Object type="0x7468" id="Demon Spawn">
       <Skin/>
       <Class>Skin</Class>

@@ -88,4 +88,25 @@
     <EnemyOccupySquare/>
     <BlocksSight/>
   </Object>
+  <Object type="0xc07b" id="Nexus Wall 3">
+    <Class>Wall</Class>
+    <Texture>
+      <File>LunarGround</File>
+      <Index>0x36</Index>
+    </Texture>
+    <Top>
+      <Texture>
+        <File>LunarGround</File>
+        <Index>0x37</Index>
+      </Texture>
+    </Top>
+    <HitSound>monster/stone_walls_hit</HitSound>
+    <DeathSound>monster/stone_walls_death</DeathSound>
+    <Static/>
+    <FullOccupy/>
+    <OccupySquare/>
+    <EnemyOccupySquare/>
+    <BlocksSight/>
+  </Object>
+
 </Objects>

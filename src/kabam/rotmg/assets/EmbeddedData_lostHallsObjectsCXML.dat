@@ -4718,7 +4718,7 @@
     </AltTexture>
     <DisplayId>Marble Colossus</DisplayId>
     <Size>140</Size>
-    <MaxHitPoints>10000000</MaxHitPoints>
+    <MaxHitPoints>100000</MaxHitPoints>
     <Defense>50</Defense>
     <Quest/>
     <God/>
