@@ -156,9 +156,9 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addTierText():void {
-        var _local_1 = (this.isPet() == false);
-        var _local_2 = (this.objectXML.hasOwnProperty("Consumable") == false);
-        var _local_3 = (this.objectXML.hasOwnProperty("Treasure") == false);
+        var _local_1 = !this.isPet();
+        var _local_2 = !this.objectXML.hasOwnProperty("Consumable");
+        var _local_3 = !this.objectXML.hasOwnProperty("Treasure");
         var _local_4:Boolean = this.objectXML.hasOwnProperty("Tier");
         if (((((_local_1) && (_local_2))) && (_local_3))) {
             this.tierText = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth(30).setBold(true);
@@ -249,7 +249,7 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addNumProjectilesTagsToEffectsList():void {
-        if (((this.objectXML.hasOwnProperty("NumProjectiles")) && (!((this.comparisonResults.processedTags.hasOwnProperty(this.objectXML.NumProjectiles.toXMLString()) == true))))) {
+        if (((this.objectXML.hasOwnProperty("NumProjectiles")) && !this.comparisonResults.processedTags.hasOwnProperty(this.objectXML.NumProjectiles.toXMLString()))) {
             this.effects.push(new Effect(TextKey.SHOTS, {"numShots": this.objectXML.NumProjectiles}));
         }
     }
@@ -356,10 +356,14 @@ public class EquipmentToolTip extends ToolTip {
         var _local_29:Number;
         var _local_30:Number;
         var _local_31:AppendingLineBuilder;
+        var _local_32:Object;
+        var _local_33:String;
         for each (_local_1 in this.objectXML.Activate) {
+            //throw(this.comparisonResults.processedTags[_local_1.toXMLString()]);
             _local_5 = this.comparisonResults.processedTags[_local_1.toXMLString()];
-            if (this.comparisonResults.processedTags[_local_1.toXMLString()] != true) {
+            if (this.comparisonResults.processedTags[_local_1.toXMLString()]) {
                 _local_6 = _local_1.toString();
+
                 switch (_local_6) {
                     case ActivationType.COND_EFFECT_AURA:
                         this.effects.push(new Effect(TextKey.PARTY_EFFECT, {"effect": new AppendingLineBuilder().pushParams(TextKey.WITHIN_SQRS, {"range": _local_1.@range}, TooltipHelper.getOpenTag(TooltipHelper.NO_DIFF_COLOR), TooltipHelper.getCloseTag())}));
@@ -412,15 +416,16 @@ public class EquipmentToolTip extends ToolTip {
                     case ActivationType.TRAP:
                         _local_7 = ((_local_1.hasOwnProperty("@condEffect")) ? _local_1.@condEffect : new LineBuilder().setParams(TextKey.CONDITION_EFFECT_SLOWED));
                         _local_8 = ((_local_1.hasOwnProperty("@condDuration")) ? _local_1.@condDuration : "5");
+                        _local_32 = ((_local_1.hasOwnProperty("@condEffect2")) ? _local_1.@condEffect2 : new LineBuilder().setParams("Marked"));
+                        _local_33 = ((_local_1.hasOwnProperty("@condDuration2")) ? _local_1.@condDuration2 : "5");
                         this.effects.push(new Effect(TextKey.TRAP, {
-                            "data": new AppendingLineBuilder().pushParams(TextKey.HP_WITHIN_SQRS, {
-                                "amount": _local_1.@totalDamage,
-                                "range": _local_1.@radius
-                            }, TooltipHelper.getOpenTag(TooltipHelper.NO_DIFF_COLOR), TooltipHelper.getCloseTag()).pushParams(TextKey.EFFECT_FOR_DURATION, {
-                                "effect": _local_7,
-                                "duration": _local_8
+                            "data": new AppendingLineBuilder().pushParams(TextKey.EFFECT_FOR_DURATION, {
+                                "effect": _local_32,
+                                "duration": _local_33
                             }, TooltipHelper.getOpenTag(TooltipHelper.NO_DIFF_COLOR), TooltipHelper.getCloseTag())
+
                         }));
+
                         break;
                     case ActivationType.STASIS_BLAST:
                         this.effects.push(new Effect(TextKey.STASIS_GROUP, {"stasis": new AppendingLineBuilder().pushParams(TextKey.SEC_COUNT, {"duration": _local_1.@duration}, TooltipHelper.getOpenTag(TooltipHelper.NO_DIFF_COLOR), TooltipHelper.getCloseTag())}));

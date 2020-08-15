@@ -1068,10 +1068,12 @@ public class GameObject extends BasicObject {
     }
 
     override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
+        if(this.objectType_ in Parameters.manualSizes) this.size_=Parameters.manualSizes[this.objectType_];
         var _local_8:BitmapData;
         var _local_9:uint;
         var _local_10:uint;
         var _local_4:BitmapData = this.getTexture(_arg_2, _arg_3);
+        if(this is Player && (this as Player).onHorse)_local_4 = (this as Player).updateHorse(_arg_2,_arg_3);
         if (this.props_.drawOnGround_) {
             if (square_.faces_.length == 0) {
                 return;

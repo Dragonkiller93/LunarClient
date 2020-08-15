@@ -106,6 +106,7 @@ public class StatData {
     public static const MARKET_TYPE:int = 100;
     public static const MARKET_PRICE :int = 101;
     public static const BLOCKS_PROJ:int = 102;
+    public static const OnHorse:int=103;
 
     public var statType_:uint = 0;
     public var statValue_:int;
@@ -164,6 +165,7 @@ public class StatData {
             case ACTIVE_STAT:
             case NAME_CHOSEN_STAT:
             case HASBACKPACK_STAT:
+            case OnHorse:
                 return true;
         }
         return false;

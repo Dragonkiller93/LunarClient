@@ -1669,6 +1669,7 @@
   <Object type="0xd099" id="Big Boat">
     <Class>Portal</Class>
     <IntergamePortal/>
+    <size>99999</size>
     <Texture>
       <File>LunarAddedItems32x32</File>
       <Index>0x06</Index>
@@ -1681,7 +1682,7 @@
         </Texture>
       </Frame>
     </Animation>
-    <DisplayId>Big Boat</DisplayId>
+    <DisplayId>Realm Ship</DisplayId>
   </Object>
     <Object type="0xd09a" id="Tinkerer Portal">
       <Class>Portal</Class>

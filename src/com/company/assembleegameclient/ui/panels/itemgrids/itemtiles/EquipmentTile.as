@@ -35,13 +35,13 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.ALL_TYPE:
                 break;
             case ItemConstants.SWORD_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 48);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x60);
                 break;
             case ItemConstants.DAGGER_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 96);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x50);
                 break;
             case ItemConstants.BOW_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 80);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x80);
                 break;
             case ItemConstants.TOME_TYPE:
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 80);
@@ -50,13 +50,13 @@ public class EquipmentTile extends InteractiveItemTile {
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 112);
                 break;
             case ItemConstants.LEATHER_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 0);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x10);
                 break;
             case ItemConstants.PLATE_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 32);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x00);
                 break;
             case ItemConstants.WAND_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 64);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x40);
                 break;
             case ItemConstants.RING_TYPE:
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj", 44);
@@ -71,7 +71,7 @@ public class EquipmentTile extends InteractiveItemTile {
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 32);
                 break;
             case ItemConstants.ROBE_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 16);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x20);
                 break;
             case ItemConstants.QUIVER_TYPE:
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 48);
@@ -80,7 +80,7 @@ public class EquipmentTile extends InteractiveItemTile {
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 96);
                 break;
             case ItemConstants.STAFF_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj5", 112);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x30);
                 break;
             case ItemConstants.POISON_TYPE:
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 128);
@@ -101,10 +101,16 @@ public class EquipmentTile extends InteractiveItemTile {
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj6", 192);
                 break;
             case ItemConstants.KATANA_TYPE:
-                _local_2 = AssetLibrary.getImageFromSet("lofiObj3", 540);
+                _local_2 = AssetLibrary.getImageFromSet("LunarTieredItems", 0x70);
                 break;
             case ItemConstants.SHURIKEN_TYPE:
                 _local_2 = AssetLibrary.getImageFromSet("lofiObj3", 555);
+                break;
+            case ItemConstants.SPEAR_TYPE:
+                _local_2 = AssetLibrary.getImageFromSet("LunarHuntsmanTiered", 0x10);
+                break;
+            case ItemConstants.NET_TYPE:
+                _local_2 = AssetLibrary.getImageFromSet("LunarHuntsmanTiered", 0x20);
                 break;
         }
         if (_local_2 != null) {

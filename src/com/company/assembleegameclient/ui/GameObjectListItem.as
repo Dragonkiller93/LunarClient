@@ -66,7 +66,7 @@ public class GameObjectListItem extends Sprite {
     }
 
     public function isClear():Boolean {
-        return ((((this.go == null)) && ((visible == false))));
+        return (((this.go == null)) && !visible);
     }
 
     private function hasChanged():Boolean {

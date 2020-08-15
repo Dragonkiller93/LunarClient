@@ -38,6 +38,7 @@ public class Portal extends GameObject implements IInteractiveObject {
         if (this.nexusPortal_) {
             drawName(_arg_1, _arg_2);
         }
+
     }
 
     public function getPanel(_arg_1:GameSprite):Panel {

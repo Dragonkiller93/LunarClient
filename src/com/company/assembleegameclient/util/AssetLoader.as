@@ -16,6 +16,7 @@ import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
+import kabam.rotmg.assets.Lunar_Horses16x16;
 
 public class AssetLoader {
 
@@ -132,6 +133,7 @@ public class AssetLoader {
         AnimatedChars.add("d1chars16x16r", new EmbeddedAssets.d1Chars16x16rEmbed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars16x16",new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData,null,16,16,112,16,AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars8x8",new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData,null,8,8,56,8,AnimatedChar.STAND);
+        AnimatedChars.add("LunarHorses16x16",new EmbeddedAssets.LunarHorses16x16().bitmapData,null,16,16,112,48,AnimatedChar.RIGHT);
     }
 
     private function addSoundEffects():void {

@@ -996,7 +996,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         if ((((_arg_1.objectId_ >= 0)) && ((_arg_1.bulletId_ >= 0)))) {
             _local_5 = Projectile.findObjId(_arg_1.objectId_, _arg_1.bulletId_);
             _local_3 = (_local_2.boDict_[_local_5] as Projectile);
-            if(_local_3!=null && _arg_1.remove_) _local_3.update(99999999999,0);
             if ( (((!(_local_3 == null)) && (!(_local_3.projProps_.multiHit_)))) ) {
 
                 _local_2.removeObj(_local_5);
@@ -1472,6 +1471,10 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                     break;
                 case StatData.BLOCKS_PROJ:
                     _local_4.blocksProjectiles=_local_7.boolStatValue_;
+                    break;
+                case StatData.OnHorse:
+                    if(_local_4.onHorse && !_local_7.boolStatValue_)_local_4.removeHorse();
+                    if(!_local_4.onHorse&&_local_7.boolStatValue_)_local_4.toaddHorse=true;
                     break;
                 case StatData.NAME_STAT:
                     if (_arg_1.name_ != _local_7.strStatValue_) {

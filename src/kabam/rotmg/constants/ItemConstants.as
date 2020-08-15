@@ -29,6 +29,8 @@ public class ItemConstants {
     public static const KATANA_TYPE:int = 24;
     public static const SHURIKEN_TYPE:int = 25;
     public static const EGG_TYPE:int = 26;
+    public static const SPEAR_TYPE:int = 27;
+    public static const NET_TYPE:int = 28;
 
 
     public static function itemTypeToName(_arg_1:int):String {

@@ -145,10 +145,16 @@ public class ObjectLibrary {
     }
 
     public static function getObjectFromType(_arg_1:int):GameObject {
-        var _local_2:XML = xmlLibrary_[_arg_1];
-        var _local_3:String = _local_2.Class;
-        var _local_4:Class = ((TYPE_MAP[_local_3]) || (makeClass(_local_3)));
-        return (new (_local_4)(_local_2));
+        try {
+            var _local_2:XML = xmlLibrary_[_arg_1];
+            var _local_3:String = _local_2.Class;
+            var _local_4:Class = ((TYPE_MAP[_local_3]) || (makeClass(_local_3)));
+            return (new (_local_4)(_local_2));
+        }
+        catch( e:TypeError){
+            throw(_arg_1 + " " + e);
+        }
+        return null;
     }
 
     private static function makeClass(_arg_1:String):Class {

@@ -143,6 +143,7 @@ public class EmbeddedAssets {
     public static var LunarHuntsmanTiered:Class = Lunar_HuntsmanTiered;
     public static var LunarTieredProjs:Class = Lunar_TieredItemProjectiles;
     public static var LunarGround:Class = Lunar_Ground;
+    public static var LunarHorses16x16:Class=Lunar_Horses16x16;
 
     public static var models_:Object = {
         "Monster Tank1": new monsterTank1Embed_(),

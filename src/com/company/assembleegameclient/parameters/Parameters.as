@@ -58,6 +58,8 @@ public class Parameters {
     itemShrinkTypes[36996]=32;
     itemShrinkTypes[262]=16;
     itemShrinkTypes[263] = 16;
+    public static var manualSizes:Dictionary=new Dictionary();
+    manualSizes[0xd099]=300;
 
 
     public static function load():void {

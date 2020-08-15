@@ -9,7 +9,6 @@ public class Damage extends IncomingMessage {
     public var kill_:Boolean;
     public var bulletId_:uint;
     public var objectId_:int;
-    public var remove_:Boolean;
 
     public function Damage(_arg_1:uint, _arg_2:Function) {
         this.effects_ = new Vector.<uint>();
@@ -29,11 +28,10 @@ public class Damage extends IncomingMessage {
         this.kill_ = _arg_1.readBoolean();
         this.bulletId_ = _arg_1.readUnsignedByte();
         this.objectId_ = _arg_1.readInt();
-        this.remove_ = _arg_1.readBoolean();
     }
 
     override public function toString():String {
-        return (formatToString("DAMAGE", "targetId_", "effects_", "damageAmount_", "kill_", "bulletId_", "objectId_","remove_"));
+        return (formatToString("DAMAGE", "targetId_", "effects_", "damageAmount_", "kill_", "bulletId_", "objectId_"));
     }
 
 

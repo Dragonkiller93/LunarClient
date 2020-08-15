@@ -9,12 +9,14 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.tutorial.Tutorial;
 import com.company.assembleegameclient.tutorial.doneAction;
 import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.AnimatedChars;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.FameUtil;
 import com.company.assembleegameclient.util.FreeList;
 import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+import com.company.util.AssetLibrary;
 import com.company.util.CachingColorTransformer;
 import com.company.util.ConversionUtil;
 import com.company.util.GraphicsUtil;
@@ -23,13 +25,17 @@ import com.company.util.MoreColorUtil;
 import com.company.util.PointUtil;
 import com.company.util.Trig;
 
+import flash.display.Bitmap;
+
 import flash.display.BitmapData;
 import flash.display.GraphicsPath;
 import flash.display.GraphicsSolidFill;
 import flash.display.IGraphicsData;
+import flash.display.Sprite;
 import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Point;
+import flash.geom.Rectangle;
 import flash.geom.Vector3D;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
@@ -141,6 +147,9 @@ public class Player extends Character {
     private var breathBackPath_:GraphicsPath = null;
     private var breathFill_:GraphicsSolidFill = null;
     private var breathPath_:GraphicsPath = null;
+    public var onHorse:Boolean = false;
+    public var Horse:Bitmap;
+    public var toaddHorse:Boolean =false;
 
     public function Player(_arg_1:XML) {
         this.ip_ = new IntPoint();
@@ -296,7 +305,7 @@ public class Player extends Character {
     }
 
     public function handleExpUp(_arg_1:int):void {
-        if (level_ == 20) {
+        if (level_ == 50) {
             return;
         }
         var _local_2:CharacterStatusText = new CharacterStatusText(this, 0xFF00, 1000);
@@ -672,9 +681,41 @@ public class Player extends Character {
         GraphicsFillExtra.setSoftwareDrawSolid(this.breathFill_, true);
         GraphicsFillExtra.setSoftwareDrawSolid(this.breathBackFill_, true);
     }
+    public function addHorse(_arg_1:Camera):void{
+        var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
+        this.Horse = new Bitmap(_local_1.imageFromFacing(this.facing_,_arg_1,0,AnimatedChar.WALK).image_);
+        this.Horse.height= 100;
+        this.Horse.width=100;
+        //this.map_.addChild(this.Horse);
+        onHorse=true;
+    }
+    public function removeHorse():void{
+        try{
+            //this.map_.removeChild(this.Horse);
+        }
+        catch(e:Error){}
+        onHorse=false;
 
+    }
+    public function updateHorse(_arg_1:Camera,_arg_2:int):BitmapData{
+        //this.map_.removeChild(this.Horse);
+
+        var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
+        var _local_10:int = (30 / this.getMoveSpeed());
+        var _local_3:Number = ((_arg_2 % _local_10) / _local_10);
+        var _local_4:BitmapData = TextureRedrawer.resize(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.WALK,_local_3).image_,null,100,true,0,0,5);//TextureRedrawer.redraw(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.WALK,_local_3).image_,100,true,0xffffff);
+        var _local_5:BitmapData = TextureRedrawer.resize(animatedChar_.imageFromFacing(facing_, _arg_1, AnimatedChar.STAND, 0).image_,null,100,true,0,0,5); //TextureRedrawer.redraw(animatedChar_.imageFromFacing(facing_, _arg_1, AnimatedChar.STAND, 0).image_,100,false,0,false);
+        _local_4 = GlowRedrawer.outlineGlow(_local_4,0xffffff);
+        _local_5 = GlowRedrawer.outlineGlow(_local_5,0);
+        _local_4.copyPixels(_local_5,new flash.geom.Rectangle(0,0,_local_5.width,_local_5.height/2),new Point(.5*(_local_4.width-_local_5.width),_local_5.height/3),null,null,true);
+        Horse = new Bitmap(_local_4);
+        this.Horse.x-=(this.Horse.width/2);
+        this.Horse.y-=(this.Horse.height*.75);
+        return _local_4;
+    }
     override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
         super.draw(_arg_1, _arg_2, _arg_3);
+
         if (this != map_.player_) {
             if (!Parameters.screenShotMode_) {
                 drawName(_arg_1, _arg_2);
@@ -685,6 +726,12 @@ public class Player extends Character {
                 this.drawBreathBar(_arg_1, _arg_3);
             }
         }
+        if(this.toaddHorse) {
+            addHorse(_arg_2);
+            this.toaddHorse=false;
+        }
+        //if(onHorse)updateHorse(_arg_2,_arg_3);
+
     }
 
     private function getMoveSpeed():Number {

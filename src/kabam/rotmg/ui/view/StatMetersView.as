@@ -35,7 +35,7 @@ public class StatMetersView extends Sprite {
 
     public function update(_arg_1:Player):void {
         this.expBar_.setLabelText(TextKey.EXP_BAR_LEVEL, {"level": _arg_1.level_});
-        if (_arg_1.level_ != 51) {
+        if (_arg_1.level_ != 50) {
             if (this.expTimer) {
                 this.expTimer.update(_arg_1.xpTimer);
             }
