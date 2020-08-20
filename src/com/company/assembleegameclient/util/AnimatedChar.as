@@ -26,41 +26,58 @@ public class AnimatedChar {
     private var height_:int;
     private var firstDir_:int;
     private var dict_:Dictionary;
+    public var numStand:int;
+    private var numWalk:int;
+    private var numAttack:int;
+    private var isSecondary:Boolean;
 
-    public function AnimatedChar(_arg_1:MaskedImage, _arg_2:int, _arg_3:int, _arg_4:int) {
+    public function AnimatedChar(_arg_1:MaskedImage, _arg_2:int, _arg_3:int, _arg_4:int,_arg_5:Boolean,_arg_6:int,_arg_7:int,_arg_8:int,_arg_9:Boolean) {
         this.dict_ = new Dictionary();
         super();
         this.origImage_ = _arg_1;
         this.width_ = _arg_2;
         this.height_ = _arg_3;
         this.firstDir_ = _arg_4;
+        this.isSecondary= _arg_5;
+        this.numStand=_arg_6;
+        this.numWalk=_arg_7;
+        this.numAttack=_arg_8;
         var _local_5:Dictionary = new Dictionary();
         var _local_6:MaskedImageSet = new MaskedImageSet();
         _local_6.addFromMaskedImage(_arg_1, _arg_2, _arg_3);
-        if (_arg_4 == RIGHT) {
+        if(isSecondary){
             this.dict_[RIGHT] = this.loadDir(0, false, false, _local_6);
             this.dict_[LEFT] = this.loadDir(0, true, false, _local_6);
-            if (_local_6.images_.length >= 14) {
-                this.dict_[DOWN] = this.loadDir(7, false, true, _local_6);
-                if (_local_6.images_.length >= 21) {
-                    this.dict_[UP] = this.loadDir(14, false, true, _local_6);
-                }
+            if(!_arg_9) {
+                this.dict_[DOWN] = this.loadDir(numStand + numWalk + numAttack, false, true, _local_6);
+                this.dict_[UP] = this.loadDir((numStand + numWalk + numAttack) * 2, false, true, _local_6);
             }
+
         }
         else {
-            if (_arg_4 == DOWN) {
-                this.dict_[DOWN] = this.loadDir(0, false, true, _local_6);
+            if (_arg_4 == RIGHT) {
+                this.dict_[RIGHT] = this.loadDir(0, false, false, _local_6);
+                this.dict_[LEFT] = this.loadDir(0, true, false, _local_6);
                 if (_local_6.images_.length >= 14) {
-                    this.dict_[RIGHT] = this.loadDir(7, false, false, _local_6);
-                    this.dict_[LEFT] = this.loadDir(7, true, false, _local_6);
+                    this.dict_[DOWN] = this.loadDir(7, false, true, _local_6);
                     if (_local_6.images_.length >= 21) {
                         this.dict_[UP] = this.loadDir(14, false, true, _local_6);
+                    }
+                }
+            } else {
+                if (_arg_4 == DOWN) {
+                    this.dict_[DOWN] = this.loadDir(0, false, true, _local_6);
+                    if (_local_6.images_.length >= 14) {
+                        this.dict_[RIGHT] = this.loadDir(7, false, false, _local_6);
+                        this.dict_[LEFT] = this.loadDir(7, true, false, _local_6);
+                        if (_local_6.images_.length >= 21) {
+                            this.dict_[UP] = this.loadDir(14, false, true, _local_6);
+                        }
                     }
                 }
             }
         }
     }
-
     public function getFirstDirImage():BitmapData {
         var _local_1:BitmapData = new BitmapDataSpy((this.width_ * 7), this.height_, true, 0);
         var _local_2:Dictionary = this.dict_[this.firstDir_];
@@ -130,6 +147,9 @@ public class AnimatedChar {
     }
 
     private function loadDir(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:MaskedImageSet):Dictionary {
+        if(numStand!=-1){
+            return loadDirSecondary(_arg_1,_arg_2,_arg_3,_arg_4);
+        }
         var _local_14:Vector.<MaskedImage>;
         var _local_15:BitmapData;
         var _local_16:BitmapData;
@@ -197,7 +217,35 @@ public class AnimatedChar {
         _local_5[ATTACK] = _local_14;
         return (_local_5);
     }
-
+    private function loadDirSecondary(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:MaskedImageSet):Dictionary {
+        var _local_14:Vector.<MaskedImage>;
+        var _local_15:BitmapData;
+        var _local_16:BitmapData;
+        var _local_5:Dictionary = new Dictionary();
+        var _local_6:Vector.<MaskedImage> = new Vector.<MaskedImage>();
+        var _local_7:Vector.<MaskedImage> = new Vector.<MaskedImage>();
+        var _local_8:Vector.<MaskedImage> = new Vector.<MaskedImage>();
+        var _local_9:int = 0;
+        for(var i:int =0; i < numStand;i++){
+            var _local_10:MaskedImage = _arg_4.images_[(_arg_1 + _local_9)];
+            _local_6.push(_arg_2?_local_10.mirror():_local_10);
+            _local_9++;
+        }
+        _local_5[STAND] = _local_6;
+        for(i=0; i < numWalk;i++){
+            var _local_11:MaskedImage = _arg_4.images_[(_arg_1 + _local_9)];
+            _local_7.push(_arg_2?_local_11.mirror():_local_11);
+            _local_9++;
+        }
+        _local_5[WALK] = _local_7;
+        for(i=0;i<numAttack;i++){
+            var _local_12:MaskedImage = _arg_4.images_[(_arg_1 + _local_9)];
+            _local_8.push(_arg_2?_local_12.mirror():_local_12);
+            _local_9++;
+        }
+        _local_5[ATTACK] = _local_8;
+        return _local_5;
+    }
 
 }
 }//package com.company.assembleegameclient.util

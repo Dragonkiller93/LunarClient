@@ -184,15 +184,14 @@ public class ObjectLibrary {
         if (Parameters.itemTypes16.indexOf(_arg_1) != -1) {
             _arg_2 = (_arg_2 * 0.5);
         }
-        if(_arg_1 in Parameters.itemShrinkTypes) {
-            _arg_2 = (_arg_2 * 8/Parameters.itemShrinkTypes[_arg_1]);
-        }
         var _local_7:TextureData = typeToTextureData_[_arg_1];
         var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
+
+        var _local_9:XML = xmlLibrary_[_arg_1];
+        if(_local_9.hasOwnProperty("PixelCount")){_arg_2 = (_arg_2 * 8 / _local_9.PixelCount)}
         if (_local_8 == null) {
             return (TextureRedrawer.redraw(_local_6, _arg_2, _arg_3, 0, _arg_4, _arg_5));
         }
-        var _local_9:XML = xmlLibrary_[_arg_1];
         var _local_10:int = ((_local_9.hasOwnProperty("Tex1")) ? int(_local_9.Tex1) : 0);
         var _local_11:int = ((_local_9.hasOwnProperty("Tex2")) ? int(_local_9.Tex2) : 0);
         _local_6 = TextureRedrawer.resize(_local_6, _local_8, _arg_2, _arg_3, _local_10, _local_11, _arg_5);

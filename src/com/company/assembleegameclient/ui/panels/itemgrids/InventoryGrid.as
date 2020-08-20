@@ -19,7 +19,7 @@ public class InventoryGrid extends ItemGrid {
         while (_local_5 < this.NUM_SLOTS) {
             _local_6 = new InventoryTile((_local_5 + indexOffset), this, interactive);
             _local_6.addTileNumber((_local_5 + 1));
-            addToGrid(_local_6, 2, _local_5);
+            addToGrid(_local_6, 2, _local_5,false);
             this.tiles[_local_5] = _local_6;
             _local_5++;
         }

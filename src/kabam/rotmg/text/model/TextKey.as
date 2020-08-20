@@ -86,7 +86,11 @@ public class TextKey {
     public static const OPTIONS_ROTATE_RIGHT:String = "Options.RotateRight";
     public static const OPTIONS_ROTATE_RIGHT_DESC:String = "Options.RotateRightDesc";
     public static const OPTIONS_USE_SPECIAL_ABILITY:String = "Options.UseSpecialAbility";
+    public static const OPTIONS_USE_SPECIAL_ABILITY2:String = "Options.UseSpecialAbility2";
+    public static const OPTIONS_USE_SPECIAL_ABILITY3:String = "Options.UseSpecialAbility3";
     public static const OPTIONS_USE_SPECIAL_ABILITY_DESC:String = "Options.UseSpecialAbilityDesc";
+    public static const OPTIONS_USE_SPECIAL_ABILITY_DESC2:String = "Options.UseSpecialAbilityDesc2";
+    public static const OPTIONS_USE_SPECIAL_ABILITY_DESC3:String = "Options.UseSpecialAbilityDesc3";
     public static const OPTIONS_AUTOFIRE_TOGGLE:String = "Options.AutofireToggle";
     public static const OPTIONS_AUTOFIRE_TOGGLE_DESC:String = "Options.AutofireToggleDesc";
     public static const OPTIONS_RESET_CAMERA:String = "Options.ResetCamera";

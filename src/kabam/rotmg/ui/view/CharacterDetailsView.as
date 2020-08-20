@@ -11,6 +11,8 @@ import flash.display.Sprite;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 
+import kabam.rotmg.LunarSkillTree.SkillIcon;
+
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
@@ -30,18 +32,19 @@ public class CharacterDetailsView extends Sprite {
     public var gotoOptions:Signal;
     public var iconButtonFactory:IconButtonFactory;
     public var imageFactory:ImageFactory;
-    private var portrait_:Bitmap;
+    private var portrait_:SkillIcon;
     private var button:IconButton;
     private var nameText_:TextFieldDisplayConcrete;
     private var nexusClicked:NativeSignal;
     private var optionsClicked:NativeSignal;
     private var boostPanelButton:BoostPanelButton;
     private var expTimer:ExperienceBoostTimerPopup;
+    public var player_:Player;
 
     public function CharacterDetailsView() {
         this.gotoNexus = new Signal();
         this.gotoOptions = new Signal();
-        this.portrait_ = new Bitmap(null);
+        this.portrait_ = new SkillIcon(null);
         this.nameText_ = new TextFieldDisplayConcrete().setSize(20).setColor(0xB3B3B3);
         this.nexusClicked = new NativeSignal(this.button, MouseEvent.CLICK);
         this.optionsClicked = new NativeSignal(this.button, MouseEvent.CLICK);
@@ -75,7 +78,13 @@ public class CharacterDetailsView extends Sprite {
     private function createPortrait():void {
         this.portrait_.x = -2;
         this.portrait_.y = -8;
+        this.portrait_.addEventListener(MouseEvent.CLICK,portraitClick);
         addChild(this.portrait_);
+    }
+    private function portraitClick(e:MouseEvent):void{
+        player_.abilitiesVisible= !player_.abilitiesVisible;
+        player_.map_.gs_.hudView.removeChild(player_.map_.gs_.hudView.equippedGrid);
+        player_.map_.gs_.hudView.createEquippedGrid(player_.abilitiesVisible);
     }
 
     private function createNameText(_arg_1:String):void {
@@ -88,7 +97,8 @@ public class CharacterDetailsView extends Sprite {
     }
 
     public function update(_arg_1:Player):void {
-        this.portrait_.bitmapData = _arg_1.getPortrait();
+        this.portrait_.icon_ = new Bitmap(_arg_1.getPortrait());
+        this.portrait_.addChild(this.portrait_.icon_);
     }
 
     public function draw(_arg_1:Player):void {

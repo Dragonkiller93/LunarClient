@@ -23,7 +23,7 @@ public class InventoryTabContent extends Sprite {
     }
 
     private function init(_arg_1:Player):void {
-        this.storage = new InventoryGrid(_arg_1, _arg_1, 4);
+        this.storage = new InventoryGrid(_arg_1, _arg_1, 7);
         this.storageContent.name = TabStripModel.MAIN_INVENTORY;
     }
 

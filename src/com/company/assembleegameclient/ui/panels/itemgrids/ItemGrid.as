@@ -104,12 +104,18 @@ public class ItemGrid extends Panel {
         return (InventoryOwnerTypes.NPC);
     }
 
-    protected function addToGrid(_arg_1:ItemTile, _arg_2:uint, _arg_3:uint):void {
-        _arg_1.drawBackground(CutsByNum[_arg_2][_arg_3]);
+    protected function addToGrid(_arg_1:ItemTile, _arg_2:uint, _arg_3:uint,_arg_4:Boolean):void {
+        if(!_arg_4 || _arg_3<4)_arg_1.drawBackground(CutsByNum[_arg_2][_arg_3]);
 
         _arg_1.addEventListener(MouseEvent.ROLL_OVER, this.onTileHover);
-        _arg_1.x = (int((_arg_3 % this.rowLength)) * (ItemTile.WIDTH + this.padding));
-        _arg_1.y = (int((_arg_3 / this.rowLength)) * (ItemTile.HEIGHT + this.padding));
+        if(!_arg_4||_arg_3<4) {
+            _arg_1.x = (int((_arg_3 % this.rowLength)) * (ItemTile.WIDTH + this.padding));
+            _arg_1.y = (int((_arg_3 / this.rowLength)) * (ItemTile.HEIGHT + this.padding));
+        }
+        else{
+            _arg_1.x=0-ItemTile.WIDTH-this.padding-20;
+            _arg_1.y=-100+(int((_arg_3 % this.rowLength)) * (ItemTile.HEIGHT + this.padding));
+        }
         addChild(_arg_1);
     }
 

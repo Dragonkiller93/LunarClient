@@ -361,7 +361,7 @@ public class EquipmentToolTip extends ToolTip {
         for each (_local_1 in this.objectXML.Activate) {
             //throw(this.comparisonResults.processedTags[_local_1.toXMLString()]);
             _local_5 = this.comparisonResults.processedTags[_local_1.toXMLString()];
-            if (this.comparisonResults.processedTags[_local_1.toXMLString()]) {
+            if (!this.comparisonResults.processedTags[_local_1.toXMLString()] || _local_1.toString()==ActivationType.TRAP) {
                 _local_6 = _local_1.toString();
 
                 switch (_local_6) {

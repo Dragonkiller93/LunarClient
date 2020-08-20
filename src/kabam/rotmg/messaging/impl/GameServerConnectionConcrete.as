@@ -1460,6 +1460,11 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                 case StatData.INVENTORY_11_STAT:
                     _arg_1.equipment_[(_local_7.statType_ - StatData.INVENTORY_0_STAT)] = _local_8;
                     break;
+                case StatData.INVENTORY_12_STAT:
+                case StatData.INVENTORY_13_STAT:
+                case StatData.INVENTORY_14_STAT:
+                    _arg_1.equipment_[(_local_7.statType_)-StatData.INVENTORY_12_STAT+12] = _local_8;
+                    break;
                 case StatData.NUM_STARS_STAT:
                     _local_4.numStars_ = _local_8;
                     break;

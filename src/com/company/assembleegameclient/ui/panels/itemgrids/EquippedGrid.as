@@ -9,18 +9,19 @@ import kabam.lib.util.VectorAS3Util;
 
 public class EquippedGrid extends ItemGrid {
 
-    public static const NUM_SLOTS:uint = 4;
+    public static const NUM_SLOTS:uint = 7;
 
     private var tiles:Vector.<EquipmentTile>;
-
-    public function EquippedGrid(_arg_1:GameObject, _arg_2:Vector.<int>, _arg_3:Player, _arg_4:int = 0) {
+    private var abilitiesVisible:Boolean;
+    public function EquippedGrid(_arg_1:GameObject, _arg_2:Vector.<int>, _arg_3:Player, _arg_4:int = 0,_arg_5:Boolean=true) {
         var _local_6:EquipmentTile;
         super(_arg_1, _arg_3, _arg_4);
-        this.tiles = new Vector.<EquipmentTile>(NUM_SLOTS);
+        this.tiles = new Vector.<EquipmentTile>(_arg_5?NUM_SLOTS:(NUM_SLOTS-3));
         var _local_5:int;
-        while (_local_5 < NUM_SLOTS) {
+        abilitiesVisible=_arg_5;
+        while (_arg_5?_local_5 < NUM_SLOTS:(_local_5<NUM_SLOTS-3)) {
             _local_6 = new EquipmentTile(_local_5, this, interactive);
-            addToGrid(_local_6, 1, _local_5);
+            addToGrid(_local_6, 1, _local_5,true);
             _local_6.setType(_arg_2[_local_5]);
             this.tiles[_local_5] = _local_6;
             _local_5++;

@@ -214,11 +214,11 @@ public class MapUserInput {
             }
             if (Parameters.isGpuRender()) {
                 if ((((((_arg_1.currentTarget == _arg_1.target)) || ((_arg_1.target == this.gs_.map)))) || ((_arg_1.target == this.gs_)))) {
-                    _local_2.useAltWeapon(_local_6, _local_7, UseType.START_USE);
+                    _local_2.useAbility1(_local_6, _local_7, UseType.START_USE);
                 }
             }
             else {
-                _local_2.useAltWeapon(_local_6, _local_7, UseType.START_USE);
+                _local_2.useAbility1(_local_6, _local_7, UseType.START_USE);
             }
             return;
         }
@@ -368,7 +368,43 @@ public class MapUserInput {
                         _local_7 = this.gs_.map.mouseX;
                         _local_8 = this.gs_.map.mouseY;
                     }
-                    _local_9 = _local_3.useAltWeapon(_local_7, _local_8, UseType.START_USE);
+                    _local_9 = _local_3.useAbility1(_local_7, _local_8, UseType.START_USE);
+                    if (_local_9) {
+                        this.specialKeyDown_ = true;
+                    }
+                }
+                break;
+            case Parameters.data_.useSpecial2:
+                _local_6 = this.gs_.map.player_;
+                if (_local_6 == null) break;
+                if (!this.specialKeyDown_) {
+                    if (_local_3.isUnstable()) {
+                        _local_7 = ((Math.random() * 600) - 300);
+                        _local_8 = ((Math.random() * 600) - 325);
+                    }
+                    else {
+                        _local_7 = this.gs_.map.mouseX;
+                        _local_8 = this.gs_.map.mouseY;
+                    }
+                    _local_9 = _local_3.useAbility2(_local_7, _local_8, UseType.START_USE);
+                    if (_local_9) {
+                        this.specialKeyDown_ = true;
+                    }
+                }
+                break;
+            case Parameters.data_.useSpecial3:
+                _local_6 = this.gs_.map.player_;
+                if (_local_6 == null) break;
+                if (!this.specialKeyDown_) {
+                    if (_local_3.isUnstable()) {
+                        _local_7 = ((Math.random() * 600) - 300);
+                        _local_8 = ((Math.random() * 600) - 325);
+                    }
+                    else {
+                        _local_7 = this.gs_.map.mouseX;
+                        _local_8 = this.gs_.map.mouseY;
+                    }
+                    _local_9 = _local_3.useAbility3(_local_7, _local_8, UseType.START_USE);
                     if (_local_9) {
                         this.specialKeyDown_ = true;
                     }
@@ -540,7 +576,35 @@ public class MapUserInput {
                         _local_2 = this.gs_.map.mouseX;
                         _local_3 = this.gs_.map.mouseY;
                     }
-                    this.gs_.map.player_.useAltWeapon(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
+                    this.gs_.map.player_.useAbility1(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
+                }
+                break;
+            case Parameters.data_.useSpecial2:
+                if (this.specialKeyDown_) {
+                    this.specialKeyDown_ = false;
+                    if (this.gs_.map.player_.isUnstable()) {
+                        _local_2 = ((Math.random() * 600) - 300);
+                        _local_3 = ((Math.random() * 600) - 325);
+                    }
+                    else {
+                        _local_2 = this.gs_.map.mouseX;
+                        _local_3 = this.gs_.map.mouseY;
+                    }
+                    this.gs_.map.player_.useAbility2(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
+                }
+                break;
+            case Parameters.data_.useSpecial3:
+                if (this.specialKeyDown_) {
+                    this.specialKeyDown_ = false;
+                    if (this.gs_.map.player_.isUnstable()) {
+                        _local_2 = ((Math.random() * 600) - 300);
+                        _local_3 = ((Math.random() * 600) - 325);
+                    }
+                    else {
+                        _local_2 = this.gs_.map.mouseX;
+                        _local_3 = this.gs_.map.mouseY;
+                    }
+                    this.gs_.map.player_.useAbility3(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
                 }
                 break;
         }

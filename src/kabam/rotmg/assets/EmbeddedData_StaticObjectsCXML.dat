@@ -99,6 +99,7 @@
          <Index>0x4f</Index>
       </Texture>
 	<ShadowSize>0</ShadowSize>
+	<PixelCount>16</PixelCount>
       <Static/>
       <Size>20</Size>
    </Object>
@@ -112,6 +113,7 @@
       <DeathSound>monster/rocks_death</DeathSound>
       <Static/>
 <ShadowSize>0</ShadowSize>
+<PixelCount>16</PixelCount>
       <MinSize>50</MinSize>
       <MaxSize>60</MaxSize>
       <OccupySquare/>

@@ -33,7 +33,7 @@ public class HUDView extends Sprite implements UnFocusAble {
 
     private var background:CharacterWindowBackground;
     private var miniMap:MiniMapImp;
-    private var equippedGrid:EquippedGrid;
+    public var equippedGrid:EquippedGrid;
     private var statMeters:StatMetersView;
     private var characterDetails:CharacterDetailsView;
     private var equippedGridBG:Sprite;
@@ -80,8 +80,9 @@ public class HUDView extends Sprite implements UnFocusAble {
     public function setPlayerDependentAssets(_arg_1:GameSprite):void {
         this.player = _arg_1.map.player_;
         this.createEquippedGridBackground();
-        this.createEquippedGrid();
+        this.createEquippedGrid(true);
         this.createInteractPanel(_arg_1);
+        this.characterDetails.player_=this.player;
     }
 
     private function createInteractPanel(_arg_1:GameSprite):void {
@@ -91,8 +92,8 @@ public class HUDView extends Sprite implements UnFocusAble {
         addChild(this.interactPanel);
     }
 
-    private function createEquippedGrid():void {
-        this.equippedGrid = new EquippedGrid(this.player, this.player.slotTypes_, this.player);
+    public function createEquippedGrid(_arg_1:Boolean):void {
+        this.equippedGrid = new EquippedGrid(this.player, this.player.slotTypes_, this.player,0,_arg_1);
         this.equippedGrid.x = this.EQUIPMENT_INVENTORY_POSITION.x;
         this.equippedGrid.y = this.EQUIPMENT_INVENTORY_POSITION.y;
         addChild(this.equippedGrid);

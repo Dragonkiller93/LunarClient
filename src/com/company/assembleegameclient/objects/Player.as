@@ -150,6 +150,7 @@ public class Player extends Character {
     public var onHorse:Boolean = false;
     public var Horse:Bitmap;
     public var toaddHorse:Boolean =false;
+    public var abilitiesVisible:Boolean = false;
 
     public function Player(_arg_1:XML) {
         this.ip_ = new IntPoint();
@@ -682,11 +683,11 @@ public class Player extends Character {
         GraphicsFillExtra.setSoftwareDrawSolid(this.breathBackFill_, true);
     }
     public function addHorse(_arg_1:Camera):void{
-        var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
+        /*var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
         this.Horse = new Bitmap(_local_1.imageFromFacing(this.facing_,_arg_1,0,AnimatedChar.WALK).image_);
         this.Horse.height= 100;
         this.Horse.width=100;
-        //this.map_.addChild(this.Horse);
+        this.map_.addChild(this.Horse);*/
         onHorse=true;
     }
     public function removeHorse():void{
@@ -700,10 +701,11 @@ public class Player extends Character {
     public function updateHorse(_arg_1:Camera,_arg_2:int):BitmapData{
         //this.map_.removeChild(this.Horse);
 
-        var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
+        //var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarHorses16x16",0);
+        var _local_1:AnimatedChar = AnimatedChars.getAnimatedChar("LunarAnimationTest",0);
         var _local_10:int = (30 / this.getMoveSpeed());
         var _local_3:Number = ((_arg_2 % _local_10) / _local_10);
-        var _local_4:BitmapData = TextureRedrawer.resize(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.WALK,_local_3).image_,null,100,true,0,0,5);//TextureRedrawer.redraw(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.WALK,_local_3).image_,100,true,0xffffff);
+        var _local_4:BitmapData = TextureRedrawer.resize(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.STAND,_local_3).image_,null,100,true,0,0,5);//TextureRedrawer.redraw(_local_1.imageFromFacing(this.facing_,_arg_1,AnimatedChar.WALK,_local_3).image_,100,true,0xffffff);
         var _local_5:BitmapData = TextureRedrawer.resize(animatedChar_.imageFromFacing(facing_, _arg_1, AnimatedChar.STAND, 0).image_,null,100,true,0,0,5); //TextureRedrawer.redraw(animatedChar_.imageFromFacing(facing_, _arg_1, AnimatedChar.STAND, 0).image_,100,false,0,false);
         _local_4 = GlowRedrawer.outlineGlow(_local_4,0xffffff);
         _local_5 = GlowRedrawer.outlineGlow(_local_5,0);
@@ -888,8 +890,7 @@ public class Player extends Character {
         }
         return (portrait_);
     }
-
-    public function useAltWeapon(_arg_1:Number, _arg_2:Number, _arg_3:int):Boolean {
+    public function useAbility1(_arg_1:Number,_arg_2:Number,_arg_3:int):Boolean{
         var _local_7:XML;
         var _local_8:int;
         var _local_9:Number;
@@ -898,7 +899,7 @@ public class Player extends Character {
         if ((((map_ == null)) || (isPaused()))) {
             return (false);
         }
-        var _local_4:int = equipment_[1];
+        var _local_4:int = equipment_[4];
         if (_local_4 == -1) {
             return (false);
         }
@@ -940,7 +941,7 @@ public class Player extends Character {
                 _local_11 = (Number(_local_5.Cooldown) * 1000);
             }
             this.nextAltAttack_ = (_local_8 + _local_11);
-            map_.gs_.gsc_.useItem(_local_8, objectId_, 1, _local_4, _local_6.x, _local_6.y, _arg_3);
+            map_.gs_.gsc_.useItem(_local_8, objectId_, 4, _local_4, _local_6.x, _local_6.y, _arg_3);
             if (_local_5.Activate == ActivationType.SHOOT) {
                 _local_9 = Math.atan2(_arg_2, _arg_1);
                 this.doShoot(_local_8, _local_4, _local_5, (Parameters.data_.cameraAngle + _local_9), false);
@@ -958,7 +959,144 @@ public class Player extends Character {
         }
         return (true);
     }
-
+    public function useAbility2(_arg_1:Number,_arg_2:Number,_arg_3:int):Boolean{
+        var _local_7:XML;
+        var _local_8:int;
+        var _local_9:Number;
+        var _local_10:int;
+        var _local_11:int;
+        if ((((map_ == null)) || (isPaused()))) {
+            return (false);
+        }
+        var _local_4:int = equipment_[5];
+        if (_local_4 == -1) {
+            return (false);
+        }
+        var _local_5:XML = ObjectLibrary.xmlLibrary_[_local_4];
+        if ((((_local_5 == null)) || (!(_local_5.hasOwnProperty("Usable"))))) {
+            return (false);
+        }
+        if(isSilenced())
+        {
+            SoundEffectLibrary.play("error");
+            return false;
+        }
+        var _local_6:Point = map_.pSTopW(_arg_1, _arg_2);
+        if (_local_6 == null) {
+            SoundEffectLibrary.play("error");
+            return (false);
+        }
+        for each (_local_7 in _local_5.Activate) {
+            if (_local_7.toString() == ActivationType.TELEPORT) {
+                if (!this.isValidPosition(_local_6.x, _local_6.y)) {
+                    SoundEffectLibrary.play("error");
+                    return (false);
+                }
+            }
+        }
+        _local_8 = getTimer();
+        if (_arg_3 == UseType.START_USE) {
+            if (_local_8 < this.nextAltAttack_) {
+                SoundEffectLibrary.play("error");
+                return (false);
+            }
+            _local_10 = int(_local_5.MpCost);
+            if (_local_10 > this.mp_) {
+                SoundEffectLibrary.play("no_mana");
+                return (false);
+            }
+            _local_11 = 500;
+            if (_local_5.hasOwnProperty("Cooldown")) {
+                _local_11 = (Number(_local_5.Cooldown) * 1000);
+            }
+            this.nextAltAttack_ = (_local_8 + _local_11);
+            map_.gs_.gsc_.useItem(_local_8, objectId_, 5, _local_4, _local_6.x, _local_6.y, _arg_3);
+            if (_local_5.Activate == ActivationType.SHOOT) {
+                _local_9 = Math.atan2(_arg_2, _arg_1);
+                this.doShoot(_local_8, _local_4, _local_5, (Parameters.data_.cameraAngle + _local_9), false);
+            }
+        }
+        else {
+            if (_local_5.hasOwnProperty("MultiPhase")) {
+                map_.gs_.gsc_.useItem(_local_8, objectId_, 1, _local_4, _local_6.x, _local_6.y, _arg_3);
+                _local_10 = int(_local_5.MpEndCost);
+                if (_local_10 <= this.mp_) {
+                    _local_9 = Math.atan2(_arg_2, _arg_1);
+                    this.doShoot(_local_8, _local_4, _local_5, (Parameters.data_.cameraAngle + _local_9), false);
+                }
+            }
+        }
+        return (true);
+    }
+    public function useAbility3(_arg_1:Number,_arg_2:Number,_arg_3:int):Boolean{
+        var _local_7:XML;
+        var _local_8:int;
+        var _local_9:Number;
+        var _local_10:int;
+        var _local_11:int;
+        if ((((map_ == null)) || (isPaused()))) {
+            return (false);
+        }
+        var _local_4:int = equipment_[6];
+        if (_local_4 == -1) {
+            return (false);
+        }
+        var _local_5:XML = ObjectLibrary.xmlLibrary_[_local_4];
+        if ((((_local_5 == null)) || (!(_local_5.hasOwnProperty("Usable"))))) {
+            return (false);
+        }
+        if(isSilenced())
+        {
+            SoundEffectLibrary.play("error");
+            return false;
+        }
+        var _local_6:Point = map_.pSTopW(_arg_1, _arg_2);
+        if (_local_6 == null) {
+            SoundEffectLibrary.play("error");
+            return (false);
+        }
+        for each (_local_7 in _local_5.Activate) {
+            if (_local_7.toString() == ActivationType.TELEPORT) {
+                if (!this.isValidPosition(_local_6.x, _local_6.y)) {
+                    SoundEffectLibrary.play("error");
+                    return (false);
+                }
+            }
+        }
+        _local_8 = getTimer();
+        if (_arg_3 == UseType.START_USE) {
+            if (_local_8 < this.nextAltAttack_) {
+                SoundEffectLibrary.play("error");
+                return (false);
+            }
+            _local_10 = int(_local_5.MpCost);
+            if (_local_10 > this.mp_) {
+                SoundEffectLibrary.play("no_mana");
+                return (false);
+            }
+            _local_11 = 500;
+            if (_local_5.hasOwnProperty("Cooldown")) {
+                _local_11 = (Number(_local_5.Cooldown) * 1000);
+            }
+            this.nextAltAttack_ = (_local_8 + _local_11);
+            map_.gs_.gsc_.useItem(_local_8, objectId_, 6, _local_4, _local_6.x, _local_6.y, _arg_3);
+            if (_local_5.Activate == ActivationType.SHOOT) {
+                _local_9 = Math.atan2(_arg_2, _arg_1);
+                this.doShoot(_local_8, _local_4, _local_5, (Parameters.data_.cameraAngle + _local_9), false);
+            }
+        }
+        else {
+            if (_local_5.hasOwnProperty("MultiPhase")) {
+                map_.gs_.gsc_.useItem(_local_8, objectId_, 1, _local_4, _local_6.x, _local_6.y, _arg_3);
+                _local_10 = int(_local_5.MpEndCost);
+                if (_local_10 <= this.mp_) {
+                    _local_9 = Math.atan2(_arg_2, _arg_1);
+                    this.doShoot(_local_8, _local_4, _local_5, (Parameters.data_.cameraAngle + _local_9), false);
+                }
+            }
+        }
+        return (true);
+    }
     public function attemptAttackAngle(_arg_1:Number):void {
         this.shoot((Parameters.data_.cameraAngle + _arg_1));
     }

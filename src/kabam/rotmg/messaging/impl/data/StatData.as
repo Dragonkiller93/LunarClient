@@ -107,6 +107,9 @@ public class StatData {
     public static const MARKET_PRICE :int = 101;
     public static const BLOCKS_PROJ:int = 102;
     public static const OnHorse:int=103;
+    public static const INVENTORY_12_STAT:int = 104;
+    public static const INVENTORY_13_STAT:int = 105;
+    public static const INVENTORY_14_STAT:int = 106;
 
     public var statType_:uint = 0;
     public var statValue_:int;

@@ -21,7 +21,17 @@ public class AnimatedChars {
         var _local_10:MaskedImageSet = new MaskedImageSet();
         _local_10.addFromBitmapData(_arg_2, _arg_3, _arg_6, _arg_7);
         for each (_local_11 in _local_10.images_) {
-            _local_9.push(new AnimatedChar(_local_11, _arg_4, _arg_5, _arg_8));
+            _local_9.push(new AnimatedChar(_local_11, _arg_4, _arg_5, _arg_8,false,-1,1,1,false));
+        }
+        nameMap_[_arg_1] = _local_9;
+    }
+    public static function addSecondary(_arg_1:String, _arg_2:BitmapData, _arg_3:BitmapData, _arg_4:int, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int,_arg_9:Boolean,_arg_10:int,_arg_11:int,_arg_12:int):void {
+        var _local_11:MaskedImage;
+        var _local_9:Vector.<AnimatedChar> = new Vector.<AnimatedChar>();
+        var _local_10:MaskedImageSet = new MaskedImageSet();
+        _local_10.addFromBitmapData(_arg_2, _arg_3, _arg_6, _arg_7);
+        for each (_local_11 in _local_10.images_) {
+            _local_9.push(new AnimatedChar(_local_11, _arg_4, _arg_5, _arg_8,true,_arg_10,_arg_11,_arg_12,_arg_9));
         }
         nameMap_[_arg_1] = _local_9;
     }

@@ -9,6 +9,7 @@ import com.company.rotmg.graphics.DeleteXGraphic;
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
 
 import kabam.rotmg.classes.model.CharacterClass;

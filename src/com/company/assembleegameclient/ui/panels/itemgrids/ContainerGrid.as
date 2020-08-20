@@ -16,7 +16,7 @@ public class ContainerGrid extends ItemGrid {
         var _local_3:int;
         while (_local_3 < this.NUM_SLOTS) {
             _local_4 = new InteractiveItemTile((_local_3 + indexOffset), this, interactive);
-            addToGrid(_local_4, 2, _local_3);
+            addToGrid(_local_4, 2, _local_3,false);
             this.tiles[_local_3] = _local_4;
             _local_3++;
         }

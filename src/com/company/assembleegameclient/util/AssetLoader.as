@@ -16,6 +16,7 @@ import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
+import kabam.rotmg.assets.Lunar_AnimationTest;
 import kabam.rotmg.assets.Lunar_Horses16x16;
 
 public class AssetLoader {
@@ -108,7 +109,7 @@ public class AssetLoader {
         AnimatedChars.add("chars8x8rLow1", new EmbeddedAssets.chars8x8rLow1Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rLow2", new EmbeddedAssets.chars8x8rLow2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rMid", new EmbeddedAssets.chars8x8rMidEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
-        AnimatedChars. add("chars8x8rMid2", new EmbeddedAssets.chars8x8rMid2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars.add("chars8x8rMid2", new EmbeddedAssets.chars8x8rMid2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHigh", new EmbeddedAssets.chars8x8rHighEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHero1", new EmbeddedAssets.chars8x8rHero1Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
         AnimatedChars.add("chars8x8rHero2", new EmbeddedAssets.chars8x8rHero2Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
@@ -133,7 +134,9 @@ public class AssetLoader {
         AnimatedChars.add("d1chars16x16r", new EmbeddedAssets.d1Chars16x16rEmbed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars16x16",new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData,null,16,16,112,16,AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars8x8",new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData,null,8,8,56,8,AnimatedChar.STAND);
-        AnimatedChars.add("LunarHorses16x16",new EmbeddedAssets.LunarHorses16x16().bitmapData,null,16,16,112,48,AnimatedChar.RIGHT);
+        //AnimatedChars.add("LunarHorses16x16",new EmbeddedAssets.LunarHorses16x16().bitmapData,null,16,16,112,48,AnimatedChar.RIGHT);
+        //AnimatedChars.addSecondary("LunarHorses16x16",new EmbeddedAssets.LunarHorses16x16().bitmapData,null,16,16,112,48,AnimatedChar.RIGHT,2,2,2);
+        AnimatedChars.addSecondary("LunarAnimationTest",new EmbeddedAssets.LunarAnimationTest().bitmapData,null,52,52,832,104,AnimatedChar.RIGHT,true,24,0,0);
     }
 
     private function addSoundEffects():void {
