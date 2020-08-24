@@ -34,7 +34,6 @@ public class TitleView extends Sprite {
     public static var queuePasswordPrompt:Boolean = false;
     public static var queuePasswordPromptFull:Boolean = false;
     public static var queueRegistrationPrompt:Boolean = false;
-    public static var kabammigrateOpened:Boolean = false;
 
     private var versionText:TextFieldDisplayConcrete;
     private var copyrightText:TextFieldDisplayConcrete;
@@ -50,7 +49,6 @@ public class TitleView extends Sprite {
     public var editorClicked:Signal;
     public var quitClicked:Signal;
     public var optionalButtonsAdded:Signal;
-    private var migrateButton:TitleMenuOption;
 
     public function TitleView() {
         var _local_2:String;
@@ -65,26 +63,7 @@ public class TitleView extends Sprite {
         this.makeChildren();
         addChild(new SoundIcon());
         var _local_1:PlatformModel = StaticInjectorContext.getInjector().getInstance(PlatformModel);
-        if (_local_1.getPlatform() == PlatformType.WEB) {
-            this.makeMigrateButton();
-            addChild(this.migrateButton);
-            _local_2 = "";
-            try {
-                _local_2 = ExternalInterface.call("window.location.search.substring", 1);
-            }
-            catch (err:Error) {
-            }
-            if (((((!(kabammigrateOpened)) && (_local_2))) && ((_local_2 == "kabammigrate")))) {
-                kabammigrateOpened = true;
-                this.openKabamTransferView();
-            }
-        }
-        else {
-            if (_local_1.getPlatform() == PlatformType.KABAM) {
-                this.makeMigrateButton();
-                addChild(this.migrateButton);
-            }
-        }
+
     }
 
     public function openKabamTransferView():void {
@@ -159,14 +138,6 @@ public class TitleView extends Sprite {
         this.editorClicked = _local_1.clicked;
     }
 
-    private function makeMigrateButton():void {
-        this.migrateButton = new TitleMenuOption("Want to migrate your Kabam.com account?", 16, false);
-        this.migrateButton.setAutoSize(TextFieldAutoSize.CENTER);
-        this.kabamTransferClicked = new NativeMappedSignal(this.migrateButton, MouseEvent.CLICK);
-        this.migrateButton.setTextKey("Want to migrate your Kabam.com account?");
-        this.migrateButton.x = 400;
-        this.migrateButton.y = 500;
-    }
 
 
 }
