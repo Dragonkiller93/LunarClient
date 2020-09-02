@@ -12,7 +12,7 @@ public class DeferredQueueSignal extends Signal {
         super(rest);
     }
 
-    override public function dispatch(... rest):void {
+    override public function dispatch(...rest):void {
         if (this.log) {
             this.data.push(rest);
         }

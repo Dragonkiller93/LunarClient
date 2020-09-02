@@ -61,20 +61,20 @@ public class TabStripMediator extends Mediator {
         this.statsDocked.add(this.onStatsDocked);
         this.statsTabHotKeyInput.add(this.onTabHotkey);
         this.notifyActivePetUpdated.add(this.onNotifyActivePetUpdated);
-        this.view.initSkillTree(this.imageFactory, this.iconButtonFactory, this.onSkillBtnClicked);
+        //this.view.initSkillTree(this.imageFactory, this.iconButtonFactory, this.onSkillBtnClicked);
     }
 
     private function onStatsUndocked(_arg_1:StatsView):void {
-        this.doShowStats = false;
-        this.clearTabs();
-        this.addTabs(this.hudModel.gameSprite.map.player_);
+//        this.doShowStats = false;
+//        this.clearTabs();
+//        this.addTabs(this.hudModel.gameSprite.map.player_);
     }
 
     private function onStatsDocked():void {
-        this.doShowStats = true;
-        this.clearTabs();
-        this.addTabs(this.hudModel.gameSprite.map.player_);
-        this.view.setSelectedTab(1);
+//        this.doShowStats = true;
+//        this.clearTabs();
+//        this.addTabs(this.hudModel.gameSprite.map.player_);
+//        this.view.setSelectedTab(1);
     }
 
     private function onTabHotkey():void {
@@ -86,7 +86,6 @@ public class TabStripMediator extends Mediator {
     override public function destroy():void {
         this.view.tabSelected.remove(this.onTabSelected);
         this.updateBackpack.remove(this.onUpdateBackPack);
-        this.view.friendsBtn.removeEventListener(MouseEvent.CLICK, this.onSkillBtnClicked);
     }
 
     private function onSkillBtnClicked(_arg_1:MouseEvent):void {
@@ -97,7 +96,7 @@ public class TabStripMediator extends Mediator {
         if (!_arg_1) {
             return;
         }
-        this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.INVENTORY_ICON_ID), new InventoryTabContent(_arg_1));
+        //this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.INVENTORY_ICON_ID), new InventoryTabContent(_arg_1));
         if (this.doShowStats) {
             this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.STATS_ICON_ID), new StatsTabContent(this.view.HEIGHT));
         }

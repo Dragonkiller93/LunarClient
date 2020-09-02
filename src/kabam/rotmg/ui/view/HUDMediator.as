@@ -48,9 +48,11 @@ public class HUDMediator extends Mediator {
     private function onStatsMouseUp(_arg_1:MouseEvent):void {
         var _local_2:Sprite = StatsView(_arg_1.target);
         this.stopDraggingStatsAsset(_local_2);
-        if (_local_2.hitTestObject(this.view.tabStrip)) {
+        /*if (_local_2.hitTestObject(this.view.tabStrip)) {
             this.dockStats(_local_2);
         }
+        */
+
     }
 
     private function dockStats(_arg_1:Sprite):void {
@@ -82,7 +84,7 @@ public class HUDMediator extends Mediator {
     }
 
     private function onUpdateHUD(_arg_1:Player):void {
-        this.view.draw();
+        this.view.draw(this.hudModel.gameSprite);
     }
 
     private function onInitializeHUD(_arg_1:Player):void {

@@ -39,15 +39,17 @@ public class CharacterDetailsView extends Sprite {
     private var optionsClicked:NativeSignal;
     private var boostPanelButton:BoostPanelButton;
     private var expTimer:ExperienceBoostTimerPopup;
-    public var player_:Player;
+    private var abilitiesVisible:Boolean;
+    private var HUD:HUDView;
 
-    public function CharacterDetailsView() {
+    public function CharacterDetailsView(_arg_1:HUDView) {
         this.gotoNexus = new Signal();
         this.gotoOptions = new Signal();
         this.portrait_ = new SkillIcon(null);
         this.nameText_ = new TextFieldDisplayConcrete().setSize(20).setColor(0xB3B3B3);
         this.nexusClicked = new NativeSignal(this.button, MouseEvent.CLICK);
         this.optionsClicked = new NativeSignal(this.button, MouseEvent.CLICK);
+        this.HUD=_arg_1;
         super();
     }
 
@@ -82,9 +84,8 @@ public class CharacterDetailsView extends Sprite {
         addChild(this.portrait_);
     }
     private function portraitClick(e:MouseEvent):void{
-        player_.abilitiesVisible= !player_.abilitiesVisible;
-        player_.map_.gs_.hudView.removeChild(player_.map_.gs_.hudView.equippedGrid);
-        player_.map_.gs_.hudView.createEquippedGrid(player_.abilitiesVisible);
+        abilitiesVisible= !abilitiesVisible;
+        //HUD.redraw();
     }
 
     private function createNameText(_arg_1:String):void {

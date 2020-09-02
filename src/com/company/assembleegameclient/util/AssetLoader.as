@@ -16,6 +16,7 @@ import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
+import kabam.rotmg.assets.Lunar_AddedItems16x16;
 import kabam.rotmg.assets.Lunar_AnimationTest;
 import kabam.rotmg.assets.Lunar_Horses16x16;
 
@@ -101,6 +102,7 @@ public class AssetLoader {
         AssetLibrary.addImageSet("LunarHuntsmanTiered",new EmbeddedAssets.LunarHuntsmanTiered().bitmapData,8,8);
         AssetLibrary.addImageSet("LunarTieredProjs",new EmbeddedAssets.LunarTieredProjs().bitmapData,8,8);
         AssetLibrary.addImageSet("LunarGround",new EmbeddedAssets.LunarGround().bitmapData,8,8);
+        AssetLibrary.addImageSet("LunarAddedItems16x16",new EmbeddedAssets.LunarAddedItems16x16().bitmapData,16,16);
     }
 
     private function addAnimatedCharacters():void {

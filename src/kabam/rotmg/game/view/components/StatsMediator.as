@@ -36,14 +36,14 @@ public class StatsMediator extends Mediator {
     }
 
     private function onStatsDrag(_arg_1:MouseEvent):void {
-        if (this.view.currentState == StatsView.STATE_DOCKED) {
-            this.view.undock();
-            this.statsUndocked.dispatch(this.view);
-        }
+//        if (this.view.currentState == StatsView.STATE_DOCKED) {
+//            this.view.undock();
+//            this.statsUndocked.dispatch(this.view);
+//        }
     }
 
     private function onStatsDock():void {
-        this.view.dock();
+//        this.view.dock();
     }
 
 

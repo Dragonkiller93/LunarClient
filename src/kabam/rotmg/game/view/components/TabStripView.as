@@ -33,7 +33,6 @@ public class TabStripView extends Sprite {
     public var tabs:Vector.<TabView>;
     private var contents:Vector.<Sprite>;
     public var currentTabIndex:int;
-    public var friendsBtn:IconButton;
 
     public function TabStripView(_arg_1:Number = 186, _arg_2:Number = 153) {
         this.tabs = new Vector.<TabView>();
@@ -49,11 +48,6 @@ public class TabStripView extends Sprite {
     }
 
     public function initSkillTree(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function):void {
-        this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("LunarSkillTreeIcon", 0), "", "Skill Tree", "");
-        this.friendsBtn.x = 160;
-        this.friendsBtn.y = 6;
-        this.friendsBtn.addEventListener(MouseEvent.CLICK, _arg_3);
-        addChild(this.friendsBtn);
     }
 
     private function onTabClicked(_arg_1:MouseEvent):void {

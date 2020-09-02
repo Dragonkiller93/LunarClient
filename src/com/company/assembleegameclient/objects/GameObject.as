@@ -148,7 +148,7 @@ public class GameObject extends BasicObject {
         }
         this.objectType_ = int(_arg_1.@type);
         this.props_ = ObjectLibrary.propsLibrary_[this.objectType_];
-        hasShadow_ = (this.props_.shadowSize_ > 0);
+        hasShadow_ = this.props_.shadowSize_ > 0;
         var _local_2:TextureData = ObjectLibrary.typeToTextureData_[this.objectType_];
         this.texture_ = _local_2.texture_;
         this.mask_ = _local_2.mask_;

@@ -188,7 +188,8 @@ public class ObjectLibrary {
         var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
 
         var _local_9:XML = xmlLibrary_[_arg_1];
-        if(_local_9.hasOwnProperty("PixelCount")){_arg_2 = (_arg_2 * 8 / _local_9.PixelCount)}
+        var hasPixelCount:Boolean = _local_9==null?false:_local_9.hasOwnProperty("PixelCount");
+        if(hasPixelCount)_arg_2=(_arg_2 * 8/_local_9.PixelCount);
         if (_local_8 == null) {
             return (TextureRedrawer.redraw(_local_6, _arg_2, _arg_3, 0, _arg_4, _arg_5));
         }

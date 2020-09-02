@@ -63,7 +63,6 @@ public class TitleMediator extends Mediator {
         this.view.accountClicked.add(this.handleIntentionToReviewAccount);
         this.view.legendsClicked.add(this.showLegendsScreen);
         this.view.supportClicked.add(this.openSupportPage);
-        this.view.kabamTransferClicked.add(this.openKabamTransferView);
     }
 
     private function openSupportPage():void {
@@ -127,14 +126,10 @@ public class TitleMediator extends Mediator {
         this.view.legendsClicked.remove(this.showLegendsScreen);
         this.view.supportClicked.remove(this.openSupportPage);
         this.view.optionalButtonsAdded.remove(this.onOptionalButtonsAdded);
-        this.view.kabamTransferClicked.remove(this.openKabamTransferView);
         ((this.view.editorClicked) && (this.view.editorClicked.remove(this.showMapEditor)));
         ((this.view.quitClicked) && (this.view.quitClicked.remove(this.attemptToCloseClient)));
     }
 
-    private function openKabamTransferView():void {
-        this.view.openKabamTransferView();
-    }
 
     private function handleIntentionToPlay():void {
         this.enterGame.dispatch();

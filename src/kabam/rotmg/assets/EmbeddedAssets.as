@@ -145,6 +145,7 @@ public class EmbeddedAssets {
     public static var LunarGround:Class = Lunar_Ground;
     public static var LunarHorses16x16:Class=Lunar_Horses16x16;
     public static var LunarAnimationTest:Class = Lunar_AnimationTest;
+    public static var LunarAddedItems16x16:Class = Lunar_AddedItems16x16;
 
     public static var models_:Object = {
         "Monster Tank1": new monsterTank1Embed_(),

@@ -16,7 +16,7 @@ public class BackpackTabContent extends Sprite {
 
     public function BackpackTabContent(_arg_1:Player) {
         this.backpackContent = new Sprite();
-        this.backpackPotionsInventory = new PotionInventoryView();
+        //this.backpackPotionsInventory = new PotionInventoryView();
         super();
         this.init(_arg_1);
         this.addChildren();
@@ -31,12 +31,12 @@ public class BackpackTabContent extends Sprite {
     private function positionChildren():void {
         this.backpackContent.x = 7;
         this.backpackContent.y = 7;
-        this.backpackPotionsInventory.y = (this.backpack.height + 4);
+        //this.backpackPotionsInventory.y = (this.backpack.height + 4);
     }
 
     private function addChildren():void {
         this.backpackContent.addChild(this.backpack);
-        this.backpackContent.addChild(this.backpackPotionsInventory);
+        //this.backpackContent.addChild(this.backpackPotionsInventory);
         addChild(this.backpackContent);
     }
 

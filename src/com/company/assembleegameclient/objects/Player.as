@@ -56,6 +56,7 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 import kabam.rotmg.ui.model.TabStripModel;
+import kabam.rotmg.ui.view.HUDView;
 
 import org.swiftsuspenders.Injector;
 

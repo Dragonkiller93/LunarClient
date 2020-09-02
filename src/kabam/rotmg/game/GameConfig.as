@@ -5,6 +5,7 @@ import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.map.MapMediator;
 import com.company.assembleegameclient.map.QueueStatusTextSignal;
 import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
+import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.TradeSlot;
 import com.company.assembleegameclient.ui.TradeSlotMediator;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
@@ -66,6 +67,7 @@ import kabam.rotmg.game.view.components.StatsView;
 import kabam.rotmg.game.view.components.TabStripMediator;
 import kabam.rotmg.game.view.components.TabStripView;
 import kabam.rotmg.ui.model.TabStripModel;
+import kabam.rotmg.ui.view.HUDView;
 
 import org.swiftsuspenders.Injector;
 
@@ -99,6 +101,7 @@ public class GameConfig implements IConfig {
         this.injector.map(ExitGameSignal).asSingleton();
         this.injector.map(QueueStatusTextSignal).asSingleton();
         this.injector.map(SocketServerModel).asSingleton();
+        this.injector.map(Player).asSingleton();
         this.makeTextPanelMappings();
         this.makeGiftStatusDisplayMappings();
         this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);

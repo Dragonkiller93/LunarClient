@@ -144,7 +144,15 @@ public class IconButton extends Sprite implements TooltipAble {
     public function getHideToolTips():HideTooltipsSignal {
         return (this.hoverTooltipDelegate.getHideToolTips());
     }
-
+    public function drawBackground(_arg_1:uint):void{
+        graphics.lineStyle(0,_arg_1,1);
+        graphics.beginFill(_arg_1);
+        graphics.drawRoundRect(-3,0,width/2,height/2,1,1);
+        graphics.endFill();
+    }
+    public function removeBackground():void{
+        graphics.clear();
+    }
 
 }
 }//package com.company.assembleegameclient.ui.icons
