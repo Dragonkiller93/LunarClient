@@ -43,6 +43,7 @@ public class ObjectLibrary {
         "ConnectedWall": ConnectedWall,
         "Container": Container,
         "DoubleWall": DoubleWall,
+        "FullWall":FullWall,
         "FortuneGround": FortuneGround,
         "FortuneTeller": FortuneTeller,
         "GameObject": GameObject,

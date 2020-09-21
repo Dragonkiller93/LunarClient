@@ -13,6 +13,8 @@ import flash.display.IGraphicsData;
 import flash.geom.Utils3D;
 import flash.geom.Vector3D;
 
+import mx.logging.Log;
+
 public class Face3D {
 
     private static const blackOutFill_:GraphicsSolidFill = new GraphicsSolidFill(0, 1);

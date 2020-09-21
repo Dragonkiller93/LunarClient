@@ -1,5 +1,6 @@
 ﻿package com.company.assembleegameclient.mapeditor {
 import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.assembleegameclient.ui.Searchbar;
 import com.company.util.GraphicsUtil;
 
 import flash.display.CapsStyle;
@@ -20,11 +21,11 @@ class Chooser extends Sprite {
     public static const HEIGHT:int = 480;
     private static const SCROLLBAR_WIDTH:int = 20;
     public var layer_:int;
-    private var elementSprite_:Sprite;
+    protected var elementSprite_:Sprite;
     public var selected_:Element;
     private var scrollBar_:Scrollbar;
     private var mask_:Shape;
-    private var elements_:Vector.<Element> = new Vector.<Element>();
+    protected var elements_:Vector.<Element> = new Vector.<Element>();
     private var outlineFill_:GraphicsSolidFill = new GraphicsSolidFill(0xFFFFFF, 1);
     private var lineStyle_:GraphicsStroke = new GraphicsStroke(
             1, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.ROUND, 3, outlineFill_
@@ -34,6 +35,7 @@ class Chooser extends Sprite {
     private const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[
         lineStyle_, backgroundFill_, path_, GraphicsUtil.END_FILL, GraphicsUtil.END_STROKE
     ];
+    private var search:Searchbar;
 
     public function Chooser(_arg_1:int) {
         super();
@@ -54,6 +56,9 @@ class Chooser extends Sprite {
         this.elementSprite_.mask = _local_2;
         addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+        search = new Searchbar(refresh);
+        search.y = -100;
+        addChild(search);
     }
 
     public function selectedType():int {
@@ -69,8 +74,12 @@ class Chooser extends Sprite {
             }
         }
     }
-
+    protected function refresh(_arg_1:String):void{}
     protected function addElement(_arg_1:Element):void {
+        try {
+            if (this.elementSprite_.getChildIndex(_arg_1) != -1) return;
+        }
+        catch(e:Error){}
         var _local_2:int;
         _local_2 = this.elements_.length;
         _arg_1.x = ((((_local_2 % 2)) == 0) ? 0 : (2 + Element.WIDTH));

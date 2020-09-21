@@ -214,7 +214,7 @@ public class GameSprite extends AGameSprite {
             "play_platform": _local_1.playPlatform()
         };
         MoreObjectUtil.addToObject(_local_3, _local_1.getCredentials());
-        if (((((((!((map.name_ == "Kitchen"))) && (!((map.name_ == "Tutorial"))))) && (!((map.name_ == "Nexus Explanation"))))) && ((Parameters.data_.watchForTutorialExit == true)))) {
+        if (((((((!((map.name_ == "Kitchen"))) && (!((map.name_ == "Tutorial"))))) && (!((map.name_ == "Nexus Explanation"))))) && Parameters.data_.watchForTutorialExit)) {
             Parameters.data_.watchForTutorialExit = false;
             _local_3["fteStepCompleted"] = 9900;
             _local_2.sendRequest("/log/logFteStep", _local_3);
@@ -224,7 +224,7 @@ public class GameSprite extends AGameSprite {
             _local_2.sendRequest("/log/logFteStep", _local_3);
         }
         if (map.name_ == "Tutorial") {
-            if (Parameters.data_.needsTutorial == true) {
+            if (Parameters.data_.needsTutorial) {
                 Parameters.data_.watchForTutorialExit = true;
                 _local_3["fteStepCompleted"] = 100;
                 _local_2.sendRequest("/log/logFteStep", _local_3);

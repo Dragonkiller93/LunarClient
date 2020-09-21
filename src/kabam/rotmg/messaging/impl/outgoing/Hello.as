@@ -49,7 +49,7 @@ public class Hello extends OutgoingMessage {
     }
 
     override public function toString():String {
-        return (formatToString("HELLO", "buildVersion_", "gameId_", "guid_", "password_", "secret_"));
+        return (formatToString("HELLO", "buildVersion_", "gameId_", "guid_", "password_", "secret_","keyTime_","key_","mapJSON_","entrytag_","gameNet","gameNetUserId","playPlatform","platformToken"));
     }
 
 

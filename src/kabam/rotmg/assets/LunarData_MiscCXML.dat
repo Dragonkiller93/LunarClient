@@ -89,11 +89,26 @@
     <BlocksSight/>
   </Object>
   <Object type="0xc07b" id="Nexus Wall 3">
-    <Class>Wall</Class>
-    <Texture>
-      <File>LunarGround</File>
-      <Index>0x36</Index>
-    </Texture>
+    <Class>FullWall</Class>
+    <WallHeight>5</WallHeight>
+    <TileSize>8</TileSize>
+    <WallTextures>
+      <Texture>
+        <File>LunarGround</File>
+        <Index>0</Index>
+      </Texture>
+      <Texture>
+        <File>LunarGround</File>
+        <Index>0x10</Index>
+      </Texture>
+    </WallTextures>
+    <WallTextures>
+       <Texture>
+         <File>LunarGround</File>
+         <Index>0x1c</Index>
+       </Texture>
+    </WallTextures>
+    <TextureList>1,2,1,1</TextureList>
     <Top>
       <Texture>
         <File>LunarGround</File>
