@@ -56,7 +56,7 @@
       </extensions>
       <!-- compiler.external-library-path: list of SWC files or directories to compile against but to omit from linking-->
       <external-library-path>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/player/15.0/playerglobal.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/player/18.0/playerglobal.swc</path-element>
       </external-library-path>
       <fonts>
          <!-- compiler.fonts.advanced-anti-aliasing: enables advanced anti-aliasing for embedded fonts, which provides greater clarity for small fonts.-->
@@ -135,32 +135,32 @@
       <keep-generated-actionscript>false</keep-generated-actionscript>
       <!-- compiler.library-path: list of SWC files or directories that contain SWC files-->
       <library-path>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/locale/{locale}</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/rpc.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/osmf.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/spark.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/apache.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/charts.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/framework.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/spark_dmv.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/sparkskins.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/textLayout.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/experimental.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/advancedgrids.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/authoringsupport.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/flash-integration.swc</path-element>
-         <path-element>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/mx/mx.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3-signals.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3core.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3crypto.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Console.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/GTween-v2.01.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/hamcrest-as3-flex-1.1.3.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Hi-Res-Stats.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/ionel.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/robotlegs.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/starling.swc</path-element>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/locale/{locale}</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/rpc.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/osmf.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/spark.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/apache.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/charts.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/framework.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/spark_dmv.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/sparkskins.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/textLayout.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/experimental.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/advancedgrids.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/authoringsupport.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/flash-integration.swc</path-element>
+         <path-element>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/libs/mx/mx.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3-signals.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3core.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/as3crypto.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Console.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/GTween-v2.01.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/hamcrest-as3-flex-1.1.3.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Hi-Res-Stats.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/ionel.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/robotlegs.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/starling.swc</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
       </library-path>
       <!-- compiler.locale: specifies the locale for internationalization-->
       <locale>
@@ -187,19 +187,19 @@
          <!-- compiler.namespaces.namespace: Specify a URI to associate with a manifest of components for use as MXML elements-->
          <namespace>
             <uri>http://ns.adobe.com/mxml/2009</uri>
-            <manifest>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/mxml-2009-manifest.xml</manifest>
+            <manifest>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/mxml-2009-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>library://ns.adobe.com/flex/spark</uri>
-            <manifest>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/spark-manifest.xml</manifest>
+            <manifest>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/spark-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>library://ns.adobe.com/flex/mx</uri>
-            <manifest>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/mx-manifest.xml</manifest>
+            <manifest>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/mx-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>http://www.adobe.com/2006/mxml</uri>
-            <manifest>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/mxml-manifest.xml</manifest>
+            <manifest>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/mxml-manifest.xml</manifest>
          </namespace>
       </namespaces>
       <!-- compiler.omit-trace-statements: toggle whether trace statements are omitted-->
@@ -238,13 +238,13 @@
       -->
       <!-- compiler.source-path: list of path elements that form the roots of ActionScript class hierarchies-->
       <source-path>
-         <path-element>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/src</path-element>
+         <path-element>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/src</path-element>
       </source-path>
       <!-- compiler.strict: runs the AS3 compiler in strict error checking mode.-->
       <strict>true</strict>
       <!-- compiler.theme: list of CSS or SWC files to apply as a theme-->
       <theme>
-         <filename>E:/Software/Pserver Stuff/flex_sdk_4.9.1/frameworks/themes/Spark/spark.css</filename>
+         <filename>E:/Software/Game Things/Pserver Stuff/flex_sdk_4.9.1/frameworks/themes/Spark/spark.css</filename>
       </theme>
       <!-- compiler.use-resource-bundle-metadata: determines whether resources bundles are included in the application.-->
       <use-resource-bundle-metadata>true</use-resource-bundle-metadata>
@@ -449,7 +449,7 @@
    <link-report>filename</link-report>
    -->
    <!-- load-config: load a file containing configuration options-->
-   <load-config>C:\Users\Rotf\.IntelliJIdea2019.3\system\compile-server\webmain_bcf9b3cf\_temp_\IntelliJ_IDEA\idea-DBF48E9E-45A3E760.xml</load-config>
+   <load-config>C:\Users\Rotf\.IntelliJIdea2019.3\system\compile-server\webmain_dcd8cb98\_temp_\IntelliJ_IDEA\idea-DBF48E9E-45A3E760.xml</load-config>
    <!-- load-externs: an XML file containing <def>, <pre>, and <ext> symbols to omit from linking when building a SWF-->
    <!-- load-externs usage:
    <load-externs>filename</load-externs>
@@ -501,7 +501,7 @@
       -->
    </metadata>
    <!-- output: the filename of the SWF movie to create-->
-   <output>E:/Software/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/bin-debug/WebMain.swf</output>
+   <output>E:/Software/Game Things/Fsod Pserver/RotMG_Client_27.7.X2-master/RotMG_Client_27.7.X2-master/LunarClient/bin-debug/WebMain.swf</output>
    <!-- raw-metadata: XML text to store in the SWF metadata (overrides metadata.* configuration)-->
    <!-- raw-metadata usage:
    <raw-metadata>text</raw-metadata>
@@ -554,7 +554,7 @@
    <!-- swf-version: specifies the version of the compiled SWF file.-->
    <swf-version>15</swf-version>
    <!-- target-player: specifies the version of the player the application is targeting. Features requiring a later version will not be compiled into the application. The minimum value supported is "9.0.0".-->
-   <target-player>15.0</target-player>
+   <target-player>18.0</target-player>
    <!-- tools-locale: specifies the locale used by the compiler when reporting errors and warnings.-->
    <!-- tools-locale usage:
    <tools-locale>string</tools-locale>

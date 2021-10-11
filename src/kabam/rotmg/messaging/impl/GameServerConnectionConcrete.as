@@ -581,6 +581,8 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         if (isFromArena_) {
             this.openDialog.dispatch(new BattleSummaryDialog());
         }
+        var a:ByteArray = new ByteArray();
+        a.writeInt(_local_1.charId_);
     }
 
     override public function playerShoot(_arg_1:int, _arg_2:Projectile):void {
@@ -1173,6 +1175,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
             gs_.map.removeObj(_arg_1.drops_[_local_3]);
             _local_3++;
         }
+        //throw(_arg_1.newObjs_);
     }
 
     private function onNotification(_arg_1:Notification):void {

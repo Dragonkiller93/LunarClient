@@ -16,7 +16,7 @@ public class ObjectStatusData {
         super();
     }
 
-    public function parseFromInput(_arg_1:IDataInput):void {
+    public function     parseFromInput(_arg_1:IDataInput):void {
         var _local_3:int;
         this.objectId_ = _arg_1.readInt();
         this.pos_.parseFromInput(_arg_1);

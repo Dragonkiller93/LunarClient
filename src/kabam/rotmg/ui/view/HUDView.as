@@ -124,6 +124,8 @@ public class HUDView extends Sprite implements UnFocusAble {
     private function changeTab(_arg_1:int):void{
         if(tab1==_arg_1) {
             tab1 = 0;
+            tab1 = tab2;
+            tab2 =0;
         }
         else if(tab2==_arg_1){
             tab2=0;
@@ -183,13 +185,13 @@ public class HUDView extends Sprite implements UnFocusAble {
                 this.createEquippedGrid(true,tab1pos);
                 break;
             case 2:
-                this.createInteractPanel(_arg_1,tab1pos);
+                this.createStatsTab(tab1pos);
                 break;
             case 3:
                 this.createInventory(tab1pos);
                 break;
             case 4:
-                this.createStatsTab(tab1pos);
+                this.createInteractPanel(_arg_1,tab1pos);
                 break;
             case 5:
                 this.createBackPackTab(tab1pos);
@@ -197,20 +199,20 @@ public class HUDView extends Sprite implements UnFocusAble {
         }
     }
     public function drawTab2(_arg_1:GameSprite):void{
-        var tempPoint:Point = new Point(tab2pos.x,tab1==1?tab2pos.y-80:tab2pos.y);
+        var tempPoint:Point = new Point(tab2pos.x,tab1==1?tab2pos.y-80:tab1==2?tab2pos.y-75:tab2pos.y);
         switch(tab2){
             case 1:
                 this.createEquippedGridBackground(tempPoint);
                 this.createEquippedGrid(true,tempPoint);
                 break;
             case 2:
-                this.createInteractPanel(_arg_1, tempPoint);
+                this.createStatsTab(tempPoint);
                 break;
             case 3:
                 this.createInventory(tempPoint);
                 break;
             case 4:
-                this.createStatsTab(tempPoint);
+                this.createInteractPanel(_arg_1, tempPoint);
                 break;
             case 5:
                 this.createBackPackTab(tempPoint);
@@ -233,12 +235,8 @@ public class HUDView extends Sprite implements UnFocusAble {
     }
     private function createStatsTab(_arg_1:Point):void{
         this.stats = new StatsTabContent(110);
-        this.stats.x = _arg_1.x-5;
-        this.stats.y=_arg_1.y;
-//        stats.graphics.lineStyle(1,0xff0000,1);
-//        stats.graphics.beginFill(0xffff00);
-//        stats.graphics.drawRect(0,0,300,200);
-        //graphics.drawRoundRect(_arg_1.x-10,_arg_1.y-10,this.stats.width,this.stats.height,20,10);
+        this.stats.x = _arg_1.x-10;
+        this.stats.y=_arg_1.y-40;
         addChild(this.stats);
     }
     private function createInteractPanel(_arg_1:GameSprite,_arg_2:Point):void {
@@ -277,7 +275,7 @@ public class HUDView extends Sprite implements UnFocusAble {
             setPlayerDependentAssets(_arg_1);
             toredraw= false;
         }
-        if(tab1==2 || tab2==2) interactPanel.draw();
+        //if(tab1==4|| tab2==4) interactPanel.draw();
         if(tab1==1 || tab2==1)equippedGrid.draw();
     }
 

@@ -93,11 +93,11 @@ public class StatsView extends Sprite {
 
     private function createBackground():Sprite {
         this.background = new Sprite();
-        this.background.graphics.clear();
+        /*this.background.graphics.clear();
         this.background.graphics.beginFill(0x363636);
         this.background.graphics.lineStyle(2, 0xFFFFFF);
         this.background.graphics.drawRoundRect(-5, -5, (this.WIDTH + 10), (this.HEIGHT + 13), 10);
-        this.background.filters = [new GlowFilter(0, 1, 10, 10, 1, 3)];
+        this.background.filters = [new GlowFilter(0, 1, 10, 10, 1, 3)];*/
         return (this.background);
     }
 

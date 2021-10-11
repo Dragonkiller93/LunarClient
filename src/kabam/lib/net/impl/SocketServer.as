@@ -103,7 +103,7 @@ public class SocketServer {
 
     public function sendMessage(_arg_1:Message):void {
         this.tail.next = _arg_1;
-        //this.tail = _arg_1;
+        this.tail = _arg_1;
         ((this.socket.connected) && (this.sendPendingMessages()));
     }
 
@@ -131,7 +131,6 @@ public class SocketServer {
     }
 
     private function onConnect(_arg_1:Event):void {
-
         this.sendPendingMessages();
         this.connected.dispatch();
     }

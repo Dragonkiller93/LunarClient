@@ -18,7 +18,7 @@ public class StatsTabContent extends Sprite {
     private function drawBackground():void{
         graphics.lineStyle(0,0);
         graphics.beginFill(0x333333,1);
-        graphics.drawRoundRect(-10,-10,width+20,height+20,20,20);
+        graphics.drawRoundRect(-10,-10,width,height+20,20,20);
     }
     private function addChildren():void {
         addChild(this.stats);
